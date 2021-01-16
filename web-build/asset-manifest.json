@@ -1,0 +1,40 @@
+{
+  "files": {
+    "app.js": "/Portfolio/static/js/app.240ecc59.chunk.js",
+    "app.js.map": "/Portfolio/static/js/app.240ecc59.chunk.js.map",
+    "runtime~app.js": "/Portfolio/static/js/runtime~app.2ebe9a9b.js",
+    "runtime~app.js.map": "/Portfolio/static/js/runtime~app.2ebe9a9b.js.map",
+    "static/js/2.6e8fe116.chunk.js": "/Portfolio/static/js/2.6e8fe116.chunk.js",
+    "static/js/2.6e8fe116.chunk.js.map": "/Portfolio/static/js/2.6e8fe116.chunk.js.map",
+    "fonts/AntDesign.ttf": "/Portfolio/./fonts/AntDesign.ttf",
+    "fonts/Entypo.ttf": "/Portfolio/./fonts/Entypo.ttf",
+    "fonts/Feather.ttf": "/Portfolio/./fonts/Feather.ttf",
+    "fonts/FontAwesome.ttf": "/Portfolio/./fonts/FontAwesome.ttf",
+    "fonts/FontAwesome5_Brands.ttf": "/Portfolio/./fonts/FontAwesome5_Brands.ttf",
+    "fonts/FontAwesome5_Solid.ttf": "/Portfolio/./fonts/FontAwesome5_Solid.ttf",
+    "fonts/Fontisto.ttf": "/Portfolio/./fonts/Fontisto.ttf",
+    "fonts/Foundation.ttf": "/Portfolio/./fonts/Foundation.ttf",
+    "fonts/Ionicons.ttf": "/Portfolio/./fonts/Ionicons.ttf",
+    "fonts/MaterialCommunityIcons.ttf": "/Portfolio/./fonts/MaterialCommunityIcons.ttf",
+    "fonts/MaterialIcons.ttf": "/Portfolio/./fonts/MaterialIcons.ttf",
+    "fonts/SimpleLineIcons.ttf": "/Portfolio/./fonts/SimpleLineIcons.ttf",
+    "fonts/SpaceMono-Regular.ttf": "/Portfolio/./fonts/SpaceMono-Regular.ttf",
+    "favicon-16.png": "/Portfolio/favicon-16.png",
+    "favicon-32.png": "/Portfolio/favicon-32.png",
+    "favicon.ico": "/Portfolio/favicon.ico",
+    "index.html": "/Portfolio/index.html",
+    "manifest.json": "/Portfolio/manifest.json",
+    "serve.json": "/Portfolio/serve.json",
+    "static/js/2.6e8fe116.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.6e8fe116.chunk.js.LICENSE.txt",
+    "static/media/az-logo.png": "/Portfolio/static/media/az-logo.1a07737f.png",
+    "static/media/bell.png": "/Portfolio/static/media/bell.cf04af27.png",
+    "static/media/heart.png": "/Portfolio/static/media/heart.23b5c2c0.png",
+    "static/media/rocket.png": "/Portfolio/static/media/rocket.d2f3bf41.png",
+    "static/media/star.png": "/Portfolio/static/media/star.69c71386.png"
+  },
+  "entrypoints": [
+    "static/js/runtime~app.2ebe9a9b.js",
+    "static/js/2.6e8fe116.chunk.js",
+    "static/js/app.240ecc59.chunk.js"
+  ]
+}
