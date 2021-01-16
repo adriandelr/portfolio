@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "Portfolio",
+    "slug": "Portfolio",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./app/assets/images/icon-az.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./app/assets/images/splash-az.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./app/assets/images/adaptive-icon-az.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.adriandelr.Portfolio"
+    },
+    "web": {
+      "favicon": "./app/assets/images/favicon-az.png"
+    },
+    "description": ""
+  }
+}
