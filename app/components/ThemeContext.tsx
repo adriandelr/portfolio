@@ -13,8 +13,9 @@ export const ThemeProvider = (props: any) => {
   // Get data of saved colorScheme
   let localData_colorScheme: any;
   if (Platform.OS === "web") {
-    localData_colorScheme = localStorage.getItem("colorScheme");
-    // console.log(localData_colorScheme);
+    localData_colorScheme
+      ? (localData_colorScheme = localStorage.getItem("colorScheme"))
+      : (localData_colorScheme = "light");
   }
 
   // Getting the device color theme, this will also work with react-native-web
