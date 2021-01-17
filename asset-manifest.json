@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/portfolio/static/js/app.cb4e67de.chunk.js",
-    "app.js.map": "/portfolio/static/js/app.cb4e67de.chunk.js.map",
+    "app.js": "/portfolio/static/js/app.240ecc59.chunk.js",
+    "app.js.map": "/portfolio/static/js/app.240ecc59.chunk.js.map",
     "runtime~app.js": "/portfolio/static/js/runtime~app.e3633d06.js",
     "runtime~app.js.map": "/portfolio/static/js/runtime~app.e3633d06.js.map",
-    "static/js/2.a75b5fff.chunk.js": "/portfolio/static/js/2.a75b5fff.chunk.js",
-    "static/js/2.a75b5fff.chunk.js.map": "/portfolio/static/js/2.a75b5fff.chunk.js.map",
+    "static/js/2.adc31124.chunk.js": "/portfolio/static/js/2.adc31124.chunk.js",
+    "static/js/2.adc31124.chunk.js.map": "/portfolio/static/js/2.adc31124.chunk.js.map",
     "fonts/AntDesign.ttf": "/portfolio/./fonts/AntDesign.ttf",
     "fonts/Entypo.ttf": "/portfolio/./fonts/Entypo.ttf",
     "fonts/Feather.ttf": "/portfolio/./fonts/Feather.ttf",
@@ -25,7 +25,8 @@
     "index.html": "/portfolio/index.html",
     "manifest.json": "/portfolio/manifest.json",
     "serve.json": "/portfolio/serve.json",
-    "static/js/2.a75b5fff.chunk.js.LICENSE.txt": "/portfolio/static/js/2.a75b5fff.chunk.js.LICENSE.txt",
+    "static/js/2.adc31124.chunk.js.LICENSE.txt": "/portfolio/static/js/2.adc31124.chunk.js.LICENSE.txt",
+    "static/media/az-logo.png": "/portfolio/static/media/az-logo.1a07737f.png",
     "static/media/bell.png": "/portfolio/static/media/bell.cf04af27.png",
     "static/media/heart.png": "/portfolio/static/media/heart.23b5c2c0.png",
     "static/media/rocket.png": "/portfolio/static/media/rocket.d2f3bf41.png",
@@ -33,7 +34,7 @@
   },
   "entrypoints": [
     "static/js/runtime~app.e3633d06.js",
-    "static/js/2.a75b5fff.chunk.js",
-    "static/js/app.cb4e67de.chunk.js"
+    "static/js/2.adc31124.chunk.js",
+    "static/js/app.240ecc59.chunk.js"
   ]
 }
