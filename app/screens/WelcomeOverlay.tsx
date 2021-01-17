@@ -107,14 +107,25 @@ export default function WelcomeOverlay() {
         padding: 11,
         zIndex: 1,
         elevation: 1,
+        flexDirection: "row",
       }}
     >
+      <TouchableOpacity>
+        <Icon
+          name="bars"
+          size={21}
+          color={colors.primary}
+          style={{ paddingLeft: 7 }}
+          solid
+        />
+      </TouchableOpacity>
+
       <TouchableOpacity onPress={toggleOverlay}>
         <Icon
           name="info-circle"
           size={21}
           color={colors.primary}
-          style={{ paddingLeft: 7 }}
+          style={{ paddingLeft: 17 }}
           solid
         />
       </TouchableOpacity>
@@ -150,13 +161,13 @@ export default function WelcomeOverlay() {
                 color: colors.primary,
                 fontSize: 27,
                 position: "absolute",
-                top: "30%",
+                top: "13%",
                 flex: 1,
                 alignSelf: "center",
                 fontWeight: "700",
               }}
             >
-              User Guide
+              Quick User Guide
             </Text>
             <View
               style={{
