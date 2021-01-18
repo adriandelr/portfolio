@@ -4,6 +4,7 @@ export const lightColors = {
   background: "whitesmoke",
   primary: "dimgrey",
   text: "dimgrey",
+  textGuide: "whitesmoke",
   error: "slategrey",
 };
 
@@ -13,5 +14,6 @@ export const darkColors = {
   background: "#101111",
   primary: "dimgrey",
   text: "gainsboro",
+  textGuide: "whitesmoke",
   error: "darkslategrey",
 };

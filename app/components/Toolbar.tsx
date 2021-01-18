@@ -5,7 +5,7 @@ import { View } from "./Themed";
 
 import { Appearance, useColorScheme } from "react-native-appearance";
 
-import { useTheme } from "../components/ThemeContext";
+import { useTheme } from "../hooks/useThemeContext";
 import { Text, colors as elementsColor } from "react-native-elements";
 import Icon from "react-native-vector-icons/FontAwesome5";
 

@@ -10,7 +10,7 @@ import { Text, Overlay } from "react-native-elements";
 
 import Modal from "modal-react-native-web";
 
-import { useTheme } from "../components/ThemeContext";
+import { useTheme } from "../hooks/useThemeContext";
 import Icon from "react-native-vector-icons/FontAwesome5";
 
 export default function WelcomeOverlay() {
@@ -166,7 +166,7 @@ export default function WelcomeOverlay() {
           >
             <Text
               style={{
-                color: colors.background,
+                color: colors.textGuide,
                 fontSize: 23,
                 position: "absolute",
                 top: "27%",
@@ -179,7 +179,7 @@ export default function WelcomeOverlay() {
             </Text>
             <Text
               style={{
-                color: colors.background,
+                color: colors.textGuide,
                 fontSize: 13,
                 position: "absolute",
                 top: "29%",
@@ -195,7 +195,7 @@ export default function WelcomeOverlay() {
             </Text>
             <Text
               style={{
-                color: colors.background,
+                color: colors.textGuide,
                 fontSize: 13,
                 position: "absolute",
                 top: "39%",
@@ -220,11 +220,11 @@ export default function WelcomeOverlay() {
               <Icon
                 name="long-arrow-alt-up"
                 size={37}
-                color={colors.background}
+                color={colors.textGuide}
                 style={{ marginLeft: 7, transform: [{ rotate: "-37deg" }] }}
                 solid
               />
-              <Text style={{ color: colors.background, fontSize: 13 }}>
+              <Text style={{ color: colors.textGuide, fontSize: 13 }}>
                 Toggle Guide
               </Text>
             </View>
@@ -248,12 +248,12 @@ export default function WelcomeOverlay() {
               <Icon
                 name="long-arrow-alt-up"
                 size={37}
-                color={colors.background}
+                color={colors.textGuide}
                 style={{ marginLeft: 7, transform: [{ rotate: "-7deg" }] }}
                 solid
               />
               <Text
-                style={{ color: colors.background, fontSize: 13, width: "30%" }}
+                style={{ color: colors.textGuide, fontSize: 13, width: "30%" }}
               >
                 Toggle Side Menu on the first page
               </Text>
@@ -271,11 +271,11 @@ export default function WelcomeOverlay() {
               <Icon
                 name="long-arrow-alt-up"
                 size={37}
-                color={colors.background}
+                color={colors.textGuide}
                 style={{ marginLeft: 7, transform: [{ rotate: "73deg" }] }}
                 solid
               />
-              <Text style={{ color: colors.background, fontSize: 13 }}>
+              <Text style={{ color: colors.textGuide, fontSize: 13 }}>
                 Toggle Dark Mode
               </Text>
             </View>
@@ -289,7 +289,7 @@ export default function WelcomeOverlay() {
               >
                 <Text
                   style={{
-                    color: colors.background,
+                    color: colors.textGuide,
                     fontSize: 13,
                     marginLeft: 15,
                   }}
@@ -300,7 +300,7 @@ export default function WelcomeOverlay() {
                   <Icon
                     name="hand-point-up"
                     size={37}
-                    color={colors.background}
+                    color={colors.textGuide}
                     style={{ marginLeft: 7 }}
                     solid
                   />
@@ -319,7 +319,7 @@ export default function WelcomeOverlay() {
             >
               <Text
                 style={{
-                  color: colors.background,
+                  color: colors.textGuide,
                   fontSize: 13,
                 }}
               >
@@ -329,7 +329,7 @@ export default function WelcomeOverlay() {
                 <Icon
                   name="hand-point-up"
                   size={37}
-                  color={colors.background}
+                  color={colors.textGuide}
                   style={{ marginLeft: 7 }}
                   solid
                 />
@@ -350,11 +350,11 @@ export default function WelcomeOverlay() {
                 <Icon
                   name="long-arrow-alt-up"
                   size={37}
-                  color={colors.background}
+                  color={colors.textGuide}
                   style={{ marginLeft: 7, transform: [{ rotate: "-37deg" }] }}
                   solid
                 />
-                <Text style={{ color: colors.background, fontSize: 13 }}>
+                <Text style={{ color: colors.textGuide, fontSize: 13 }}>
                   Tabs to navigate between pages
                 </Text>
               </View>
@@ -370,13 +370,13 @@ export default function WelcomeOverlay() {
                   justifyContent: "center",
                 }}
               >
-                <Text style={{ color: colors.background, fontSize: 13 }}>
+                <Text style={{ color: colors.textGuide, fontSize: 13 }}>
                   Tabs to navigate between pages
                 </Text>
                 <Icon
                   name="long-arrow-alt-down"
                   size={37}
-                  color={colors.background}
+                  color={colors.textGuide}
                   style={{ marginLeft: 7 }}
                   solid
                 />

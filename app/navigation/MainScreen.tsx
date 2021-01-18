@@ -15,7 +15,7 @@ import {
 
 import TabDevScreen from "../screens/TabDevScreen";
 
-import { useTheme } from "../components/ThemeContext";
+import { useTheme } from "../hooks/useThemeContext";
 import { Text, Image, colors as elementsColor } from "react-native-elements";
 import Icon from "react-native-vector-icons/Ionicons";
 import { ScrollView } from "react-native-gesture-handler";

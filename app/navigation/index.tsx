@@ -18,7 +18,7 @@ import { RootStackParamList } from "../types";
 
 // import { Appearance } from "react-native-appearance";
 
-import { useTheme } from "../components/ThemeContext";
+import { useTheme } from "../hooks/useThemeContext";
 import Icon from "react-native-vector-icons/Ionicons";
 
 import TabMainScreen from "./MainScreen";

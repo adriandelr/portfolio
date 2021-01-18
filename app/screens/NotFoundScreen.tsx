@@ -4,7 +4,7 @@ import { StyleSheet, TouchableOpacity, View } from "react-native";
 
 import { RootStackParamList } from "../types";
 
-import { useTheme } from "../components/ThemeContext";
+import { useTheme } from "../hooks/useThemeContext";
 import { Text, Image, colors as elementsColor } from "react-native-elements";
 import Icon from "react-native-vector-icons/FontAwesome5";
 

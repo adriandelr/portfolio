@@ -11,7 +11,7 @@ import TabProjectsScreen from "../screens/TabProjectsScreen";
 import TabSnippetsScreen from "../screens/TabSnippetsScreen";
 import { TabOneParamList, TabTwoParamList, TabThreeParamList } from "../types";
 
-import { useTheme } from "../components/ThemeContext";
+import { useTheme } from "../hooks/useThemeContext";
 import Icon from "react-native-vector-icons/Ionicons";
 
 const TopTab = createMaterialTopTabNavigator();

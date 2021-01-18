@@ -10,7 +10,7 @@ import Navigation from "./app/navigation";
 
 import { AppearanceProvider, Appearance } from "react-native-appearance";
 
-import { ThemeProvider } from "./app/components/ThemeContext";
+import { ThemeProvider } from "./app/hooks/useThemeContext";
 
 import WelcomeOverlay from "./app/screens/WelcomeOverlay";
 
