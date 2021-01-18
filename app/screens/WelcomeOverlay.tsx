@@ -105,12 +105,19 @@ export default function WelcomeOverlay() {
         top: 0,
         left: 0,
         padding: 11,
+        width: visible ? "100%" : undefined,
+        height: visible ? "100%" : undefined,
         zIndex: 1,
         elevation: 1,
         flexDirection: "row",
       }}
     >
-      <TouchableOpacity onPress={toggleOverlay}>
+      <TouchableOpacity
+        onPress={toggleOverlay}
+        style={{
+          flexDirection: "row",
+        }}
+      >
         <Icon
           name="info-circle"
           size={21}
@@ -118,15 +125,26 @@ export default function WelcomeOverlay() {
           style={{ paddingLeft: 9 }}
           solid
         />
+        <Text
+          style={{
+            color: colors.primary,
+            fontSize: 13,
+            alignSelf: "center",
+            fontWeight: "700",
+            marginLeft: 7,
+          }}
+        >
+          User Guide
+        </Text>
       </TouchableOpacity>
 
       <Overlay
         ModalComponent={Platform.OS === "web" ? Modal : undefined}
         isVisible={visible}
-        onBackdropPress={toggleOverlay}
+        // onBackdropPress={toggleOverlay}
         overlayStyle={{
-          // backgroundColor: "transparent",
-          opacity: 0.7,
+          backgroundColor: "transparent",
+          opacity: 1,
           elevation: 0,
           shadowOpacity: 0,
           width: "100%",
@@ -148,10 +166,10 @@ export default function WelcomeOverlay() {
           >
             <Text
               style={{
-                color: colors.primary,
-                fontSize: 27,
+                color: colors.background,
+                fontSize: 23,
                 position: "absolute",
-                top: "13%",
+                top: "27%",
                 flex: 1,
                 alignSelf: "center",
                 fontWeight: "700",
@@ -159,11 +177,42 @@ export default function WelcomeOverlay() {
             >
               Quick User Guide
             </Text>
+            <Text
+              style={{
+                color: colors.background,
+                fontSize: 13,
+                position: "absolute",
+                top: "29%",
+                flex: 1,
+                alignSelf: "center",
+                fontWeight: "300",
+                padding: "7%",
+                textAlign: "center",
+              }}
+            >
+              Please have a quick look on the features, navigations, and
+              gestures.
+            </Text>
+            <Text
+              style={{
+                color: colors.background,
+                fontSize: 13,
+                position: "absolute",
+                top: "39%",
+                flex: 1,
+                alignSelf: "center",
+                fontWeight: "300",
+                padding: "7%",
+                textAlign: "center",
+              }}
+            >
+              Tap anywhere to dismiss.
+            </Text>
             <View
               style={{
                 position: "absolute",
-                top: 50,
-                left: 0,
+                top: Platform.OS === "web" ? 20 : 10,
+                left: Platform.OS === "web" ? 20 : 40,
                 flex: 1,
                 alignItems: "flex-start",
               }}
@@ -171,11 +220,11 @@ export default function WelcomeOverlay() {
               <Icon
                 name="long-arrow-alt-up"
                 size={37}
-                color={colors.primary}
-                style={{ marginLeft: 7 }}
+                color={colors.background}
+                style={{ marginLeft: 7, transform: [{ rotate: "-37deg" }] }}
                 solid
               />
-              <Text style={{ color: colors.primary, fontSize: 17 }}>
+              <Text style={{ color: colors.background, fontSize: 13 }}>
                 Toggle Guide
               </Text>
             </View>
@@ -183,8 +232,38 @@ export default function WelcomeOverlay() {
             <View
               style={{
                 position: "absolute",
-                top: 50,
-                right: 10,
+                top: Platform.OS === "web" ? 123 : 48,
+                left: Platform.OS === "web" ? 5 : 3,
+                flex: 1,
+                alignItems: "flex-start",
+              }}
+            >
+              <Icon
+                name="bars"
+                size={21}
+                color={colors.pimary}
+                style={{ paddingLeft: 7 }}
+                solid
+              />
+              <Icon
+                name="long-arrow-alt-up"
+                size={37}
+                color={colors.background}
+                style={{ marginLeft: 7, transform: [{ rotate: "-7deg" }] }}
+                solid
+              />
+              <Text
+                style={{ color: colors.background, fontSize: 13, width: "30%" }}
+              >
+                Toggle Side Menu on the first page
+              </Text>
+            </View>
+
+            <View
+              style={{
+                position: "absolute",
+                top: 10,
+                right: 60,
                 flex: 1,
                 alignItems: "center",
               }}
@@ -192,39 +271,42 @@ export default function WelcomeOverlay() {
               <Icon
                 name="long-arrow-alt-up"
                 size={37}
-                color={colors.primary}
-                style={{ marginLeft: 7 }}
+                color={colors.background}
+                style={{ marginLeft: 7, transform: [{ rotate: "73deg" }] }}
                 solid
               />
-              <Text style={{ color: colors.primary, fontSize: 17 }}>
-                Dark Mode
+              <Text style={{ color: colors.background, fontSize: 13 }}>
+                Toggle Dark Mode
               </Text>
             </View>
 
-            <View
-              style={{
-                marginLeft: "3%",
-              }}
-            >
-              <SwipeFadeAnim>
-                <Icon
-                  name="hand-point-up"
-                  size={37}
-                  color={colors.primary}
-                  style={{ marginLeft: 7 }}
-                  solid
-                />
-              </SwipeFadeAnim>
-              <Text
+            {Platform.OS !== "web" && (
+              <View
                 style={{
-                  color: colors.primary,
-                  fontSize: 17,
-                  marginLeft: 15,
+                  marginTop: "37%",
+                  marginLeft: "3%",
                 }}
               >
-                Swipe to open drawer
-              </Text>
-            </View>
+                <Text
+                  style={{
+                    color: colors.background,
+                    fontSize: 13,
+                    marginLeft: 15,
+                  }}
+                >
+                  Swipe to open drawer on the first page
+                </Text>
+                <SwipeFadeAnim>
+                  <Icon
+                    name="hand-point-up"
+                    size={37}
+                    color={colors.background}
+                    style={{ marginLeft: 7 }}
+                    solid
+                  />
+                </SwipeFadeAnim>
+              </View>
+            )}
 
             <View
               style={{
@@ -235,48 +317,87 @@ export default function WelcomeOverlay() {
                 alignItems: "flex-end",
               }}
             >
-              <SwipeFadeAnim direction="left">
-                <Icon
-                  name="hand-point-up"
-                  size={37}
-                  color={colors.primary}
-                  style={{ marginLeft: 7 }}
-                  solid
-                />
-              </SwipeFadeAnim>
               <Text
                 style={{
-                  color: colors.primary,
-                  fontSize: 17,
+                  color: colors.background,
+                  fontSize: 13,
                 }}
               >
                 Swipe to move between pages
               </Text>
+              <SwipeFadeAnim direction="left">
+                <Icon
+                  name="hand-point-up"
+                  size={37}
+                  color={colors.background}
+                  style={{ marginLeft: 7 }}
+                  solid
+                />
+              </SwipeFadeAnim>
             </View>
 
-            <View
-              style={{
-                position: "absolute",
-                bottom: 50,
-                right: 10,
-                flex: 1,
-                alignItems: "center",
-              }}
-            >
-              <Text style={{ color: colors.primary, fontSize: 17 }}>
-                Tabs Navigation
-              </Text>
-              <Icon
-                name="long-arrow-alt-down"
-                size={37}
-                color={colors.primary}
-                style={{ marginLeft: 7 }}
-                solid
-              />
-            </View>
+            {Platform.OS === "web" && (
+              <View
+                style={{
+                  position: "absolute",
+                  top: 90,
+                  marginLeft: 370,
+                  flex: 1,
+                  alignItems: "flex-start",
+                  alignSelf: "center",
+                }}
+              >
+                <Icon
+                  name="long-arrow-alt-up"
+                  size={37}
+                  color={colors.background}
+                  style={{ marginLeft: 7, transform: [{ rotate: "-37deg" }] }}
+                  solid
+                />
+                <Text style={{ color: colors.background, fontSize: 13 }}>
+                  Tabs to navigate between pages
+                </Text>
+              </View>
+            )}
+
+            {Platform.OS !== "web" && (
+              <View
+                style={{
+                  position: "absolute",
+                  bottom: 50,
+                  flex: 1,
+                  alignSelf: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Text style={{ color: colors.background, fontSize: 13 }}>
+                  Tabs to navigate between pages
+                </Text>
+                <Icon
+                  name="long-arrow-alt-down"
+                  size={37}
+                  color={colors.background}
+                  style={{ marginLeft: 7 }}
+                  solid
+                />
+              </View>
+            )}
           </View>
         </TouchableOpacity>
       </Overlay>
+      {visible && (
+        <View
+          style={{
+            backgroundColor: colors.background,
+            opacity: 0.97,
+            position: "absolute",
+            top: 120,
+            left: 0,
+            width: "100%",
+            height: "70%",
+          }}
+        ></View>
+      )}
     </View>
   );
 }
