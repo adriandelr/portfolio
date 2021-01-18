@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Platform } from "react-native";
+import { Platform, TouchableOpacity } from "react-native";
 import { ActivityIndicator, StyleSheet } from "react-native";
 
 // import EditScreenInfo from "../components/EditScreenInfo";
@@ -11,7 +11,7 @@ import { useTheme } from "../components/ThemeContext";
 import { Text, Image, colors as elementsColor } from "react-native-elements";
 import Icon from "react-native-vector-icons/FontAwesome5";
 
-export default function TabDevScreen() {
+export default function TabDevScreen({ navigation }: any) {
   const { setScheme, colors, isDark } = useTheme();
 
   const styles = StyleSheet.create({
@@ -45,9 +45,28 @@ export default function TabDevScreen() {
 
   return (
     <View style={styles.container}>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.openDrawer();
+        }}
+        style={{
+          position: "absolute",
+          top: Platform.OS === "web" ? 15 : 13,
+          left: Platform.OS === "web" ? 15 : 13,
+        }}
+      >
+        <Icon
+          name="bars"
+          size={21}
+          color={colors.primary}
+          style={{ paddingLeft: 7 }}
+          solid
+        />
+      </TouchableOpacity>
+
       <Image
         source={require("../assets/images/az-logo.png")}
-        style={{ width: 200, height: 200, marginBottom: 70 }}
+        style={{ width: 192, height: 192, marginBottom: 70 }}
         PlaceholderContent={
           <ActivityIndicator
             style={{

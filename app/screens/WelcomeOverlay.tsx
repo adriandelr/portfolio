@@ -110,22 +110,12 @@ export default function WelcomeOverlay() {
         flexDirection: "row",
       }}
     >
-      <TouchableOpacity>
-        <Icon
-          name="bars"
-          size={21}
-          color={colors.primary}
-          style={{ paddingLeft: 7 }}
-          solid
-        />
-      </TouchableOpacity>
-
       <TouchableOpacity onPress={toggleOverlay}>
         <Icon
           name="info-circle"
           size={21}
           color={colors.primary}
-          style={{ paddingLeft: 17 }}
+          style={{ paddingLeft: 9 }}
           solid
         />
       </TouchableOpacity>
