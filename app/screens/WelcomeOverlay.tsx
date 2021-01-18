@@ -16,7 +16,7 @@ import Icon from "react-native-vector-icons/FontAwesome5";
 export default function WelcomeOverlay() {
   const { setScheme, colors, isDark } = useTheme();
 
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
 
   const toggleOverlay = () => {
     setVisible(!visible);
@@ -241,7 +241,7 @@ export default function WelcomeOverlay() {
               <Icon
                 name="bars"
                 size={21}
-                color={colors.pimary}
+                color={colors.primary}
                 style={{ paddingLeft: 7 }}
                 solid
               />
