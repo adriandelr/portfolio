@@ -75,6 +75,8 @@ export default function MainScreen() {
         backgroundColor: colors.background,
         width: 200,
       }}
+      edgeWidth={200}
+      minSwipeDistance={10}
     >
       <Drawer.Screen
         name="Dev"
