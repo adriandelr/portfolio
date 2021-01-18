@@ -12,7 +12,7 @@ import { AppearanceProvider, Appearance } from "react-native-appearance";
 
 import { ThemeProvider } from "./app/hooks/useThemeContext";
 
-import WelcomeOverlay from "./app/screens/WelcomeOverlay";
+import WelcomeOverlay from "./app/screens/OverlayUserGuide";
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
