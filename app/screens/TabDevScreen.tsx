@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Platform, TouchableOpacity } from "react-native";
-import { ActivityIndicator, StyleSheet } from "react-native";
+import { ActivityIndicator, ScrollView, StyleSheet } from "react-native";
 
 // import EditScreenInfo from "../components/EditScreenInfo";
 import { View } from "../components/Themed";
@@ -14,37 +14,15 @@ import Icon from "react-native-vector-icons/FontAwesome5";
 export default function TabDevScreen({ navigation }: any) {
   const { setScheme, colors, isDark } = useTheme();
 
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      justifyContent: "center",
-      alignItems: "center",
-      /*
-       * the colors.background value will change dynamicly with
-       * so if we wanna change its value we can go directly to the pallet
-       * this will make super easy to change and maintain mid or end project
-       */
-      backgroundColor: colors.background,
-    },
-  });
-
-  const elemStyles = {
-    title: {
-      color: colors.text,
-    },
-    desc: {
-      color: colors.text,
-      paddingTop: 20,
-      paddingLeft: Platform.OS === "web" ? "10%" : "7%",
-      paddingRight: Platform.OS === "web" ? "10%" : "7%",
-    },
-    error: {
-      color: colors.error,
-    },
-  };
-
   return (
-    <View style={styles.container}>
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: colors.background,
+      }}
+    >
       <TouchableOpacity
         onPress={() => {
           navigation.openDrawer();
@@ -64,46 +42,103 @@ export default function TabDevScreen({ navigation }: any) {
         />
       </TouchableOpacity>
 
-      <Image
-        source={require("../assets/images/az-logo.png")}
-        style={{ width: 192, height: 192, marginBottom: 70 }}
-        PlaceholderContent={
-          <ActivityIndicator
-            style={{
-              position: "absolute",
-              left: 0,
-              right: 0,
-              top: 0,
-              bottom: 0,
-              alignItems: "center",
-              justifyContent: "center",
-              backgroundColor: colors.background,
-            }}
-            animating={true}
-            color={colors.primary}
-          />
-        }
-      />
-      <Text h2 style={elemStyles.title}>
-        Adrian del Rosario
-      </Text>
-      <Text h4 style={elemStyles.error}>
-        Cross-Platform Digital Portfolio
-      </Text>
-
-      <Text style={elemStyles.desc} numberOfLines={2}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel
-        feugiat ligula, et pretium dolor. Integer vel mollis mauris. Donec
-        maximus tristique condimentum. Quisque posuere augue non luctus posuere.
-      </Text>
-      <View
+      <ScrollView
         style={{
-          backgroundColor: colors.background,
-          flexDirection: "row",
-          alignItems: "center",
-          marginTop: 40,
+          top: 50,
         }}
-      ></View>
+      >
+        <View
+          style={{
+            paddingBottom: 117,
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: colors.background,
+          }}
+        >
+          <Image
+            source={require("../assets/images/az-logo.png")}
+            style={{ width: 192, height: 192, marginTop: 30, marginBottom: 50 }}
+            PlaceholderContent={
+              <ActivityIndicator
+                style={{
+                  position: "absolute",
+                  left: 0,
+                  right: 0,
+                  top: 0,
+                  bottom: 0,
+                  alignItems: "center",
+                  justifyContent: "center",
+                  backgroundColor: colors.background,
+                }}
+                animating={true}
+                color={colors.primary}
+              />
+            }
+          />
+          {Platform.OS === "web" && (
+            <Text
+              h4
+              style={{
+                color: colors.text,
+                fontWeight: "700",
+              }}
+            >
+              Adrian Del Rosario
+            </Text>
+          )}
+          {Platform.OS !== "web" && (
+            <Text
+              h3
+              style={{
+                color: colors.text,
+                fontWeight: "300",
+              }}
+            >
+              Adrian Del Rosario
+            </Text>
+          )}
+          <Text
+            style={{
+              color: colors.error,
+              fontSize: 17,
+              fontWeight: "300",
+            }}
+          >
+            Cross-Platform Digital Portfolio
+          </Text>
+
+          <Text
+            style={{
+              color: colors.text,
+              fontSize: 14,
+              marginTop: 40,
+              paddingLeft: Platform.OS === "web" ? "10%" : "13%",
+              paddingRight: Platform.OS === "web" ? "10%" : "13%",
+            }}
+            numberOfLines={0}
+          >
+            Adrian is a Web Developer focused on developing Web Applications
+            using Front-end Web Technologies.
+            {"\n"}
+            {"\n"}
+            He has been delivering various applications ranging from UI and
+            Animation to communication, computation, and manipulation of queries
+            and content for the last seven (7) years.
+            {"\n"}
+            {"\n"}
+            He handled projects before as a UI Hybrid Mobile Developer for US
+            based Toll Agency and supported Accenture’s Business Development for
+            a Hong Kong based Housing Agency with the same role.
+            {"\n"}
+            {"\n"}
+            Recently, he worked on a project for a Global Law Firm based in the
+            US using Angular2 in maintaining their records, and continued
+            developing Mobile Applications for a Global Loyalty Solutions
+            Provider catering big 5* Star Hotel Clients such as Hilton,
+            MarcoPolo, ClubHotel, and more.
+          </Text>
+        </View>
+      </ScrollView>
     </View>
   );
 
