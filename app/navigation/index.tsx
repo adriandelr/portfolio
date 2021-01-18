@@ -8,7 +8,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import * as React from "react";
-import { Button, View, Text, ColorSchemeName } from "react-native";
+import { Button, View, Text, Platform, ColorSchemeName } from "react-native";
 
 // import NotFoundScreen from "../screens/NotFoundScreen";
 import { RootStackParamList } from "../types";
@@ -98,7 +98,7 @@ export default function Navigation({
     <NavigationContainer>
       <TopTab.Navigator
         initialRouteName="TabDev"
-        tabBarPosition="bottom"
+        tabBarPosition={Platform.OS === "web" ? "top" : "bottom"}
         lazy={true}
         lazyPreloadDistance={0.3}
         swipeVelocityImpact={0.3}
