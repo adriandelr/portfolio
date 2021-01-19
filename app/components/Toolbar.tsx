@@ -1,7 +1,5 @@
 import * as React from "react";
-import { Platform, StyleSheet, Switch } from "react-native";
-
-import { View } from "./Themed";
+import { Platform, StyleSheet, View, Switch } from "react-native";
 
 import { Appearance, useColorScheme } from "react-native-appearance";
 

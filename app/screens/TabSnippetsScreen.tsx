@@ -1,7 +1,5 @@
 import * as React from "react";
-import { ActivityIndicator, StyleSheet } from "react-native";
-
-import { View } from "../components/Themed";
+import { View, StyleSheet } from "react-native";
 
 import { useTheme } from "../hooks/useThemeContext";
 import { Text, Image, colors as elementsColor } from "react-native-elements";

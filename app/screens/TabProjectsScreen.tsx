@@ -1,41 +1,77 @@
 import * as React from "react";
-import { ActivityIndicator, StyleSheet } from "react-native";
+import { StyleSheet, Text, View, SectionList } from "react-native";
 
-import { View } from "../components/Themed";
+import { ListItem, Avatar } from "react-native-elements";
 
 import { useTheme } from "../hooks/useThemeContext";
-import { Text, Image, colors as elementsColor } from "react-native-elements";
 import Icon from "react-native-vector-icons/FontAwesome5";
 
 export default function TabProjectsScreen() {
   const { colors } = useTheme();
 
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      justifyContent: "center",
-      alignItems: "center",
-      backgroundColor: "transparent",
+  const PROJECTS: any = [
+    {
+      year: "2021",
+      // data: ["French Fries", "Onion Rings", "Fried Shrimps"],
+      data: [
+        {
+          title: "Cross-Platform Digital Portfolio",
+          description: "My Project 1",
+          image: "",
+        },
+      ],
     },
-  });
+    {
+      year: "2020",
+      data: ["French Fries", "Onion Rings", "Fried Shrimps"],
+    },
+    {
+      year: "2019",
+      data: ["Water", "Coke", "Beer"],
+    },
+    {
+      year: "2018",
+      data: ["Cheese Cake", "Ice Cream"],
+    },
+  ];
 
-  const elemStyles = {
-    title: {
-      color: colors.text,
-    },
-  };
+  const Item = ({ projItem }: any) => (
+    <View style={styles.item}>
+      <Text style={styles.title}>{projItem.title}</Text>
+      <Text style={styles.desc}>{projItem.description}</Text>
+    </View>
+  );
 
   return (
     <View style={styles.container}>
-      <Icon
-        name="hard-hat"
-        size={30}
-        color={colors.text}
-        style={{ marginTop: 50 }}
+      <SectionList
+        sections={PROJECTS}
+        keyExtractor={(item, index): any => item}
+        renderItem={({ item }) => <Item projItem={item} />}
+        renderSectionHeader={({ section: { year } }) => (
+          <Text style={styles.header}>{year}</Text>
+        )}
       />
-      <Text h2 style={elemStyles.title}>
-        Projects
-      </Text>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    marginHorizontal: 16,
+  },
+  item: {
+    padding: 20,
+    marginVertical: 8,
+  },
+  header: {
+    fontSize: 27,
+    textAlign: "right",
+    paddingRight: 17,
+  },
+  title: {
+    fontSize: 21,
+  },
+  desc: {},
+});
