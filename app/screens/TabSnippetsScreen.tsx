@@ -34,6 +34,7 @@ export default function TabSnippetsScreen() {
       <Text h2 style={elemStyles.title}>
         Snippets
       </Text>
+      <Text style={elemStyles.title}>In Progress</Text>
     </View>
   );
 }

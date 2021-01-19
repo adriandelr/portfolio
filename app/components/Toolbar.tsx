@@ -52,7 +52,11 @@ export default function Toolbar() {
         style={{ marginRight: 7 }}
         solid
       />
-      <Switch value={isDark} onValueChange={toggleScheme} />
+      <Switch
+        value={isDark}
+        onValueChange={toggleScheme}
+        thumbColor={colors.error}
+      />
     </View>
   );
 }

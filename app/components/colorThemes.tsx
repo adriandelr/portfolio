@@ -15,5 +15,5 @@ export const darkColors = {
   primary: "dimgrey",
   text: "gainsboro",
   textGuide: "whitesmoke",
-  error: "darkslategrey",
+  error: "slategrey",
 };

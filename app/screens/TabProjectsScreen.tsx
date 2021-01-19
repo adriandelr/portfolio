@@ -20,10 +20,11 @@ export default function TabProjectsScreen() {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      paddingHorizontal: 7,
+      paddingHorizontal: 3,
     },
     section: {
       paddingTop: 7,
+      paddingHorizontal: Platform.OS === "web" ? "21%" : 0,
     },
     item: {
       padding: 21,
@@ -37,12 +38,12 @@ export default function TabProjectsScreen() {
       paddingRight: 17,
     },
     title: {
-      fontSize: 19,
+      fontSize: Platform.OS === "web" ? 27 : 19,
       color: colors.text,
       fontWeight: Platform.OS === "web" ? "normal" : "300",
     },
     desc: {
-      fontSize: 17,
+      fontSize: Platform.OS === "web" ? 14 : 17,
       color: colors.text,
     },
     time: {
@@ -70,7 +71,7 @@ export default function TabProjectsScreen() {
     btnLinkText: {
       color: colors.background,
       fontSize: 13,
-      fontWeight: "700",
+      fontWeight: Platform.OS === "web" ? "300" : "700",
     },
   });
 

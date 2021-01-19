@@ -110,8 +110,7 @@ export default function TabDevScreen({ navigation }: any) {
               color: colors.text,
               fontSize: 14,
               marginTop: 40,
-              paddingLeft: Platform.OS === "web" ? "10%" : "13%",
-              paddingRight: Platform.OS === "web" ? "10%" : "13%",
+              paddingHorizontal: Platform.OS === "web" ? "27%" : "13%",
             }}
             numberOfLines={0}
           >
