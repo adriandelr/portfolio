@@ -1,6 +1,6 @@
-import * as React from "react";
+import React, { useState } from "react";
 import { Platform, TouchableOpacity } from "react-native";
-import { ActivityIndicator, ScrollView, StyleSheet } from "react-native";
+import { ActivityIndicator, ScrollView, Image, StyleSheet } from "react-native";
 
 // import EditScreenInfo from "../components/EditScreenInfo";
 import { View } from "../components/Themed";
@@ -8,11 +8,13 @@ import { View } from "../components/Themed";
 // import { Appearance, useColorScheme } from "react-native-appearance";
 
 import { useTheme } from "../hooks/useThemeContext";
-import { Text, Image, colors as elementsColor } from "react-native-elements";
+import { Text, colors as elementsColor } from "react-native-elements";
 import Icon from "react-native-vector-icons/FontAwesome5";
 
 export default function TabDevScreen({ navigation }: any) {
-  const { setScheme, colors, isDark } = useTheme();
+  const { colors } = useTheme();
+
+  const [isLoading, setIsLoading] = useState(true);
 
   return (
     <View
@@ -42,6 +44,17 @@ export default function TabDevScreen({ navigation }: any) {
         />
       </TouchableOpacity>
 
+      <ActivityIndicator
+        style={{
+          position: "absolute",
+          top: Platform.OS === "web" ? 15 : 13,
+          right: Platform.OS === "web" ? 15 : 13,
+        }}
+        size={21}
+        color={colors.primary}
+        animating={isLoading}
+      />
+
       <ScrollView
         style={{
           top: 50,
@@ -52,28 +65,22 @@ export default function TabDevScreen({ navigation }: any) {
             paddingBottom: 117,
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor: "transparent",
+            backgroundColor: colors.background,
           }}
         >
           <Image
             source={require("../assets/images/az-logo.png")}
-            style={{ width: 192, height: 192, marginTop: 30, marginBottom: 50 }}
-            PlaceholderContent={
-              <ActivityIndicator
-                style={{
-                  position: "absolute",
-                  left: 0,
-                  right: 0,
-                  top: 0,
-                  bottom: 0,
-                  alignItems: "center",
-                  justifyContent: "center",
-                  backgroundColor: colors.background,
-                }}
-                animating={true}
-                color={colors.primary}
-              />
-            }
+            onLoadEnd={() => {
+              setTimeout(() => {
+                setIsLoading(false);
+              }, 700);
+            }}
+            style={{
+              width: 192,
+              height: 192,
+              marginTop: 30,
+              marginBottom: 50,
+            }}
           />
           {Platform.OS === "web" && (
             <Text
