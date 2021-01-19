@@ -1,6 +1,6 @@
 // Light theme colors
 export const lightColors = {
-  navBackground: "lightgray",
+  navBackground: "whitesmoke",
   background: "whitesmoke",
   primary: "dimgrey",
   text: "dimgrey",
@@ -10,7 +10,7 @@ export const lightColors = {
 
 // Dark theme colors
 export const darkColors = {
-  navBackground: "lightgray",
+  navBackground: "#101111",
   background: "#101111",
   primary: "dimgrey",
   text: "gainsboro",
