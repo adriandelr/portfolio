@@ -59,6 +59,7 @@ export default function TabDevScreen({ navigation }: any) {
         >
           <ActivityIndicator
             style={{
+              display: "none",
               top: 140,
             }}
             size={21}
