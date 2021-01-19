@@ -15,7 +15,7 @@ export default function TabProjectsScreen() {
       flex: 1,
       justifyContent: "center",
       alignItems: "center",
-      backgroundColor: colors.background,
+      backgroundColor: "transparent",
     },
   });
 

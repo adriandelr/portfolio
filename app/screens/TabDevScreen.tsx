@@ -20,7 +20,7 @@ export default function TabDevScreen({ navigation }: any) {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: colors.background,
+        backgroundColor: "transparent",
       }}
     >
       <TouchableOpacity
@@ -52,7 +52,7 @@ export default function TabDevScreen({ navigation }: any) {
             paddingBottom: 117,
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor: colors.background,
+            backgroundColor: "transparent",
           }}
         >
           <Image

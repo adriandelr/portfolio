@@ -77,6 +77,9 @@ export default function MainScreen() {
       }}
       edgeWidth={200}
       minSwipeDistance={10}
+      sceneContainerStyle={{
+        backgroundColor: "transparent",
+      }}
     >
       <Drawer.Screen
         name="Dev"

@@ -31,6 +31,7 @@ import {
   TabThreeParamList,
   TabFourParamList,
 } from "../types";
+// import { colors } from "react-native-elements";
 
 function SettingsScreen({ route, navigation }: any) {
   const { user } = route.params;
@@ -115,6 +116,12 @@ export default function Navigation({
           pressColor: "whitesmoke",
           allowFontScaling: false,
         }}
+        style={{
+          backgroundColor: colors.background,
+        }}
+        sceneContainerStyle={{
+          backgroundColor: "transparent",
+        }}
       >
         <TopTab.Screen
           name="TabDev"
@@ -169,6 +176,9 @@ function MainScreenTabNavigator() {
           title: dpTitle + "Dev",
           headerShown: false,
           headerTitle: "Tab One Title",
+          cardStyle: {
+            backgroundColor: "transparent",
+          },
         }}
       />
     </MainScreenTabStack.Navigator>
@@ -187,6 +197,9 @@ function DevTabNavigator() {
           title: dpTitle + "Dev",
           headerShown: false,
           headerTitle: "Tab One Title",
+          cardStyle: {
+            backgroundColor: "transparent",
+          },
         }}
       />
     </DevTabStack.Navigator>
@@ -205,6 +218,9 @@ function ProjectsTabNavigator() {
           title: dpTitle + "Projects",
           headerShown: false,
           headerTitle: "Tab Two Title",
+          cardStyle: {
+            backgroundColor: "transparent",
+          },
         }}
       />
     </ProjectsTabStack.Navigator>
@@ -223,6 +239,9 @@ function SnippetsTabNavigator() {
           title: dpTitle + "Snippets",
           headerShown: false,
           headerTitle: "Tab Two Title",
+          cardStyle: {
+            backgroundColor: "transparent",
+          },
         }}
       />
     </SnippetsTabStack.Navigator>
