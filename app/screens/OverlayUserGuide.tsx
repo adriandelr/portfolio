@@ -191,8 +191,7 @@ export default function WelcomeOverlay() {
                 textAlign: "center",
               }}
             >
-              Please have a quick look on the features, navigations, and
-              gestures.
+              Have a look on the features, navigations, and gestures.
             </Text>
             <Text
               style={{
