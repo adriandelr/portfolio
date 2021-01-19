@@ -14,7 +14,7 @@ import Icon from "react-native-vector-icons/FontAwesome5";
 export default function TabDevScreen({ navigation }: any) {
   const { colors } = useTheme();
 
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoaded, setIsLoaded] = useState(true);
 
   return (
     <View
@@ -44,17 +44,6 @@ export default function TabDevScreen({ navigation }: any) {
         />
       </TouchableOpacity>
 
-      <ActivityIndicator
-        style={{
-          position: "absolute",
-          top: Platform.OS === "web" ? 15 : 13,
-          right: Platform.OS === "web" ? 15 : 13,
-        }}
-        size={21}
-        color={colors.primary}
-        animating={isLoading}
-      />
-
       <ScrollView
         style={{
           top: 50,
@@ -68,12 +57,18 @@ export default function TabDevScreen({ navigation }: any) {
             backgroundColor: colors.background,
           }}
         >
+          <ActivityIndicator
+            style={{
+              top: 140,
+            }}
+            size={21}
+            color={colors.primary}
+            animating={isLoaded}
+          />
           <Image
             source={require("../assets/images/az-logo.png")}
             onLoadEnd={() => {
-              setTimeout(() => {
-                setIsLoading(false);
-              }, 700);
+              setIsLoaded(false);
             }}
             style={{
               width: 192,
