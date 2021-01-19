@@ -1,6 +1,4 @@
 import * as React from "react";
-import { Platform } from "react-native";
-import { StyleSheet } from "react-native";
 import {
   createDrawerNavigator,
   DrawerContentScrollView,
@@ -16,14 +14,11 @@ import {
 import TabDevScreen from "../screens/TabDevScreen";
 
 import { useTheme } from "../hooks/useThemeContext";
-import { Text, Image, colors as elementsColor } from "react-native-elements";
+import { Text } from "react-native-elements";
 import Icon from "react-native-vector-icons/Ionicons";
-import { ScrollView } from "react-native-gesture-handler";
-import { color } from "react-native-reanimated";
-// import { color } from "react-native-reanimated";
 
 export default function MainScreen() {
-  const { setScheme, colors, isDark } = useTheme();
+  const { colors } = useTheme();
 
   const navigation: any = useNavigation(),
     isFocused = useIsFocused();

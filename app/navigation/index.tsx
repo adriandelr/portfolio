@@ -1,99 +1,28 @@
-// import { Ionicons } from "@expo/vector-icons";
-import {
-  NavigationContainer,
-  DefaultTheme,
-  DarkTheme,
-} from "@react-navigation/native";
+import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { createDrawerNavigator } from "@react-navigation/drawer";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import * as React from "react";
-import { Button, View, Text, Platform, ColorSchemeName } from "react-native";
+import { Platform, ColorSchemeName } from "react-native";
 
-// import NotFoundScreen from "../screens/NotFoundScreen";
+import NotFoundScreen from "../screens/NotFoundScreen";
 import { RootStackParamList } from "../types";
-// import BottomTabNavigator from "./_BottomTabNavigator";
-// import MaterialTopTabNavigator from "./MaterialTopTabNavigator";
-// import LinkingConfiguration from "./LinkingConfiguration";
-
-// import { Appearance } from "react-native-appearance";
 
 import { useTheme } from "../hooks/useThemeContext";
 import Icon from "react-native-vector-icons/Ionicons";
 
 import TabMainScreen from "./MainScreen";
-import TabDevScreen from "../screens/TabDevScreen";
 import TabProjectsScreen from "../screens/TabProjectsScreen";
 import TabSnippetsScreen from "../screens/TabSnippetsScreen";
-import {
-  TabOneParamList,
-  TabTwoParamList,
-  TabThreeParamList,
-  TabFourParamList,
-} from "../types";
-// import { colors } from "react-native-elements";
+import { TabProjectsParamList, TabSnippetsParamList } from "../types";
 
-function SettingsScreen({ route, navigation }: any) {
-  const { user } = route.params;
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Settings Screen</Text>
-      <Text>userParam: {JSON.stringify(user)}</Text>
-      <Button title="Go to Dev" onPress={() => navigation.navigate("Dev")} />
-    </View>
-  );
-}
-
-function DevScreen({ navigation }: any) {
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Dev Screen</Text>
-      <Button
-        title="Go to Settings"
-        onPress={() => navigation.navigate("TabProjects")}
-      />
-    </View>
-  );
-}
-
-function HomeScreen({ navigation }: any) {
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Home Screen</Text>
-      <Button
-        title="Go to Settings"
-        onPress={() =>
-          navigation.navigate("Root", {
-            screen: "Settings",
-            params: { user: "jane" },
-          })
-        }
-      />
-    </View>
-  );
-}
-
-// A root stack navigator is often used for displaying modals on top of all other content
-// Read more here: https://reactnavigation.org/docs/modal
-const Stack = createStackNavigator<RootStackParamList>();
 const TopTab = createMaterialTopTabNavigator();
 
-function Root() {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen name="Root" component={DevScreen} />
-    </Stack.Navigator>
-  );
-}
-
-// If you are not familiar with React Navigation, we recommend going through the
-// "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
 export default function Navigation({
   colorScheme,
 }: {
   colorScheme: ColorSchemeName;
 }) {
-  const { setScheme, colors, isDark } = useTheme();
+  const { colors } = useTheme();
 
   return (
     <NavigationContainer>
@@ -164,7 +93,7 @@ function TabBarIcon(props: { name: string; color: string }) {
 
 let dpTitle = "Adrian del Rosario - ";
 
-const MainScreenTabStack = createStackNavigator<TabFourParamList>();
+const MainScreenTabStack = createStackNavigator<RootStackParamList>();
 
 function MainScreenTabNavigator() {
   return (
@@ -175,38 +104,21 @@ function MainScreenTabNavigator() {
         options={{
           title: dpTitle + "Dev",
           headerShown: false,
-          headerTitle: "Tab One Title",
           cardStyle: {
             backgroundColor: "transparent",
           },
         }}
+      />
+      <MainScreenTabStack.Screen
+        name="NotFound"
+        component={NotFoundScreen}
+        options={{ title: "Oops!" }}
       />
     </MainScreenTabStack.Navigator>
   );
 }
 
-const DevTabStack = createStackNavigator<TabOneParamList>();
-
-function DevTabNavigator() {
-  return (
-    <DevTabStack.Navigator>
-      <DevTabStack.Screen
-        name="TabDevScreen"
-        component={TabDevScreen}
-        options={{
-          title: dpTitle + "Dev",
-          headerShown: false,
-          headerTitle: "Tab One Title",
-          cardStyle: {
-            backgroundColor: "transparent",
-          },
-        }}
-      />
-    </DevTabStack.Navigator>
-  );
-}
-
-const ProjectsTabStack = createStackNavigator<TabTwoParamList>();
+const ProjectsTabStack = createStackNavigator<TabProjectsParamList>();
 
 function ProjectsTabNavigator() {
   return (
@@ -217,7 +129,6 @@ function ProjectsTabNavigator() {
         options={{
           title: dpTitle + "Projects",
           headerShown: false,
-          headerTitle: "Tab Two Title",
           cardStyle: {
             backgroundColor: "transparent",
           },
@@ -227,7 +138,7 @@ function ProjectsTabNavigator() {
   );
 }
 
-const SnippetsTabStack = createStackNavigator<TabThreeParamList>();
+const SnippetsTabStack = createStackNavigator<TabSnippetsParamList>();
 
 function SnippetsTabNavigator() {
   return (
@@ -238,7 +149,6 @@ function SnippetsTabNavigator() {
         options={{
           title: dpTitle + "Snippets",
           headerShown: false,
-          headerTitle: "Tab Two Title",
           cardStyle: {
             backgroundColor: "transparent",
           },
@@ -247,22 +157,3 @@ function SnippetsTabNavigator() {
     </SnippetsTabStack.Navigator>
   );
 }
-
-// function RootNavigator() {
-//   return (
-//     <Stack.Navigator screenOptions={{ headerShown: false }}>
-//       <Stack.Screen
-//         name="Root"
-//         // component={BottomTabNavigator}
-//         // component={MaterialTopTabNavigator}
-//         component={RootNavigator}
-//       />
-//       <Drawer.Screen name="TabDevScreen" component={TabDevScreen} />
-//       <Stack.Screen
-//         name="NotFound"
-//         component={NotFoundScreen}
-//         options={{ title: "Oops!" }}
-//       />
-//     </Stack.Navigator>
-//   );
-// }
