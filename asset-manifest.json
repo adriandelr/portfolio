@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/portfolio/static/js/app.107bf9b7.chunk.js",
-    "app.js.map": "/portfolio/static/js/app.107bf9b7.chunk.js.map",
+    "app.js": "/portfolio/static/js/app.068647f7.chunk.js",
+    "app.js.map": "/portfolio/static/js/app.068647f7.chunk.js.map",
     "runtime~app.js": "/portfolio/static/js/runtime~app.e3633d06.js",
     "runtime~app.js.map": "/portfolio/static/js/runtime~app.e3633d06.js.map",
-    "static/js/2.80fb0599.chunk.js": "/portfolio/static/js/2.80fb0599.chunk.js",
-    "static/js/2.80fb0599.chunk.js.map": "/portfolio/static/js/2.80fb0599.chunk.js.map",
+    "static/js/2.3519b3c4.chunk.js": "/portfolio/static/js/2.3519b3c4.chunk.js",
+    "static/js/2.3519b3c4.chunk.js.map": "/portfolio/static/js/2.3519b3c4.chunk.js.map",
     "fonts/AntDesign.ttf": "/portfolio/./fonts/AntDesign.ttf",
     "fonts/Entypo.ttf": "/portfolio/./fonts/Entypo.ttf",
     "fonts/Feather.ttf": "/portfolio/./fonts/Feather.ttf",
@@ -25,16 +25,23 @@
     "index.html": "/portfolio/index.html",
     "manifest.json": "/portfolio/manifest.json",
     "serve.json": "/portfolio/serve.json",
-    "static/js/2.80fb0599.chunk.js.LICENSE.txt": "/portfolio/static/js/2.80fb0599.chunk.js.LICENSE.txt",
+    "static/js/2.3519b3c4.chunk.js.LICENSE.txt": "/portfolio/static/js/2.3519b3c4.chunk.js.LICENSE.txt",
     "static/media/az-logo.png": "/portfolio/static/media/az-logo.1a07737f.png",
+    "static/media/az-proj.png": "/portfolio/static/media/az-proj.3966a7c7.png",
     "static/media/bell.png": "/portfolio/static/media/bell.cf04af27.png",
     "static/media/heart.png": "/portfolio/static/media/heart.23b5c2c0.png",
+    "static/media/proj-acn.png": "/portfolio/static/media/proj-acn.ce1a887d.png",
+    "static/media/proj-avo.png": "/portfolio/static/media/proj-avo.56d3b876.png",
+    "static/media/proj-cata.png": "/portfolio/static/media/proj-cata.706fbbe0.png",
+    "static/media/proj-hmc.png": "/portfolio/static/media/proj-hmc.9fc7a164.png",
+    "static/media/proj-ibm.png": "/portfolio/static/media/proj-ibm.ffd5f01f.png",
+    "static/media/proj-wo.png": "/portfolio/static/media/proj-wo.c45f277a.png",
     "static/media/rocket.png": "/portfolio/static/media/rocket.d2f3bf41.png",
     "static/media/star.png": "/portfolio/static/media/star.69c71386.png"
   },
   "entrypoints": [
     "static/js/runtime~app.e3633d06.js",
-    "static/js/2.80fb0599.chunk.js",
-    "static/js/app.107bf9b7.chunk.js"
+    "static/js/2.3519b3c4.chunk.js",
+    "static/js/app.068647f7.chunk.js"
   ]
 }
