@@ -9,6 +9,7 @@ import {
 import { Text, Overlay } from "react-native-elements";
 
 import Modal from "modal-react-native-web";
+import Layout from "../constants/Layout";
 
 import { useTheme } from "../hooks/useThemeContext";
 import Icon from "react-native-vector-icons/FontAwesome5";
@@ -391,10 +392,10 @@ export default function WelcomeOverlay() {
             backgroundColor: colors.background,
             opacity: 0.97,
             position: "absolute",
-            top: 120,
+            top: Platform.OS === "web" ? 120 : 95,
             left: 0,
-            width: "100%",
-            height: "70%",
+            width: Layout.window.width,
+            height: Layout.window.height - 203,
           }}
         ></View>
       )}
