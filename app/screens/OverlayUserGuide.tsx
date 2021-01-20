@@ -117,6 +117,7 @@ export default function WelcomeOverlay() {
         onPress={toggleOverlay}
         style={{
           flexDirection: "row",
+          top: Platform.OS === "ios" ? 50 : 0,
         }}
       >
         <Icon
