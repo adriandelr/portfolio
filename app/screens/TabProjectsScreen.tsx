@@ -1,19 +1,15 @@
 import React, { useCallback } from "react";
 import {
-  Alert,
-  Button,
-  Linking,
   StyleSheet,
   Text,
   Image,
   View,
   SectionList,
   Platform,
-  TouchableOpacity,
 } from "react-native";
 
 import { useTheme } from "../hooks/useThemeContext";
-import Icon from "react-native-vector-icons/FontAwesome5";
+import Linker from "../components/Linker";
 
 export default function TabProjectsScreen() {
   const { colors } = useTheme();
@@ -54,24 +50,6 @@ export default function TabProjectsScreen() {
       fontSize: 13,
       color: colors.error,
       marginTop: 13,
-    },
-    btnLink: {
-      flex: 1,
-      alignItems: "center",
-      justifyContent: "center",
-      width: 170,
-      height: 44,
-      backgroundColor: colors.error,
-      marginTop: 17,
-      elevation: 8,
-      borderRadius: 3,
-      paddingVertical: 7,
-      paddingHorizontal: 13,
-    },
-    btnLinkText: {
-      color: colors.background,
-      fontSize: 13,
-      fontWeight: Platform.OS === "web" ? "300" : "700",
     },
   });
 
@@ -176,28 +154,6 @@ export default function TabProjectsScreen() {
   const resumeURL =
     "https://drive.google.com/file/d/1MX6I97C9fx8CTzV5YQhRPwYdyAEjsyhm/view?usp=sharing";
 
-  const OpenURLButton = ({ url, text, color }: any) => {
-    const openLink = useCallback(async () => {
-      const supported = await Linking.canOpenURL(url);
-
-      if (supported) {
-        if (Platform.OS == "web") {
-          window.open(url, "_blank");
-        } else {
-          await Linking.openURL(url);
-        }
-      } else {
-        Alert.alert(`Invalid URL: ${url}`);
-      }
-    }, [url]);
-
-    return (
-      <TouchableOpacity onPress={openLink} style={styles.btnLink}>
-        <Text style={styles.btnLinkText}>{text}</Text>
-      </TouchableOpacity>
-    );
-  };
-
   const Item = ({ projItem }: any) => (
     <View style={styles.item}>
       <Text style={styles.title}>{projItem.title}</Text>
@@ -214,18 +170,10 @@ export default function TabProjectsScreen() {
       />
       <Text style={styles.desc}>{projItem.description}</Text>
       {projItem.showResume && (
-        <OpenURLButton url={resumeURL} text="Open Resume" color="#D3D3D3">
-          Open Resume
-        </OpenURLButton>
+        <Linker url={resumeURL} text="Open Resume" color="#D3D3D3" />
       )}
       {projItem.storeLink && (
-        <OpenURLButton
-          url={projItem.storeLink}
-          text="Store Link"
-          color="#D3D3D3"
-        >
-          Store Link
-        </OpenURLButton>
+        <Linker url={projItem.storeLink} text="Store Link" color="#D3D3D3" />
       )}
       <Text style={styles.date}>{projItem.date}</Text>
     </View>
