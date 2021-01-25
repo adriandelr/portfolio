@@ -171,7 +171,7 @@ export default function WelcomeOverlay() {
                 color: colors.textGuide,
                 fontSize: 23,
                 position: "absolute",
-                top: "27%",
+                top: Layout.isSmallDevice ? "37%" : "27%",
                 flex: 1,
                 alignSelf: "center",
                 fontWeight: "700",
@@ -184,22 +184,7 @@ export default function WelcomeOverlay() {
                 color: colors.textGuide,
                 fontSize: 13,
                 position: "absolute",
-                top: "29%",
-                flex: 1,
-                alignSelf: "center",
-                fontWeight: "300",
-                padding: "7%",
-                textAlign: "center",
-              }}
-            >
-              Have a look on the features, navigations, and gestures.
-            </Text>
-            <Text
-              style={{
-                color: colors.textGuide,
-                fontSize: 13,
-                position: "absolute",
-                top: "39%",
+                top: Layout.isSmallDevice ? "39%" : "23%",
                 flex: 1,
                 alignSelf: "center",
                 fontWeight: "300",
@@ -208,6 +193,21 @@ export default function WelcomeOverlay() {
               }}
             >
               Tap anywhere to dismiss.
+            </Text>
+            <Text
+              style={{
+                color: colors.textGuide,
+                fontSize: 13,
+                position: "absolute",
+                top: Layout.isSmallDevice ? "43%" : "29%",
+                flex: 1,
+                alignSelf: "center",
+                fontWeight: "300",
+                padding: "7%",
+                textAlign: "center",
+              }}
+            >
+              Have a look on the features, navigations, and gestures.
             </Text>
             <View
               style={{
@@ -254,7 +254,11 @@ export default function WelcomeOverlay() {
                 solid
               />
               <Text
-                style={{ color: colors.textGuide, fontSize: 13, width: "30%" }}
+                style={{
+                  color: colors.textGuide,
+                  fontSize: 13,
+                  width: Layout.isSmallerDevice ? "73%" : "30%",
+                }}
               >
                 Toggle Side Menu on the first page
               </Text>
@@ -342,7 +346,11 @@ export default function WelcomeOverlay() {
                 style={{
                   position: "absolute",
                   top: 90,
-                  marginLeft: 370,
+                  marginLeft: Layout.isSmallDevice
+                    ? Layout.isSmallerDevice
+                      ? 210
+                      : 300
+                    : 370,
                   flex: 1,
                   alignItems: "flex-start",
                   alignSelf: "center",

@@ -10,6 +10,7 @@ import {
 
 import { useTheme } from "../hooks/useThemeContext";
 import Linker from "../components/Linker";
+import Layout from "../constants/Layout";
 
 export default function TabProjectsScreen() {
   const { colors } = useTheme();
@@ -20,7 +21,8 @@ export default function TabProjectsScreen() {
     },
     section: {
       paddingTop: 7,
-      paddingHorizontal: Platform.OS === "web" ? "21%" : 0,
+      paddingHorizontal:
+        Platform.OS === "web" ? (Layout.isSmallDevice ? "0%" : "21%") : 0,
     },
     item: {
       padding: 21,

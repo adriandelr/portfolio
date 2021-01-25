@@ -3,6 +3,8 @@ import { Platform, TouchableOpacity } from "react-native";
 import { ActivityIndicator, View, ScrollView, Image } from "react-native";
 
 import { useTheme } from "../hooks/useThemeContext";
+import Layout from "../constants/Layout";
+
 import Linker from "../components/Linker";
 import { Text } from "react-native-elements";
 import Icon from "react-native-vector-icons/FontAwesome5";
@@ -114,7 +116,12 @@ export default function TabDevScreen({ navigation }: any) {
               color: colors.text,
               fontSize: 14,
               marginTop: 40,
-              paddingHorizontal: Platform.OS === "web" ? "27%" : "13%",
+              paddingHorizontal:
+                Platform.OS === "web"
+                  ? Layout.isSmallDevice
+                    ? "7%"
+                    : "27%"
+                  : "13%",
             }}
             numberOfLines={0}
           >
@@ -144,7 +151,12 @@ export default function TabDevScreen({ navigation }: any) {
                 color: colors.text,
                 fontSize: 14,
                 marginTop: 40,
-                paddingHorizontal: Platform.OS === "web" ? "27%" : "13%",
+                paddingHorizontal:
+                  Platform.OS === "web"
+                    ? Layout.isSmallDevice
+                      ? "7%"
+                      : "27%"
+                    : "13%",
               }}
             >
               {
@@ -178,7 +190,12 @@ export default function TabDevScreen({ navigation }: any) {
                 color: colors.text,
                 fontSize: 14,
                 marginTop: 30,
-                paddingHorizontal: Platform.OS === "web" ? "27%" : "13%",
+                paddingHorizontal:
+                  Platform.OS === "web"
+                    ? Layout.isSmallDevice
+                      ? "7%"
+                      : "27%"
+                    : "13%",
               }}
             >
               {
