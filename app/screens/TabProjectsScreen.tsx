@@ -127,6 +127,7 @@ export default function TabProjectsScreen() {
           height: Platform.OS === "web" ? 370 : 190,
           marginVertical: 7,
           backgroundColor: colors.error,
+          opacity: 0.9,
         }}
         resizeMode={"contain"}
       />
