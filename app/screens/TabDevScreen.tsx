@@ -1,6 +1,12 @@
 import React, { useState } from "react";
-import { Platform, TouchableOpacity } from "react-native";
-import { ActivityIndicator, View, ScrollView, Image } from "react-native";
+import {
+  ActivityIndicator,
+  View,
+  ScrollView,
+  Image,
+  Platform,
+  TouchableOpacity,
+} from "react-native";
 
 import { useTheme } from "../hooks/useThemeContext";
 import Layout from "../constants/Layout";

@@ -2,13 +2,13 @@ import React, { useCallback } from "react";
 import {
   Alert,
   Platform,
+  Text,
   StyleSheet,
   Linking,
   TouchableOpacity,
 } from "react-native";
 
 import { useTheme } from "../hooks/useThemeContext";
-import { Text } from "react-native-elements";
 
 export default function Linker({
   url,
