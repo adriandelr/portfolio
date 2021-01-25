@@ -34,7 +34,10 @@ export default function Navigation({
         swipeVelocityImpact={0.3}
         tabBarOptions={{
           activeTintColor: colors.primary,
-          style: { backgroundColor: colors.navBackground },
+          style: {
+            backgroundColor:
+              Platform.OS === "web" ? colors.navBackground : colors.background,
+          },
           showIcon: true,
           indicatorStyle: {
             backgroundColor: colors.primary,

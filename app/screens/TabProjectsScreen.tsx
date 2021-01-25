@@ -14,46 +14,6 @@ import Layout from "../constants/Layout";
 
 export default function TabProjectsScreen() {
   const { colors } = useTheme();
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      paddingHorizontal: 3,
-    },
-    section: {
-      paddingTop: 7,
-      paddingHorizontal:
-        Platform.OS === "web" ? (Layout.isSmallDevice ? "0%" : "21%") : 0,
-    },
-    item: {
-      padding: 21,
-      marginVertical: 17,
-    },
-    header: {
-      display: "none",
-      fontSize: 13,
-      color: colors.error,
-      textAlign: "right",
-      paddingRight: 17,
-    },
-    title: {
-      fontSize: Platform.OS === "web" ? 27 : 19,
-      color: colors.text,
-      fontWeight: Platform.OS === "web" ? "normal" : "300",
-    },
-    desc: {
-      fontSize: Platform.OS === "web" ? 14 : 17,
-      color: colors.text,
-    },
-    time: {
-      fontSize: 13,
-      color: colors.error,
-    },
-    date: {
-      fontSize: 13,
-      color: colors.error,
-      marginTop: 13,
-    },
-  });
 
   const PROJECTS: any = [
     {
@@ -180,6 +140,47 @@ export default function TabProjectsScreen() {
       <Text style={styles.date}>{projItem.date}</Text>
     </View>
   );
+
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      paddingHorizontal: 3,
+    },
+    section: {
+      paddingTop: 7,
+      paddingHorizontal:
+        Platform.OS === "web" ? (Layout.isSmallDevice ? "0%" : "21%") : 0,
+    },
+    item: {
+      padding: 21,
+      marginVertical: 17,
+    },
+    header: {
+      display: "none",
+      fontSize: 13,
+      color: colors.error,
+      textAlign: "right",
+      paddingRight: 17,
+    },
+    title: {
+      fontSize: Platform.OS === "web" ? 27 : 19,
+      color: colors.text,
+      fontWeight: Platform.OS === "web" ? "normal" : "300",
+    },
+    desc: {
+      fontSize: Platform.OS === "web" ? 14 : 17,
+      color: colors.text,
+    },
+    time: {
+      fontSize: 13,
+      color: colors.error,
+    },
+    date: {
+      fontSize: 13,
+      color: colors.error,
+      marginTop: 13,
+    },
+  });
 
   return (
     <View style={styles.container}>

@@ -129,7 +129,6 @@ export default function TabDevScreen({ navigation }: any) {
                     : "27%"
                   : "13%",
             }}
-            numberOfLines={0}
           >
             Adrian is a Web Developer focused on developing Web Applications
             using Front-end Web Technologies.
