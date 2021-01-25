@@ -17,7 +17,7 @@ import Icon from "react-native-vector-icons/FontAwesome5";
 
 export default function TabDevScreen({ navigation }: any) {
   const { colors } = useTheme(),
-    [isLoaded, setIsLoaded] = useState(true),
+    [isLoaded, setIsLoaded] = useState(false),
     expoAppStoreURL = "https://apps.apple.com/ph/app/expo-client/id982107779",
     expoPlayStoreURL =
       "https://play.google.com/store/apps/details?id=host.exp.exponent",
@@ -53,6 +53,7 @@ export default function TabDevScreen({ navigation }: any) {
       </TouchableOpacity>
 
       <ScrollView
+        showsVerticalScrollIndicator={false}
         style={{
           top: 50,
         }}
@@ -72,12 +73,12 @@ export default function TabDevScreen({ navigation }: any) {
             }}
             size={21}
             color={colors.primary}
-            animating={isLoaded}
+            animating={!isLoaded}
           />
           <Image
             source={require("../assets/images/az-logo.png")}
             onLoadEnd={() => {
-              setIsLoaded(false);
+              setIsLoaded(true);
             }}
             style={{
               width: 192,
