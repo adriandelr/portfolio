@@ -83,6 +83,7 @@ export default function TabDevScreen({ navigation }: any) {
               height: 192,
               marginTop: 30,
               marginBottom: 50,
+              opacity: 0.7,
             }}
           />
           {Platform.OS === "web" && (

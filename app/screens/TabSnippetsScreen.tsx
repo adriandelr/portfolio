@@ -32,6 +32,14 @@ export default function TabSnippetsScreen() {
           content:
             "Agile is a general approach to project management, whereas scrum is just one of the different ways to practice agile. Agile is a set of guiding principles and ideals, but it doesn't say how exactly those values should be implemented. Scrum is a framework that provides specific rules for getting things done.",
         },
+        {
+          title: "Productivity Tools",
+          content: "Content...",
+        },
+        {
+          title: "Work References",
+          content: "Content...",
+        },
       ],
     },
     {
@@ -65,14 +73,29 @@ export default function TabSnippetsScreen() {
       ],
     },
     {
-      title: "Hybrid Frameworks",
+      title: "React Native",
       data: [
         {
           title: "React",
+          content: "React Native Dark Mode Done Right!",
+          link:
+            "https://medium.com/@ratebseirawan/react-native-dark-mode-done-right-13f83b39a4ca",
+        },
+        {
+          title: "Platform Packages",
+          content: "Content...",
+        },
+      ],
+    },
+    {
+      title: "Ionic",
+      data: [
+        {
+          title: "Ionic",
           content: "Content...",
         },
         {
-          title: "Ionic",
+          title: "Platform Packages",
           content: "Content...",
         },
       ],
@@ -125,13 +148,15 @@ export default function TabSnippetsScreen() {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      paddingHorizontal: 50,
+      paddingHorizontal: 13,
     },
-    section: {},
+    section: {
+      paddingHorizontal: 37,
+    },
     header: {
       fontSize: 17,
       color: colors.error,
-      marginTop: 40,
+      marginTop: 20,
     },
     item: {
       width: "100%",
@@ -139,9 +164,10 @@ export default function TabSnippetsScreen() {
       justifyContent: "center",
       paddingLeft: 7,
       paddingRight: 37,
+      marginTop: 7,
+      marginBottom: 13,
       borderWidth: 1,
       borderColor: colors.snipBorder,
-      marginTop: 17,
       overflow: "hidden",
       backgroundColor: colors.snipItemBackground,
     },
