@@ -6,14 +6,15 @@ import { Platform, ColorSchemeName } from "react-native";
 
 import NotFoundScreen from "../screens/NotFoundScreen";
 import { RootStackParamList } from "../types";
-
-import { useTheme } from "../hooks/useThemeContext";
-import Icon from "react-native-vector-icons/Ionicons";
-
 import TabMainScreen from "./MainScreen";
 import TabProjectsScreen from "../screens/TabProjectsScreen";
 import TabSnippetsScreen from "../screens/TabSnippetsScreen";
 import { TabProjectsParamList, TabSnippetsParamList } from "../types";
+
+import { useTheme } from "../hooks/useThemeContext";
+import Layout from "../constants/Layout";
+
+import Icon from "react-native-vector-icons/Ionicons";
 
 const TopTab = createMaterialTopTabNavigator();
 
@@ -28,7 +29,9 @@ export default function Navigation({
     <NavigationContainer>
       <TopTab.Navigator
         initialRouteName="TabDev"
-        tabBarPosition={Platform.OS === "web" ? "top" : "bottom"}
+        tabBarPosition={
+          Platform.OS === "web" && !Layout.isSmallDevice ? "top" : "bottom"
+        }
         lazy={true}
         lazyPreloadDistance={0.3}
         swipeVelocityImpact={0.3}

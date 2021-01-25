@@ -11,6 +11,7 @@ import {
 } from "react-native";
 
 import { useTheme } from "../hooks/useThemeContext";
+import Layout from "../constants/Layout";
 
 import Icon from "react-native-vector-icons/FontAwesome5";
 
@@ -112,7 +113,10 @@ export default function TabSnippetsScreen() {
 
     return (
       <TouchableOpacity
-        style={[styles.item, !open && { height: 40 }]}
+        style={[
+          styles.item,
+          !open && { height: Platform.OS === "web" ? 33 : 44 },
+        ]}
         onPress={toggleAccordion}
         activeOpacity={1}
       >
@@ -125,11 +129,11 @@ export default function TabSnippetsScreen() {
         <Icon
           name="chevron-left"
           style={{
-            fontSize: 14,
+            fontSize: Platform.OS === "web" ? 11 : 14,
             color: colors.error,
             position: "absolute",
-            top: Platform.OS === "web" ? 13 : 12,
-            right: Platform.OS === "web" ? 13 : 12,
+            top: Platform.OS === "web" ? 10 : 14,
+            right: Platform.OS === "web" ? 10 : 14,
             alignSelf: "flex-end",
             justifyContent: "center",
             transform: open ? [{ rotate: "-90deg" }] : [{ rotate: "0deg" }],
@@ -148,10 +152,12 @@ export default function TabSnippetsScreen() {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      paddingHorizontal: 13,
+      paddingHorizontal: 3,
     },
     section: {
-      paddingHorizontal: 37,
+      paddingHorizontal:
+        Platform.OS === "web" ? (Layout.isSmallDevice ? "7%" : "21%") : 47,
+      paddingBottom: 7,
     },
     header: {
       fontSize: 17,

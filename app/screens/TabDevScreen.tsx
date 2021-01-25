@@ -29,6 +29,7 @@ export default function TabDevScreen({ navigation }: any) {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
+        paddingHorizontal: 3,
         backgroundColor: "transparent",
       }}
     >
