@@ -53,7 +53,6 @@ export default function TabDevScreen({ navigation }: any) {
       </TouchableOpacity>
 
       <ScrollView
-        showsVerticalScrollIndicator={false}
         style={{
           top: 50,
         }}

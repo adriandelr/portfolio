@@ -193,7 +193,6 @@ export default function TabProjectsScreen() {
           <Text style={styles.header}>{year}</Text>
         )}
         style={styles.section}
-        showsVerticalScrollIndicator={Platform.OS === "web" ? false : true}
       />
     </View>
   );

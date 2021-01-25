@@ -199,7 +199,6 @@ export default function TabSnippetsScreen() {
           <Text style={styles.header}>{title}</Text>
         )}
         style={styles.section}
-        showsVerticalScrollIndicator={Platform.OS === "web" ? false : true}
       />
     </View>
   );
