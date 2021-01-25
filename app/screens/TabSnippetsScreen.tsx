@@ -11,11 +11,8 @@ import {
 } from "react-native";
 
 import { useTheme } from "../hooks/useThemeContext";
-import Layout from "../constants/Layout";
 
-import { Image, colors as elementsColor } from "react-native-elements";
 import Icon from "react-native-vector-icons/FontAwesome5";
-import { color } from "react-native-reanimated";
 
 if (Platform.OS === "android") {
   if (UIManager.setLayoutAnimationEnabledExperimental) {
@@ -61,8 +58,22 @@ export default function TabSnippetsScreen() {
       data: [
         {
           title: "Common Screen Resolution",
-          content: "Content...",
+          content:
+            "Website Dimensions: These Are The Most Common Screen Resolutions To Design For",
           link: "https://www.designrush.com/trends/website-dimensions",
+        },
+      ],
+    },
+    {
+      title: "Hybrid Frameworks",
+      data: [
+        {
+          title: "React",
+          content: "Content...",
+        },
+        {
+          title: "Ionic",
+          content: "Content...",
         },
       ],
     },
@@ -88,6 +99,20 @@ export default function TabSnippetsScreen() {
         >
           {snipItem.title}
         </Text>
+        <Icon
+          name="chevron-left"
+          style={{
+            fontSize: 14,
+            color: colors.error,
+            position: "absolute",
+            top: Platform.OS === "web" ? 13 : 12,
+            right: Platform.OS === "web" ? 13 : 12,
+            alignSelf: "flex-end",
+            justifyContent: "center",
+            transform: open ? [{ rotate: "-90deg" }] : [{ rotate: "0deg" }],
+            opacity: open ? 0.7 : 0.9,
+          }}
+        />
         {open && (
           <View>
             <Text style={styles.content}>{snipItem.content}</Text>
