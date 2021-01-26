@@ -177,24 +177,26 @@ export default function TabProjectsScreen() {
     <View style={styles.item}>
       <Text style={styles.title}>{projItem.title}</Text>
       <Text style={styles.time}>{projItem.time}</Text>
-      <TouchableWithoutFeedback
-        onPress={() => {
-          setOpen(true);
-          setImages(projItem.images);
-        }}
-      >
-        <Image
-          source={projItem.images[0].props.source}
-          style={{
-            width: "100%",
-            height: Platform.OS === "web" ? 370 : Layout.window.width - 70,
-            marginVertical: 7,
-            backgroundColor: "black",
-            opacity: 0.9,
+      <View pointerEvents={Platform.OS === "web" ? "none" : "auto"}>
+        <TouchableWithoutFeedback
+          onPress={() => {
+            setOpen(true);
+            setImages(projItem.images);
           }}
-          resizeMode={"contain"}
-        />
-      </TouchableWithoutFeedback>
+        >
+          <Image
+            source={projItem.images[0].props.source}
+            style={{
+              width: "100%",
+              height: Platform.OS === "web" ? 370 : Layout.window.width - 70,
+              marginVertical: 7,
+              backgroundColor: "black",
+              opacity: 0.9,
+            }}
+            resizeMode={"contain"}
+          />
+        </TouchableWithoutFeedback>
+      </View>
       <Text style={styles.desc}>{projItem.description}</Text>
       {projItem.showResume && (
         <Linker url={resumeURL} text="Open Resume" color={colors.link} />
