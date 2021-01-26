@@ -54,14 +54,13 @@ export default function Linker({
         fontWeight: Platform.OS === "web" ? "normal" : "300",
       }}
       buttonStyle={{
-        flex: 1,
         alignItems: "center",
         justifyContent: "center",
         width: 170,
         height: 37,
         backgroundColor: colors.error,
         marginTop: 3,
-        marginBottom: 13,
+        marginBottom: 7,
         elevation: 0.3,
         borderRadius: 3,
         paddingVertical: 7,
