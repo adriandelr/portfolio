@@ -133,10 +133,14 @@ export default function TabProjectsScreen() {
       />
       <Text style={styles.desc}>{projItem.description}</Text>
       {projItem.showResume && (
-        <Linker url={resumeURL} text="Open Resume" color="#D3D3D3" />
+        <Linker url={resumeURL} text="Open Resume" color={colors.link} />
       )}
       {projItem.storeLink && (
-        <Linker url={projItem.storeLink} text="Store Link" color="#D3D3D3" />
+        <Linker
+          url={projItem.storeLink}
+          text="Store Link"
+          color={colors.link}
+        />
       )}
       <Text style={styles.date}>{projItem.date}</Text>
     </View>
@@ -171,6 +175,7 @@ export default function TabProjectsScreen() {
     desc: {
       fontSize: Platform.OS === "web" ? 14 : 17,
       color: colors.text,
+      marginBottom: 17,
     },
     time: {
       fontSize: 13,

@@ -9,6 +9,7 @@ export const lightColors = {
   textGuide: "whitesmoke",
   textSnipTitle: "grey",
   textSnipContent: "dimgrey",
+  link: "#D3D3D3",
   error: "slategrey",
 };
 
@@ -23,5 +24,6 @@ export const darkColors = {
   textGuide: "whitesmoke",
   textSnipTitle: "darkgray",
   textSnipContent: "silver",
+  link: "#D3D3D3",
   error: "slategrey",
 };
