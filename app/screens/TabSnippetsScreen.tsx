@@ -155,11 +155,11 @@ Notable Packages
         },
         {
           title:
-            "10 Awesome React Native UI Component Libraries You Should Know",
+            "The 5 React Native Component Libraries You Should Know in 2018",
           content:
-            "With the increase in the demand for mobile applications, a large number of enterprises are shifting their focus towards mobile app development. Introduction of new technologies, platforms, and frameworks is allowing mobile app developers to create revolutionary mobile apps. Cross-Platform App Development has gained a lot of popularity in recent times as it enables developers to develop apps for multiple platforms like Android, iOS, Windows with a single code base.",
+            "Until 2018 we have much many different design pattern and component for React Native but on all of the list, I think this 5 case very important to learn and use in your app.",
           link:
-            "https://medium.com/javascript-in-plain-english/10-awesome-react-native-ui-component-libraries-you-should-know-cd3296d99c0b",
+            "https://medium.com/@aras.emami/the-5-react-native-component-libraries-you-should-know-in-2018-f0520d7eb99f",
         },
         {
           title: "React Native Dark Mode Done Right!",
@@ -167,6 +167,14 @@ Notable Packages
             "A dead-simple approach to theming and dark mode in react native.",
           link:
             "https://medium.com/@ratebseirawan/react-native-dark-mode-done-right-13f83b39a4ca",
+        },
+        {
+          title:
+            "10 Awesome React Native UI Component Libraries You Should Know",
+          content:
+            "With the increase in the demand for mobile applications, a large number of enterprises are shifting their focus towards mobile app development. Introduction of new technologies, platforms, and frameworks is allowing mobile app developers to create revolutionary mobile apps. Cross-Platform App Development has gained a lot of popularity in recent times as it enables developers to develop apps for multiple platforms like Android, iOS, Windows with a single code base.",
+          link:
+            "https://medium.com/javascript-in-plain-english/10-awesome-react-native-ui-component-libraries-you-should-know-cd3296d99c0b",
         },
         {
           title:
