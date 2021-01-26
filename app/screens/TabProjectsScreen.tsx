@@ -1,16 +1,22 @@
-import React, { useCallback } from "react";
+import React, { useState } from "react";
 import {
-  StyleSheet,
+  Alert,
   Text,
   Image,
+  Modal,
+  StyleSheet,
   View,
   SectionList,
   Platform,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
 } from "react-native";
 
 import { useTheme } from "../hooks/useThemeContext";
 import Linker from "../components/Linker";
 import Layout from "../constants/Layout";
+
+import ImageViewer from "react-native-image-zoom-viewer";
 
 export default function TabProjectsScreen() {
   const { colors } = useTheme();
@@ -25,7 +31,14 @@ export default function TabProjectsScreen() {
             "New year, new app! \n\nMy very own Digital Portfolio, made using React Native by Facebook.",
           time: "1 month",
           date: "Jan 2021",
-          image: require("../assets/images/projects/az-proj.png"),
+          images: [
+            {
+              url: "",
+              props: {
+                source: require("../assets/images/projects/az-proj.png"),
+              },
+            },
+          ],
         },
       ],
     },
@@ -38,7 +51,14 @@ export default function TabProjectsScreen() {
             "In a remote setup, I was mainly in charge of the mobile app’s front end maintenance, bug fixes, and testing of the company’s existing platform. \n\nRegular discussion of improvement with the President / Chief Marketing Officer, and IT Manager to make sure we are always intact with our client’s requirements. \n\nConstant team communication via email, and skype in an Agile setting. Lately, adding Scrum to it. Additionally, I have recruited, and trained two developers that helped us in our development. \n\nFor more details, please see Resume, and Store Links.",
           time: "2 years 7 months",
           date: "Sept 2017 - Mar 2020",
-          image: require("../assets/images/projects/proj-hmc.png"),
+          images: [
+            {
+              url: "",
+              props: {
+                source: require("../assets/images/projects/proj-hmc.png"),
+              },
+            },
+          ],
           showResume: true,
           storeLink:
             "https://play.google.com/store/apps/developer?id=Hospitality+Marketing+Concepts",
@@ -54,7 +74,14 @@ export default function TabProjectsScreen() {
             "‣ Large Restaurant Chain and International Franchise in US \n‣ Toll Highway Administrative Agency in US \n‣ Public Housing Agency Provider in Hong Kong \n‣ British Multinational Telecommunications Company in UK \n‣ Work Schedule Management Application in Internal Business Development \n‣ Presentation Management Application in Internal Business Development \n‣ Facilitation of AngularJS training \n‣ Estimation on Agile Sprint Complexity \n‣ Brown Bag Compilation \n‣ Global Law Firm in US \n\nFor more details, please see Resume link.",
           time: "2 years 5 months",
           date: "Dec 2014 - April 2017",
-          image: require("../assets/images/projects/proj-acn.png"),
+          images: [
+            {
+              url: "",
+              props: {
+                source: require("../assets/images/projects/proj-acn.png"),
+              },
+            },
+          ],
           showResume: true,
         },
       ],
@@ -68,7 +95,14 @@ export default function TabProjectsScreen() {
             "R&D on various website features using Agile Method and Frameworks such as: CodeIgniter and Wordpress while observing proper responsive web design. \n\nWorked on a location-based mobile marketing service, an advanced, complete Anti-Theft Technology for mobile phones, and a social media website that utilizes Youtube and social media login APIs.",
           time: "1 year",
           date: "Sep 2013 - Aug 2014",
-          image: require("../assets/images/projects/proj-wo.png"),
+          images: [
+            {
+              url: "",
+              props: {
+                source: require("../assets/images/projects/proj-wo.png"),
+              },
+            },
+          ],
         },
       ],
     },
@@ -81,7 +115,14 @@ export default function TabProjectsScreen() {
             "Designed and organized banners, posters, slogans, prints, and documents for formal events. \n\nProduced video slides and presentations for company news and events updates.",
           time: "6 months",
           date: " Jun - Dec 2012",
-          image: require("../assets/images/projects/proj-ibm.png"),
+          images: [
+            {
+              url: "",
+              props: {
+                source: require("../assets/images/projects/proj-ibm.png"),
+              },
+            },
+          ],
         },
       ],
     },
@@ -94,7 +135,14 @@ export default function TabProjectsScreen() {
             "Redesigned and redeveloped the old flash site to the modern web standard with SEO Optimization. Designed the header of the logo and tagline.",
           time: "2 months",
           date: "Apr - May 2012",
-          image: require("../assets/images/projects/proj-avo.png"),
+          images: [
+            {
+              url: "",
+              props: {
+                source: require("../assets/images/projects/proj-avo.png"),
+              },
+            },
+          ],
         },
       ],
     },
@@ -107,7 +155,14 @@ export default function TabProjectsScreen() {
             "Constructed the old website’s sitemap and enhanced images for web presentation.",
           time: "2 months",
           date: "Apr - May 2011",
-          image: require("../assets/images/projects/proj-cata.png"),
+          images: [
+            {
+              url: "",
+              props: {
+                source: require("../assets/images/projects/proj-cata.png"),
+              },
+            },
+          ],
         },
       ],
     },
@@ -116,21 +171,30 @@ export default function TabProjectsScreen() {
   const resumeURL =
     "https://drive.google.com/file/d/1MX6I97C9fx8CTzV5YQhRPwYdyAEjsyhm/view?usp=sharing";
 
+  const [open, setOpen] = useState(false);
+  const [images, setImages] = useState([]);
   const Item = ({ projItem }: any) => (
     <View style={styles.item}>
       <Text style={styles.title}>{projItem.title}</Text>
       <Text style={styles.time}>{projItem.time}</Text>
-      <Image
-        source={projItem.image}
-        style={{
-          width: "100%",
-          height: Platform.OS === "web" ? 370 : 190,
-          marginVertical: 7,
-          backgroundColor: "transparent",
-          opacity: 0.9,
+      <TouchableWithoutFeedback
+        onPress={() => {
+          setOpen(true);
+          setImages(projItem.images);
         }}
-        resizeMode={"contain"}
-      />
+      >
+        <Image
+          source={projItem.images[0].props.source}
+          style={{
+            width: "100%",
+            height: Platform.OS === "web" ? 370 : Layout.window.width - 70,
+            marginVertical: 7,
+            backgroundColor: "black",
+            opacity: 0.9,
+          }}
+          resizeMode={"contain"}
+        />
+      </TouchableWithoutFeedback>
       <Text style={styles.desc}>{projItem.description}</Text>
       {projItem.showResume && (
         <Linker url={resumeURL} text="Open Resume" color={colors.link} />
@@ -190,6 +254,81 @@ export default function TabProjectsScreen() {
 
   return (
     <View style={styles.container}>
+      <Modal
+        visible={open}
+        transparent={false}
+        style={{
+          borderWidth: 0,
+          borderColor: "none",
+        }}
+      >
+        <ImageViewer
+          imageUrls={images}
+          useNativeDriver={true}
+          enablePreload={true}
+          enableSwipeDown={true}
+          onCancel={() => {
+            setOpen(false);
+          }}
+          renderHeader={() => (
+            <TouchableOpacity
+              onPress={() => {
+                setOpen(false);
+              }}
+            >
+              <View
+                style={{
+                  height: 30,
+                  justifyContent: "center",
+                  backgroundColor: colors.background,
+                }}
+              >
+                <Text
+                  style={{
+                    fontSize: 13,
+                    color: colors.text,
+                    alignSelf: "center",
+                    marginRight: 7,
+                  }}
+                >
+                  Tap here or swipe down to close zoom view
+                </Text>
+              </View>
+            </TouchableOpacity>
+          )}
+          renderIndicator={(currentIndex, allSize) => <Text></Text>}
+          renderFooter={(currentIndex) => (
+            <TouchableOpacity
+              onPress={() => {
+                setOpen(false);
+              }}
+              style={{
+                display: "none",
+              }}
+            >
+              <View
+                style={{
+                  width: "200%",
+                  height: 90,
+                  backgroundColor: colors.background,
+                }}
+              >
+                <Text
+                  style={{
+                    fontSize: 16,
+                    color: colors.text,
+                    marginTop: 7,
+                    textAlign: "center",
+                  }}
+                >
+                  Tap here to close zoom view
+                </Text>
+              </View>
+            </TouchableOpacity>
+          )}
+          // menuContext={{}}
+        />
+      </Modal>
       <SectionList
         sections={PROJECTS}
         keyExtractor={(item, index): any => item}

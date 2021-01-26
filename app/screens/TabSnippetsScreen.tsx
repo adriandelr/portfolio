@@ -144,6 +144,8 @@ Notable Packages
 - React Native Gesture Handler
 - React Native Safe Area Context
 - React Native UI Lib
+- React Native Image Viewier
+- React Native Snap Carousel
 - React Native Vector Icons
 - React Native InAppBrowser
 - React Native Toggle
@@ -183,6 +185,21 @@ Notable Packages
             "In this tutorial, I will show you how to add an embedded browser into your RN mobile app, just like facebook does in their app.",
           link:
             "https://medium.com/codesight/creating-an-embedded-browser-with-react-native-aea42b54740",
+        },
+        {
+          title: "React Native Carousel",
+          content:
+            "In this piece, I am going to build a beautiful and effective carousel on React Native. If you don’t know what is Carousel, it is a dynamic scrolling list of elements in horizontal order, where the previous and next elements are partially visible.",
+          link:
+            "https://medium.com/javascript-in-plain-english/react-native-carousel-4df6db1c3303",
+        },
+        {
+          title:
+            "React-native-snap-carousel not compatible with React Native Web causing TypeError",
+          content:
+            "Getting the error TypeError: Cannot read property 'style' of undefined when running expo web. I think it’s to do with ViewPropTypes being deprecated. How can I fix this for web? I’m currently using Expo and React Native.",
+          link:
+            "https://forums.expo.io/t/react-native-snap-carousel-not-compatible-with-react-native-web-causing-typeerror/45131",
         },
       ],
     },
