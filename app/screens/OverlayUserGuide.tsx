@@ -127,17 +127,19 @@ export default function WelcomeOverlay() {
           style={{ paddingLeft: 9 }}
           solid
         />
-        <Text
-          style={{
-            color: colors.primary,
-            fontSize: 13,
-            alignSelf: "center",
-            fontWeight: "700",
-            marginLeft: 7,
-          }}
-        >
-          User Guide
-        </Text>
+        {!visible && (
+          <Text
+            style={{
+              color: colors.primary,
+              fontSize: 13,
+              alignSelf: "center",
+              fontWeight: "700",
+              marginLeft: 7,
+            }}
+          >
+            User Guide
+          </Text>
+        )}
       </TouchableOpacity>
 
       <Overlay
