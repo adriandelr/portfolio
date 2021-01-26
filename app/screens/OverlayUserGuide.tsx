@@ -131,7 +131,7 @@ export default function WelcomeOverlay() {
         {!visible && (
           <Text
             style={[
-              Styles.nunitoFamily,
+              Styles.novaFamily,
               {
                 color: colors.primary,
                 fontSize: 13,
@@ -174,7 +174,7 @@ export default function WelcomeOverlay() {
           >
             <Text
               style={[
-                Styles.nunitoFamily,
+                Styles.novaFamily,
                 {
                   color: colors.textGuide,
                   fontSize: 23,
@@ -194,7 +194,7 @@ export default function WelcomeOverlay() {
             </Text>
             <Text
               style={[
-                Styles.nunitoFamily,
+                Styles.novaFamily,
                 {
                   color: colors.textGuide,
                   fontSize: 13,
@@ -216,7 +216,7 @@ export default function WelcomeOverlay() {
             </Text>
             <Text
               style={[
-                Styles.nunitoFamily,
+                Styles.novaFamily,
                 {
                   color: colors.textGuide,
                   fontSize: 13,
@@ -254,7 +254,7 @@ export default function WelcomeOverlay() {
               />
               <Text
                 style={[
-                  Styles.nunitoFamily,
+                  Styles.novaFamily,
                   { color: colors.textGuide, fontSize: 13 },
                 ]}
               >
@@ -287,7 +287,7 @@ export default function WelcomeOverlay() {
               />
               <Text
                 style={[
-                  Styles.nunitoFamily,
+                  Styles.novaFamily,
                   {
                     color: colors.textGuide,
                     fontSize: 13,
@@ -317,7 +317,7 @@ export default function WelcomeOverlay() {
               />
               <Text
                 style={[
-                  Styles.nunitoFamily,
+                  Styles.novaFamily,
                   { color: colors.textGuide, fontSize: 13 },
                 ]}
               >
@@ -334,7 +334,7 @@ export default function WelcomeOverlay() {
               >
                 <Text
                   style={[
-                    Styles.nunitoFamily,
+                    Styles.novaFamily,
                     {
                       color: colors.textGuide,
                       fontSize: 13,
@@ -368,7 +368,7 @@ export default function WelcomeOverlay() {
               >
                 <Text
                   style={[
-                    Styles.nunitoFamily,
+                    Styles.novaFamily,
                     {
                       color: colors.textGuide,
                       fontSize: 13,
@@ -413,7 +413,7 @@ export default function WelcomeOverlay() {
                 />
                 <Text
                   style={[
-                    Styles.nunitoFamily,
+                    Styles.novaFamily,
                     { color: colors.textGuide, fontSize: 13 },
                   ]}
                 >
@@ -434,7 +434,7 @@ export default function WelcomeOverlay() {
               >
                 <Text
                   style={[
-                    Styles.nunitoFamily,
+                    Styles.novaFamily,
                     { color: colors.textGuide, fontSize: 13 },
                   ]}
                 >
