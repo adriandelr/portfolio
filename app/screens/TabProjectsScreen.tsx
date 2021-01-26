@@ -199,7 +199,7 @@ export default function TabProjectsScreen() {
       </View>
       <Text style={styles.desc}>{projItem.description}</Text>
       {projItem.showResume && (
-        <Linker url={resumeURL} text="Open Resume" color={colors.link} />
+        <Linker url={resumeURL} text="View Resume" color={colors.link} />
       )}
       {projItem.storeLink && (
         <Linker

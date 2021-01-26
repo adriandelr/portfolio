@@ -10,6 +10,8 @@ import {
 
 import { useTheme } from "../hooks/useThemeContext";
 
+import { Button } from "react-native-elements";
+
 export default function Linker({
   url,
   text,
@@ -18,27 +20,6 @@ export default function Linker({
   cancelText,
 }: any) {
   const { colors } = useTheme();
-  const styles = StyleSheet.create({
-    btnLink: {
-      flex: 1,
-      alignItems: "center",
-      justifyContent: "center",
-      width: 170,
-      height: 37,
-      backgroundColor: colors.error,
-      marginTop: 3,
-      marginBottom: 13,
-      elevation: 8,
-      borderRadius: 3,
-      paddingVertical: 7,
-      paddingHorizontal: 13,
-    },
-    btnLinkText: {
-      color: colors.background,
-      fontSize: 13,
-      fontWeight: Platform.OS === "web" ? "300" : "700",
-    },
-  });
 
   const openLink = useCallback(async () => {
     const supported = await Linking.canOpenURL(url);
@@ -55,7 +36,7 @@ export default function Linker({
   }, [url]);
 
   return (
-    <TouchableOpacity
+    <Button
       onPress={() => {
         if (confirmText && cancelText) {
           if (confirm(confirmText)) {
@@ -67,9 +48,27 @@ export default function Linker({
           openLink();
         }
       }}
-      style={styles.btnLink}
-    >
-      <Text style={styles.btnLinkText}>{text}</Text>
-    </TouchableOpacity>
+      titleStyle={{
+        fontSize: 13,
+        color: colors.background,
+        fontWeight: Platform.OS === "web" ? "400" : "300",
+      }}
+      buttonStyle={{
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        width: 170,
+        height: 37,
+        backgroundColor: colors.error,
+        marginTop: 3,
+        marginBottom: 13,
+        elevation: 0.3,
+        borderRadius: 3,
+        paddingVertical: 7,
+        paddingHorizontal: 13,
+      }}
+      title={text}
+      type="solid"
+    />
   );
 }
