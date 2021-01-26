@@ -158,6 +158,7 @@ export default function TabDevScreen({ navigation }: any) {
                 color: colors.text,
                 fontSize: 14,
                 marginTop: 40,
+                marginBottom: 20,
                 paddingHorizontal:
                   Platform.OS === "web"
                     ? Layout.isSmallDevice
@@ -197,6 +198,7 @@ export default function TabDevScreen({ navigation }: any) {
                 color: colors.text,
                 fontSize: 14,
                 marginTop: 30,
+                marginBottom: 20,
                 paddingHorizontal:
                   Platform.OS === "web"
                     ? Layout.isSmallDevice
