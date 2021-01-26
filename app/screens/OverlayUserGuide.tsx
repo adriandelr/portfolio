@@ -313,33 +313,35 @@ export default function WelcomeOverlay() {
               </View>
             )}
 
-            <View
-              style={{
-                position: "absolute",
-                top: "70%",
-                right: "7%",
-                flex: 1,
-                alignItems: "flex-end",
-              }}
-            >
-              <Text
+            {Platform.OS !== "web" && (
+              <View
                 style={{
-                  color: colors.textGuide,
-                  fontSize: 13,
+                  position: "absolute",
+                  top: "70%",
+                  right: "7%",
+                  flex: 1,
+                  alignItems: "flex-end",
                 }}
               >
-                Swipe to move between pages
-              </Text>
-              <SwipeFadeAnim direction="left">
-                <Icon
-                  name="hand-point-up"
-                  size={37}
-                  color={colors.textGuide}
-                  style={{ marginLeft: 7 }}
-                  solid
-                />
-              </SwipeFadeAnim>
-            </View>
+                <Text
+                  style={{
+                    color: colors.textGuide,
+                    fontSize: 13,
+                  }}
+                >
+                  Swipe to move between pages
+                </Text>
+                <SwipeFadeAnim direction="left">
+                  <Icon
+                    name="hand-point-up"
+                    size={37}
+                    color={colors.textGuide}
+                    style={{ marginLeft: 7 }}
+                    solid
+                  />
+                </SwipeFadeAnim>
+              </View>
+            )}
 
             {Platform.OS === "web" && (
               <View
@@ -402,8 +404,8 @@ export default function WelcomeOverlay() {
             position: "absolute",
             top: Platform.OS === "web" ? 120 : 95,
             left: 0,
-            width: Layout.window.width,
-            height: Layout.window.height - 203,
+            width: Platform.OS === "web" ? "auto" : Layout.window.width,
+            height: Platform.OS === "web" ? "auto" : Layout.window.height - 203,
           }}
         ></View>
       )}
