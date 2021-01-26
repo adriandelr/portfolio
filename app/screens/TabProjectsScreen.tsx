@@ -14,6 +14,7 @@ import {
 
 import { useTheme } from "../hooks/useThemeContext";
 import Linker from "../components/Linker";
+import Styles from "../constants/Styles";
 import Layout from "../constants/Layout";
 
 import ImageViewer from "react-native-image-zoom-viewer";
@@ -175,8 +176,8 @@ export default function TabProjectsScreen() {
   const [images, setImages] = useState([]);
   const Item = ({ projItem }: any) => (
     <View style={styles.item}>
-      <Text style={styles.title}>{projItem.title}</Text>
-      <Text style={styles.time}>{projItem.time}</Text>
+      <Text style={[Styles.novaFamily, styles.title]}>{projItem.title}</Text>
+      <Text style={[Styles.novaFamily, styles.time]}>{projItem.time}</Text>
       <View pointerEvents={Platform.OS === "web" ? "none" : "auto"}>
         <TouchableWithoutFeedback
           onPress={() => {
@@ -197,7 +198,9 @@ export default function TabProjectsScreen() {
           />
         </TouchableWithoutFeedback>
       </View>
-      <Text style={styles.desc}>{projItem.description}</Text>
+      <Text style={[Styles.novaFamily, styles.desc]}>
+        {projItem.description}
+      </Text>
       {projItem.showResume && (
         <Linker url={resumeURL} text="View Resume" color={colors.link} />
       )}
@@ -208,7 +211,7 @@ export default function TabProjectsScreen() {
           color={colors.link}
         />
       )}
-      <Text style={styles.date}>{projItem.date}</Text>
+      <Text style={[Styles.novaFamily, styles.date]}>{projItem.date}</Text>
     </View>
   );
 
@@ -286,12 +289,15 @@ export default function TabProjectsScreen() {
                 }}
               >
                 <Text
-                  style={{
-                    fontSize: 13,
-                    color: colors.text,
-                    alignSelf: "center",
-                    marginRight: 7,
-                  }}
+                  style={[
+                    Styles.novaFamily,
+                    {
+                      fontSize: 13,
+                      color: colors.text,
+                      alignSelf: "center",
+                      marginRight: 7,
+                    },
+                  ]}
                 >
                   Tap here or swipe down to close zoom view
                 </Text>
@@ -316,12 +322,15 @@ export default function TabProjectsScreen() {
                 }}
               >
                 <Text
-                  style={{
-                    fontSize: 16,
-                    color: colors.text,
-                    marginTop: 7,
-                    textAlign: "center",
-                  }}
+                  style={[
+                    Styles.novaFamily,
+                    {
+                      fontSize: 16,
+                      color: colors.text,
+                      marginTop: 7,
+                      textAlign: "center",
+                    },
+                  ]}
                 >
                   Tap here to close zoom view
                 </Text>
@@ -336,7 +345,7 @@ export default function TabProjectsScreen() {
         keyExtractor={(item, index): any => item}
         renderItem={({ item }) => <Item projItem={item} />}
         renderSectionHeader={({ section: { year } }) => (
-          <Text style={styles.header}>{year}</Text>
+          <Text style={[Styles.novaFamily, styles.header]}>{year}</Text>
         )}
         style={styles.section}
       />

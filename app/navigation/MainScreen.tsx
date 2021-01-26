@@ -14,6 +14,8 @@ import {
 import TabDevScreen from "../screens/TabDevScreen";
 
 import { useTheme } from "../hooks/useThemeContext";
+import Styles from "../constants/Styles";
+
 import { Text } from "react-native-elements";
 import Icon from "react-native-vector-icons/Ionicons";
 
@@ -28,7 +30,11 @@ export default function MainScreen() {
       <DrawerContentScrollView {...props}>
         <DrawerItemList {...props} />
         <DrawerItem
-          label={() => <Text style={{ color: colors.text }}>Projects</Text>}
+          label={() => (
+            <Text style={[Styles.nunitoFamily, { color: colors.text }]}>
+              Projects
+            </Text>
+          )}
           onPress={() => {
             navigation.navigate("TabProjects");
             navigation.dispatch(DrawerActions.closeDrawer());
@@ -42,7 +48,11 @@ export default function MainScreen() {
           )}
         />
         <DrawerItem
-          label={() => <Text style={{ color: colors.text }}>Snippets</Text>}
+          label={() => (
+            <Text style={[Styles.nunitoFamily, { color: colors.text }]}>
+              Snippets
+            </Text>
+          )}
           onPress={() => {
             navigation.navigate("TabSnippets");
             navigation.dispatch(DrawerActions.closeDrawer());
@@ -87,6 +97,7 @@ export default function MainScreen() {
               name={isFocused ? "person-circle-sharp" : "person-circle-outline"}
             />
           ),
+          headerTitleStyle: Styles.nunitoFamily,
         }}
       />
     </Drawer.Navigator>

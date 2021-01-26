@@ -6,12 +6,13 @@ import {
   Platform,
   TouchableOpacity,
 } from "react-native";
-import { Text, Overlay } from "react-native-elements";
-
-import Modal from "modal-react-native-web";
-import Layout from "../constants/Layout";
 
 import { useTheme } from "../hooks/useThemeContext";
+import Styles from "../constants/Styles";
+import Layout from "../constants/Layout";
+
+import { Text, Overlay } from "react-native-elements";
+import Modal from "modal-react-native-web";
 import Icon from "react-native-vector-icons/FontAwesome5";
 
 export default function WelcomeOverlay() {
@@ -129,13 +130,16 @@ export default function WelcomeOverlay() {
         />
         {!visible && (
           <Text
-            style={{
-              color: colors.primary,
-              fontSize: 13,
-              alignSelf: "center",
-              fontWeight: "700",
-              marginLeft: 7,
-            }}
+            style={[
+              Styles.nunitoFamily,
+              {
+                color: colors.primary,
+                fontSize: 13,
+                alignSelf: "center",
+                fontWeight: "700",
+                marginLeft: 7,
+              },
+            ]}
           >
             User Guide
           </Text>
@@ -169,45 +173,66 @@ export default function WelcomeOverlay() {
             }}
           >
             <Text
-              style={{
-                color: colors.textGuide,
-                fontSize: 23,
-                position: "absolute",
-                top: Layout.isSmallDevice ? "37%" : "27%",
-                flex: 1,
-                alignSelf: "center",
-                fontWeight: "700",
-              }}
+              style={[
+                Styles.nunitoFamily,
+                {
+                  color: colors.textGuide,
+                  fontSize: 23,
+                  position: "absolute",
+                  top: !Layout.isSmallDevice
+                    ? "27%"
+                    : Layout.isSmallDevice
+                    ? "37%"
+                    : "27%",
+                  flex: 1,
+                  alignSelf: "center",
+                  fontWeight: "700",
+                },
+              ]}
             >
               Quick User Guide
             </Text>
             <Text
-              style={{
-                color: colors.textGuide,
-                fontSize: 13,
-                position: "absolute",
-                top: Layout.isSmallDevice ? "39%" : "23%",
-                flex: 1,
-                alignSelf: "center",
-                fontWeight: "300",
-                padding: "7%",
-                textAlign: "center",
-              }}
+              style={[
+                Styles.nunitoFamily,
+                {
+                  color: colors.textGuide,
+                  fontSize: 13,
+                  position: "absolute",
+                  top: !Layout.isSmallDevice
+                    ? "29%"
+                    : Layout.isSmallDevice
+                    ? "39%"
+                    : "23%",
+                  flex: 1,
+                  alignSelf: "center",
+                  fontWeight: "300",
+                  padding: "7%",
+                  textAlign: "center",
+                },
+              ]}
             >
               Tap anywhere to dismiss.
             </Text>
             <Text
-              style={{
-                color: colors.textGuide,
-                fontSize: 13,
-                position: "absolute",
-                top: Layout.isSmallDevice ? "43%" : "29%",
-                flex: 1,
-                alignSelf: "center",
-                fontWeight: "300",
-                padding: "7%",
-                textAlign: "center",
-              }}
+              style={[
+                Styles.nunitoFamily,
+                {
+                  color: colors.textGuide,
+                  fontSize: 13,
+                  position: "absolute",
+                  top: !Layout.isSmallDevice
+                    ? "33%"
+                    : Layout.isSmallDevice
+                    ? "43%"
+                    : "29%",
+                  flex: 1,
+                  alignSelf: "center",
+                  fontWeight: "300",
+                  padding: "7%",
+                  textAlign: "center",
+                },
+              ]}
             >
               Have a look on the features, navigations, and gestures.
             </Text>
@@ -227,7 +252,12 @@ export default function WelcomeOverlay() {
                 style={{ marginLeft: 7, transform: [{ rotate: "-37deg" }] }}
                 solid
               />
-              <Text style={{ color: colors.textGuide, fontSize: 13 }}>
+              <Text
+                style={[
+                  Styles.nunitoFamily,
+                  { color: colors.textGuide, fontSize: 13 },
+                ]}
+              >
                 Toggle Guide
               </Text>
             </View>
@@ -256,11 +286,14 @@ export default function WelcomeOverlay() {
                 solid
               />
               <Text
-                style={{
-                  color: colors.textGuide,
-                  fontSize: 13,
-                  width: Layout.isSmallerDevice ? "73%" : "30%",
-                }}
+                style={[
+                  Styles.nunitoFamily,
+                  {
+                    color: colors.textGuide,
+                    fontSize: 13,
+                    width: Layout.isSmallerDevice ? "73%" : "30%",
+                  },
+                ]}
               >
                 Toggle Side Menu on the first page
               </Text>
@@ -282,7 +315,12 @@ export default function WelcomeOverlay() {
                 style={{ marginLeft: 7, transform: [{ rotate: "73deg" }] }}
                 solid
               />
-              <Text style={{ color: colors.textGuide, fontSize: 13 }}>
+              <Text
+                style={[
+                  Styles.nunitoFamily,
+                  { color: colors.textGuide, fontSize: 13 },
+                ]}
+              >
                 Toggle Dark Mode
               </Text>
             </View>
@@ -295,11 +333,14 @@ export default function WelcomeOverlay() {
                 }}
               >
                 <Text
-                  style={{
-                    color: colors.textGuide,
-                    fontSize: 13,
-                    marginLeft: 15,
-                  }}
+                  style={[
+                    Styles.nunitoFamily,
+                    {
+                      color: colors.textGuide,
+                      fontSize: 13,
+                      marginLeft: 15,
+                    },
+                  ]}
                 >
                   Swipe to open drawer on the first page
                 </Text>
@@ -326,10 +367,13 @@ export default function WelcomeOverlay() {
                 }}
               >
                 <Text
-                  style={{
-                    color: colors.textGuide,
-                    fontSize: 13,
-                  }}
+                  style={[
+                    Styles.nunitoFamily,
+                    {
+                      color: colors.textGuide,
+                      fontSize: 13,
+                    },
+                  ]}
                 >
                   Swipe to move between pages
                 </Text>
@@ -367,7 +411,12 @@ export default function WelcomeOverlay() {
                   style={{ marginLeft: 7, transform: [{ rotate: "-37deg" }] }}
                   solid
                 />
-                <Text style={{ color: colors.textGuide, fontSize: 13 }}>
+                <Text
+                  style={[
+                    Styles.nunitoFamily,
+                    { color: colors.textGuide, fontSize: 13 },
+                  ]}
+                >
                   Tabs to navigate between pages
                 </Text>
               </View>
@@ -383,7 +432,12 @@ export default function WelcomeOverlay() {
                   justifyContent: "center",
                 }}
               >
-                <Text style={{ color: colors.textGuide, fontSize: 13 }}>
+                <Text
+                  style={[
+                    Styles.nunitoFamily,
+                    { color: colors.textGuide, fontSize: 13 },
+                  ]}
+                >
                   Tabs to navigate between pages
                 </Text>
                 <Icon

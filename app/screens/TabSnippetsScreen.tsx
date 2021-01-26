@@ -12,6 +12,7 @@ import {
 
 import { useTheme } from "../hooks/useThemeContext";
 import Linker from "../components/Linker";
+import Styles from "../constants/Styles";
 import Layout from "../constants/Layout";
 
 import Icon from "react-native-vector-icons/FontAwesome5";
@@ -263,7 +264,11 @@ Notable Packages
         activeOpacity={1}
       >
         <Text
-          style={[styles.title, { paddingVertical: open ? 3 : 0 }]}
+          style={[
+            Styles.novaFamily,
+            styles.title,
+            { paddingVertical: open ? 3 : 0 },
+          ]}
           numberOfLines={open ? 0 : 1}
         >
           {snipItem.title}
@@ -330,6 +335,7 @@ Notable Packages
       width: "100%",
       paddingBottom: 7,
       color: colors.text,
+      fontFamily: "proxima-regular",
     },
   });
 
@@ -340,7 +346,7 @@ Notable Packages
         keyExtractor={(item, index): any => String(index)}
         renderItem={({ item }) => <Item snipItem={item} />}
         renderSectionHeader={({ section: { title } }) => (
-          <Text style={styles.header}>{title}</Text>
+          <Text style={[Styles.novaFamily, styles.header]}>{title}</Text>
         )}
         style={styles.section}
       />

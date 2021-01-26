@@ -9,6 +9,7 @@ import {
 } from "react-native";
 
 import { useTheme } from "../hooks/useThemeContext";
+import Styles from "../constants/Styles";
 import Layout from "../constants/Layout";
 
 import Linker from "../components/Linker";
@@ -117,36 +118,45 @@ export default function TabDevScreen({ navigation }: any) {
           {Platform.OS !== "web" && (
             <Text
               h3
-              style={{
-                color: colors.text,
-                fontWeight: "300",
-              }}
+              style={[
+                Styles.novaFamily,
+                {
+                  color: colors.text,
+                  fontWeight: "300",
+                },
+              ]}
             >
               Adrian Del Rosario
             </Text>
           )}
           <Text
-            style={{
-              color: colors.error,
-              fontSize: 17,
-              fontWeight: "300",
-            }}
+            style={[
+              Styles.novaFamily,
+              {
+                color: colors.error,
+                fontSize: 17,
+                fontWeight: "300",
+              },
+            ]}
           >
             Cross-Platform Digital Portfolio
           </Text>
 
           <Text
-            style={{
-              color: colors.text,
-              fontSize: 14,
-              marginTop: 40,
-              paddingHorizontal:
-                Platform.OS === "web"
-                  ? Layout.isSmallDevice
-                    ? "7%"
-                    : "27%"
-                  : "13%",
-            }}
+            style={[
+              Styles.novaFamily,
+              {
+                color: colors.text,
+                fontSize: 14,
+                marginTop: 40,
+                paddingHorizontal:
+                  Platform.OS === "web"
+                    ? Layout.isSmallDevice
+                      ? "7%"
+                      : "27%"
+                    : "13%",
+              },
+            ]}
           >
             Adrian is a Web Developer focused on developing Web Applications
             using Front-end Web Technologies.
@@ -170,18 +180,21 @@ export default function TabDevScreen({ navigation }: any) {
           </Text>
           {Platform.OS === "web" && (
             <Text
-              style={{
-                color: colors.text,
-                fontSize: 14,
-                marginTop: 40,
-                marginBottom: 20,
-                paddingHorizontal:
-                  Platform.OS === "web"
-                    ? Layout.isSmallDevice
-                      ? "7%"
-                      : "27%"
-                    : "13%",
-              }}
+              style={[
+                Styles.novaFamily,
+                {
+                  color: colors.text,
+                  fontSize: 14,
+                  marginTop: 40,
+                  marginBottom: 20,
+                  paddingHorizontal:
+                    Platform.OS === "web"
+                      ? Layout.isSmallDevice
+                        ? "7%"
+                        : "27%"
+                      : "13%",
+                },
+              ]}
             >
               {
                 "You are viewing on the web. For a more native experience, download the Expo app."
@@ -210,18 +223,21 @@ export default function TabDevScreen({ navigation }: any) {
           )}
           {Platform.OS === "web" && (
             <Text
-              style={{
-                color: colors.text,
-                fontSize: 14,
-                marginTop: 30,
-                marginBottom: 20,
-                paddingHorizontal:
-                  Platform.OS === "web"
-                    ? Layout.isSmallDevice
-                      ? "7%"
-                      : "27%"
-                    : "13%",
-              }}
+              style={[
+                Styles.novaFamily,
+                {
+                  color: colors.text,
+                  fontSize: 14,
+                  marginTop: 30,
+                  marginBottom: 20,
+                  paddingHorizontal:
+                    Platform.OS === "web"
+                      ? Layout.isSmallDevice
+                        ? "7%"
+                        : "27%"
+                      : "13%",
+                },
+              ]}
             >
               {
                 "If you have the Expo client already, you may open my app through this link."

@@ -17,7 +17,7 @@ export const lightColors = {
 
 // Dark theme colors
 export const darkColors = {
-  navBackground: "gray",
+  navBackground: "silver",
   background: "#101111",
   avatarBackground: "dimgrey",
   snipItemBackground: "#101111",

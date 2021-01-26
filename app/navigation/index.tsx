@@ -12,6 +12,7 @@ import TabSnippetsScreen from "../screens/TabSnippetsScreen";
 import { TabProjectsParamList, TabSnippetsParamList } from "../types";
 
 import { useTheme } from "../hooks/useThemeContext";
+import Styles from "../constants/Styles";
 import Layout from "../constants/Layout";
 
 import Icon from "react-native-vector-icons/Ionicons";
@@ -41,6 +42,7 @@ export default function Navigation({
             backgroundColor:
               Platform.OS === "web" ? colors.navBackground : colors.background,
           },
+          labelStyle: Styles.nunitoFamily,
           showIcon: true,
           indicatorStyle: {
             backgroundColor: colors.primary,
