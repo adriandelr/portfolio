@@ -17,12 +17,12 @@ export const lightColors = {
 
 // Dark theme colors
 export const darkColors = {
-  navBackground: "silver",
+  navBackground: "dimgrey",
   background: "#101111",
   avatarBackground: "dimgrey",
   snipItemBackground: "#101111",
   snipBorder: "grey",
-  primary: "dimgrey",
+  primary: "darkgrey",
   text: "gainsboro",
   textAvatar: "silver",
   textGuide: "whitesmoke",
