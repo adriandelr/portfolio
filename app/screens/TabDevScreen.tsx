@@ -12,7 +12,7 @@ import { useTheme } from "../hooks/useThemeContext";
 import Layout from "../constants/Layout";
 
 import Linker from "../components/Linker";
-import { Text } from "react-native-elements";
+import { Avatar, Text } from "react-native-elements";
 import Icon from "react-native-vector-icons/FontAwesome5";
 
 export default function TabDevScreen({ navigation }: any) {
@@ -74,12 +74,28 @@ export default function TabDevScreen({ navigation }: any) {
             color={colors.primary}
             animating={!isLoaded}
           />
+          <Avatar
+            size={192}
+            rounded
+            title="AD"
+            activeOpacity={0.7}
+            titleStyle={{
+              color: colors.textAvatar,
+              marginTop: Platform.OS === "web" ? -17 : -7,
+            }}
+            containerStyle={{
+              marginTop: 30,
+              marginBottom: 50,
+              backgroundColor: colors.avatarBackground,
+            }}
+          />
           <Image
             source={require("../assets/images/az-logo.png")}
             onLoadEnd={() => {
               setIsLoaded(true);
             }}
             style={{
+              display: "none",
               width: 192,
               height: 192,
               marginTop: 30,
