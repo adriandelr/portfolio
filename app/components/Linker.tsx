@@ -51,7 +51,7 @@ export default function Linker({
       titleStyle={{
         fontSize: 13,
         color: colors.background,
-        fontWeight: Platform.OS === "web" ? "400" : "300",
+        fontWeight: Platform.OS === "web" ? "normal" : "300",
       }}
       buttonStyle={{
         flex: 1,
