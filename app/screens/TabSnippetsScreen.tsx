@@ -143,11 +143,23 @@ Notable Packages
 - React Native Reanimated
 - React Native Gesture Handler
 - React Native Safe Area Context
+- React Native UI Lib
 - React Native Vector Icons
+- React Native InAppBrowser
 - React Native Toggle
 - React Native Markdown Display
 - React Native Tailwind
+- React NativeBase
+- React Paper
           `,
+        },
+        {
+          title:
+            "10 Awesome React Native UI Component Libraries You Should Know",
+          content:
+            "With the increase in the demand for mobile applications, a large number of enterprises are shifting their focus towards mobile app development. Introduction of new technologies, platforms, and frameworks is allowing mobile app developers to create revolutionary mobile apps. Cross-Platform App Development has gained a lot of popularity in recent times as it enables developers to develop apps for multiple platforms like Android, iOS, Windows with a single code base.",
+          link:
+            "https://medium.com/javascript-in-plain-english/10-awesome-react-native-ui-component-libraries-you-should-know-cd3296d99c0b",
         },
         {
           title: "React Native Dark Mode Done Right!",
@@ -155,6 +167,14 @@ Notable Packages
             "A dead-simple approach to theming and dark mode in react native.",
           link:
             "https://medium.com/@ratebseirawan/react-native-dark-mode-done-right-13f83b39a4ca",
+        },
+        {
+          title:
+            "Creating an embedded browser with React-Native using react-native-webview",
+          content:
+            "In this tutorial, I will show you how to add an embedded browser into your RN mobile app, just like facebook does in their app.",
+          link:
+            "https://medium.com/codesight/creating-an-embedded-browser-with-react-native-aea42b54740",
         },
       ],
     },
@@ -190,6 +210,11 @@ Notable Packages
           title: "Lorem Picsum",
           content: "The Lorem Ipsum for photos.",
           link: "https://picsum.photos/",
+        },
+        {
+          title: "npm trends",
+          content: "Compare package download counts over time.",
+          link: "https://www.npmtrends.com/",
         },
       ],
     },
