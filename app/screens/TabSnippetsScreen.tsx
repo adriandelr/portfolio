@@ -126,6 +126,11 @@ defaults write com.apple.finder AppleShowAllFiles -boolean false; killall Finder
       title: "CSS",
       data: [
         {
+          title: "Flexbox Malven",
+          content: "A simple visual cheatsheet for flexbox",
+          link: "https://flexbox.malven.co/",
+        },
+        {
           title: "Common Screen Resolution",
           content:
             "Website Dimensions: These Are The Most Common Screen Resolutions To Design For",

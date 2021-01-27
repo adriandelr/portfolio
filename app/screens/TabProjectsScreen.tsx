@@ -221,10 +221,13 @@ export default function TabProjectsScreen({ route, navigation }: any) {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
+      paddingTop: Layout.isSmallDevice ? 0 : 30,
+      paddingBottom: Layout.isSmallDevice ? 20 : 0,
       paddingHorizontal: 3,
     },
     section: {
-      paddingTop: 7,
+      paddingTop: Layout.isSmallDevice ? 7 : 50,
+      paddingBottom: Layout.isSmallDevice ? 0 : 13,
       paddingHorizontal:
         Platform.OS === "web" ? (Layout.isSmallDevice ? "0%" : "21%") : 0,
     },
@@ -320,6 +323,9 @@ export default function TabProjectsScreen({ route, navigation }: any) {
             >
               <View
                 style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
                   width: "200%",
                   height: 90,
                   backgroundColor: colors.background,
@@ -344,6 +350,55 @@ export default function TabProjectsScreen({ route, navigation }: any) {
           // menuContext={{}}
         />
       </Modal>
+      <View
+        style={{
+          width: Layout.isSmallDevice ? "100%" : "100%",
+          height: Layout.isSmallDevice ? 30 : 30,
+          alignSelf: "center",
+          position: "absolute",
+          top: !Layout.isSmallDevice ? 0 : "auto",
+          bottom: Layout.isSmallDevice ? 0 : "auto",
+          zIndex: 1,
+        }}
+      >
+        <ButtonGroup
+          onPress={(selectedIndex: number) => {
+            listRef.current?.scrollToLocation({
+              itemIndex: 0,
+              sectionIndex: selectedIndex,
+              animated: true,
+            });
+          }}
+          buttons={_.map(PROJECTS, "year")}
+          Component={TouchableOpacity}
+          containerStyle={{
+            height: "100%",
+            backgroundColor: colors.yearGroupBackground,
+            borderRadius: 0,
+            marginVertical: 0,
+            marginHorizontal: 0,
+          }}
+          buttonContainerStyle={{
+            backgroundColor: colors.yearGroupBackground,
+          }}
+          selectedButtonStyle={{
+            backgroundColor: colors.yearGroupBackground,
+          }}
+          textStyle={[
+            Styles.novaFamily,
+            {
+              fontSize: Layout.isSmallDevice ? 14 : 15,
+              color: colors.textYearGroup,
+              backgroundColor: colors.yearGroupBackground,
+            },
+          ]}
+          selectedTextStyle={{
+            color: colors.textYearGroup,
+            backgroundColor: colors.yearGroupBackground,
+          }}
+          innerBorderStyle={{ width: 0, color: colors.yearGroupBackground }}
+        />
+      </View>
       <SectionList
         sections={PROJECTS}
         keyExtractor={(item, index): any => item}
@@ -353,41 +408,6 @@ export default function TabProjectsScreen({ route, navigation }: any) {
         )}
         ref={listRef}
         style={styles.section}
-      />
-      <ButtonGroup
-        onPress={(selectedIndex: number) => {
-          listRef.current?.scrollToLocation({
-            itemIndex: 0,
-            sectionIndex: selectedIndex,
-            animated: true,
-          });
-        }}
-        buttons={_.map(PROJECTS, "year")}
-        Component={TouchableOpacity}
-        containerStyle={{
-          height: 30,
-          borderWidth: 0,
-          backgroundColor: colors.yearGroupBackground,
-        }}
-        buttonContainerStyle={{
-          backgroundColor: colors.yearGroupBackground,
-        }}
-        selectedButtonStyle={{
-          backgroundColor: colors.yearGroupBackground,
-        }}
-        textStyle={[
-          Styles.novaFamily,
-          {
-            fontSize: Layout.isSmallDevice ? 14 : 15,
-            color: colors.textYearGroup,
-            backgroundColor: colors.yearGroupBackground,
-          },
-        ]}
-        selectedTextStyle={{
-          color: colors.textYearGroup,
-          backgroundColor: colors.yearGroupBackground,
-        }}
-        innerBorderStyle={{ width: 0, color: colors.yearGroupBackground }}
       />
     </View>
   );
