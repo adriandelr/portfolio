@@ -6,6 +6,11 @@ export default {
     screens: {
       Root: {
         screens: {
+          MainScreen: {
+            screens: {
+              TabMainScreen: "MainScreen",
+            },
+          },
           TabDev: {
             screens: {
               TabDevScreen: "Dev",

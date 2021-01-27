@@ -111,6 +111,12 @@ defaults write com.apple.finder AppleShowAllFiles -boolean false; killall Finder
       title: "JavaScript",
       data: [
         {
+          title: "Lodash",
+          content:
+            "A modern JavaScript utility library delivering modularity, performance & extras.",
+          link: "https://lodash.com/",
+        },
+        {
           title: "Variable Shadowing",
           content: "Content...",
         },
@@ -201,6 +207,13 @@ Notable Packages
             "Getting the error TypeError: Cannot read property 'style' of undefined when running expo web. I think it’s to do with ViewPropTypes being deprecated. How can I fix this for web? I’m currently using Expo and React Native.",
           link:
             "https://forums.expo.io/t/react-native-snap-carousel-not-compatible-with-react-native-web-causing-typeerror/45131",
+        },
+        {
+          title: "How to typescript react native list refs",
+          content:
+            "VirtualLists (i.e. SectionList, FlatList) have always been dificult for me to describe in typescript, but the following seems to work.",
+          link:
+            "https://til.hashrocket.com/posts/cgukffdr1n-how-to-typescript-react-native-list-refs",
         },
       ],
     },
