@@ -61,7 +61,9 @@ export const PROJECTS: any = [
         ],
         showResume: true,
         storeLink:
-          "https://play.google.com/store/apps/developer?id=Hospitality+Marketing+Concepts",
+          Platform.OS === "ios"
+            ? "https://apps.apple.com/ph/developer/hospitality-marketing-concepts-llc/id837144091"
+            : "https://play.google.com/store/apps/developer?id=Hospitality+Marketing+Concepts",
       },
     ],
   },
