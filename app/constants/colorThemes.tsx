@@ -16,6 +16,7 @@ export const lightColors = {
   textSnipTitle: "grey",
   textSnipContent: "dimgrey",
   textYearGroup: "dimgrey",
+  linkerButton: "lightslategray",
   link: "#D3D3D3",
   error: "slategrey",
 };
@@ -36,6 +37,7 @@ export const darkColors = {
   textSnipTitle: "darkgray",
   textSnipContent: "dimgrey",
   textYearGroup: "darkgrey",
+  linkerButton: "lightslategray",
   link: "#D3D3D3",
   error: "slategrey",
 };
