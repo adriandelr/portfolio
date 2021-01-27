@@ -369,7 +369,10 @@ export default function TabProjectsScreen({ route, navigation }: any) {
               animated: true,
             });
           }}
-          buttons={_.map(PROJECTS, "year")}
+          buttons={_.take(
+            _.map(PROJECTS, "year"),
+            Layout.isSmallDevice ? 4 : 6
+          )}
           Component={TouchableOpacity}
           containerStyle={{
             height: "100%",
