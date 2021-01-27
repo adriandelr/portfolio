@@ -219,6 +219,7 @@ export default function TabProjectsScreen() {
     container: {
       flex: 1,
       paddingHorizontal: 3,
+      paddingBottom: 13,
     },
     section: {
       paddingTop: 7,
@@ -226,7 +227,7 @@ export default function TabProjectsScreen() {
         Platform.OS === "web" ? (Layout.isSmallDevice ? "0%" : "21%") : 0,
     },
     item: {
-      padding: 21,
+      marginHorizontal: 21,
       marginVertical: 17,
     },
     header: {
@@ -244,7 +245,7 @@ export default function TabProjectsScreen() {
     desc: {
       fontSize: Platform.OS === "web" ? 14 : 17,
       color: colors.text,
-      marginBottom: 17,
+      marginBottom: 7,
     },
     time: {
       fontSize: 13,
@@ -253,7 +254,6 @@ export default function TabProjectsScreen() {
     date: {
       fontSize: 13,
       color: colors.error,
-      marginTop: 13,
     },
   });
 
@@ -263,6 +263,7 @@ export default function TabProjectsScreen() {
         visible={open}
         transparent={false}
         style={{
+          display: open ? "flex" : "none",
           borderWidth: 0,
           borderColor: "none",
         }}

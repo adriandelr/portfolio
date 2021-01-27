@@ -82,7 +82,8 @@ export default function TabDevScreen({ navigation }: any) {
             activeOpacity={0.7}
             titleStyle={{
               color: colors.textAvatar,
-              marginTop: Platform.OS === "web" ? -17 : -7,
+              marginTop:
+                Platform.OS === "web" ? (Layout.isSmallDevice ? 0 : -17) : -7,
             }}
             containerStyle={{
               marginTop: 30,

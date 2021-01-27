@@ -60,7 +60,7 @@ export default function Linker({
         height: 37,
         backgroundColor: colors.error,
         marginTop: 3,
-        marginBottom: 7,
+        marginBottom: 13,
         elevation: 0.3,
         borderRadius: 3,
         paddingVertical: 7,
