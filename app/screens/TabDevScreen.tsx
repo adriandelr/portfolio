@@ -55,12 +55,12 @@ export default function TabDevScreen({ navigation }: any) {
 
       <ScrollView
         style={{
-          top: 50,
+          top: Platform.OS === "web" ? 50 : 0,
         }}
       >
         <View
           style={{
-            paddingBottom: 117,
+            paddingBottom: Platform.OS === "web" ? 77 : 33,
             justifyContent: "center",
             alignItems: "center",
             backgroundColor: colors.background,

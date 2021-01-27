@@ -219,7 +219,6 @@ export default function TabProjectsScreen() {
     container: {
       flex: 1,
       paddingHorizontal: 3,
-      paddingBottom: 13,
     },
     section: {
       paddingTop: 7,
@@ -254,6 +253,7 @@ export default function TabProjectsScreen() {
     date: {
       fontSize: 13,
       color: colors.error,
+      paddingBottom: 13,
     },
   });
 
