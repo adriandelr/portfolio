@@ -222,7 +222,7 @@ export default function TabProjectsScreen({ route, navigation }: any) {
     container: {
       flex: 1,
       paddingTop: Layout.isSmallDevice ? 0 : 30,
-      paddingBottom: Layout.isSmallDevice ? 20 : 0,
+      paddingBottom: Layout.isSmallDevice ? 40 : 0,
       paddingHorizontal: 3,
     },
     section: {

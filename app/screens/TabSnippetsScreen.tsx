@@ -256,6 +256,11 @@ Notable Packages
           link: "https://picsum.photos/",
         },
         {
+          title: "RapidTables",
+          content: "Need a conversion?",
+          link: "https://www.rapidtables.com/",
+        },
+        {
           title: "npm trends",
           content: "Compare package download counts over time.",
           link: "https://www.npmtrends.com/",
