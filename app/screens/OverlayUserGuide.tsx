@@ -263,46 +263,48 @@ export default function WelcomeOverlay() {
               </Text>
             </View>
 
-            <View
-              style={{
-                position: "absolute",
-                top: Layout.isSmallDevice
-                  ? Platform.OS === "web"
-                    ? 50
-                    : 48
-                  : 124,
-                left: Platform.OS === "web" ? 5 : 3,
-                flex: 1,
-                alignItems: "flex-start",
-              }}
-            >
-              <Icon
-                name="bars"
-                size={21}
-                color={colors.primary}
-                style={{ paddingLeft: 7 }}
-                solid
-              />
-              <Icon
-                name="long-arrow-alt-up"
-                size={37}
-                color={colors.textGuide}
-                style={{ marginLeft: 7, transform: [{ rotate: "-7deg" }] }}
-                solid
-              />
-              <Text
-                style={[
-                  Styles.novaFamily,
-                  {
-                    color: colors.textGuide,
-                    fontSize: 13,
-                    width: Layout.isSmallerDevice ? "73%" : "30%",
-                  },
-                ]}
+            {Platform.OS === "web" && (
+              <View
+                style={{
+                  position: "absolute",
+                  top: Layout.isSmallDevice
+                    ? Platform.OS === "web"
+                      ? 50
+                      : 48
+                    : 124,
+                  left: Platform.OS === "web" ? 5 : 3,
+                  flex: 1,
+                  alignItems: "flex-start",
+                }}
               >
-                Toggle Side Menu on the first page
-              </Text>
-            </View>
+                <Icon
+                  name="bars"
+                  size={21}
+                  color={colors.primary}
+                  style={{ paddingLeft: 7 }}
+                  solid
+                />
+                <Icon
+                  name="long-arrow-alt-up"
+                  size={37}
+                  color={colors.textGuide}
+                  style={{ marginLeft: 7, transform: [{ rotate: "-7deg" }] }}
+                  solid
+                />
+                <Text
+                  style={[
+                    Styles.novaFamily,
+                    {
+                      color: colors.textGuide,
+                      fontSize: 13,
+                      width: Layout.isSmallerDevice ? "73%" : "30%",
+                    },
+                  ]}
+                >
+                  Toggle Side Menu on the first page
+                </Text>
+              </View>
+            )}
 
             <View
               style={{
@@ -463,10 +465,10 @@ export default function WelcomeOverlay() {
             backgroundColor: colors.background,
             opacity: 0.97,
             position: "absolute",
-            top: Layout.isSmallDevice ? 95 : 120,
+            top: Layout.isSmallDevice ? 45 : 120,
             left: 0,
             width: Layout.window.width,
-            height: Layout.isSmallDevice ? Layout.window.height - 167 : "100%",
+            height: Layout.isSmallDevice ? "87.3%" : "100%",
           }}
         ></View>
       )}
