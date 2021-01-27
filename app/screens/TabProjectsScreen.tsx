@@ -377,6 +377,7 @@ export default function TabProjectsScreen({ route, navigation }: any) {
           containerStyle={{
             height: "100%",
             backgroundColor: colors.yearGroupBackground,
+            borderColor: colors.yearBorder,
             borderRadius: 0,
             marginVertical: 0,
             marginHorizontal: 0,
