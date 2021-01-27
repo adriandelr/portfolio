@@ -180,11 +180,11 @@ export default function WelcomeOverlay() {
                   color: colors.textGuide,
                   fontSize: 23,
                   position: "absolute",
-                  top: !Layout.isSmallDevice
-                    ? "27%"
-                    : Layout.isSmallDevice
-                    ? "37%"
-                    : "27%",
+                  top: Layout.isSmallDevice
+                    ? Layout.isSmallerDevice
+                      ? "37%"
+                      : "37%"
+                    : "30%",
                   flex: 1,
                   alignSelf: "center",
                   fontWeight: "700",
@@ -200,11 +200,11 @@ export default function WelcomeOverlay() {
                   color: colors.textGuide,
                   fontSize: 13,
                   position: "absolute",
-                  top: !Layout.isSmallDevice
-                    ? "29%"
-                    : Layout.isSmallDevice
-                    ? "39%"
-                    : "23%",
+                  top: Layout.isSmallDevice
+                    ? Layout.isSmallerDevice
+                      ? "41%"
+                      : "39%"
+                    : "29%",
                   flex: 1,
                   alignSelf: "center",
                   fontWeight: "300",
@@ -222,11 +222,11 @@ export default function WelcomeOverlay() {
                   color: colors.textGuide,
                   fontSize: 13,
                   position: "absolute",
-                  top: !Layout.isSmallDevice
-                    ? "33%"
-                    : Layout.isSmallDevice
-                    ? "43%"
-                    : "29%",
+                  top: Layout.isSmallDevice
+                    ? Layout.isSmallerDevice
+                      ? "45%"
+                      : "43%"
+                    : "35%",
                   flex: 1,
                   alignSelf: "center",
                   fontWeight: "300",
@@ -240,8 +240,8 @@ export default function WelcomeOverlay() {
             <View
               style={{
                 position: "absolute",
-                top: Platform.OS === "web" ? 20 : 10,
-                left: Platform.OS === "web" ? 20 : 40,
+                top: Layout.isSmallDevice ? 30 : 10,
+                left: Layout.isSmallDevice ? 40 : 40,
                 flex: 1,
                 alignItems: "flex-start",
               }}
@@ -266,7 +266,11 @@ export default function WelcomeOverlay() {
             <View
               style={{
                 position: "absolute",
-                top: Platform.OS === "web" ? 123 : 48,
+                top: Layout.isSmallDevice
+                  ? Platform.OS === "web"
+                    ? 50
+                    : 48
+                  : 124,
                 left: Platform.OS === "web" ? 5 : 3,
                 flex: 1,
                 alignItems: "flex-start",
@@ -390,7 +394,7 @@ export default function WelcomeOverlay() {
               </View>
             )}
 
-            {Platform.OS === "web" && (
+            {!Layout.isSmallDevice && (
               <View
                 style={{
                   position: "absolute",
@@ -423,7 +427,7 @@ export default function WelcomeOverlay() {
               </View>
             )}
 
-            {Platform.OS !== "web" && (
+            {Layout.isSmallDevice && (
               <View
                 style={{
                   position: "absolute",
@@ -459,10 +463,10 @@ export default function WelcomeOverlay() {
             backgroundColor: colors.background,
             opacity: 0.97,
             position: "absolute",
-            top: Platform.OS === "web" ? 120 : 95,
+            top: Layout.isSmallDevice ? 95 : 120,
             left: 0,
-            width: Platform.OS === "web" ? "100%" : Layout.window.width,
-            height: Platform.OS === "web" ? "100%" : Layout.window.height - 203,
+            width: Layout.window.width,
+            height: Layout.isSmallDevice ? Layout.window.height - 167 : "100%",
           }}
         ></View>
       )}
