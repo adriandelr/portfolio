@@ -349,7 +349,7 @@ export default function WelcomeOverlay() {
                     },
                   ]}
                 >
-                  Swipe to open drawer on the first page
+                  Swipe right till you open the side menu
                 </Text>
                 <SwipeFadeAnim>
                   <Icon
