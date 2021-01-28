@@ -214,11 +214,24 @@ Notable Packages
             "https://forums.expo.io/t/react-native-snap-carousel-not-compatible-with-react-native-web-causing-typeerror/45131",
         },
         {
+          title: "Will React Classes Get Deprecated Because of Hooks?",
+          content:
+            "React Hooks are a complete and better replacement for Classes. Will React Classes stay with us much longer?",
+          link:
+            "https://blog.bitsrc.io/will-react-classes-get-deprecated-because-of-hooks-bb62938ac1f5",
+        },
+        {
           title: "How to typescript react native list refs",
           content:
             "VirtualLists (i.e. SectionList, FlatList) have always been dificult for me to describe in typescript, but the following seems to work.",
           link:
             "https://til.hashrocket.com/posts/cgukffdr1n-how-to-typescript-react-native-list-refs",
+        },
+        {
+          title: "Automatic Versioning for React Native Apps",
+          content: "You need to update your app's version to 1.0.0.",
+          link:
+            "https://dev.to/osamaqarem/automatic-versioning-for-react-native-apps-2bf3",
         },
       ],
     },
