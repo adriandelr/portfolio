@@ -20,6 +20,7 @@ import Layout from "../constants/Layout";
 import { ButtonGroup } from "react-native-elements";
 import ImageViewer from "react-native-image-zoom-viewer";
 import _ from "lodash";
+import Icon from "react-native-vector-icons/FontAwesome5";
 
 export const PROJECTS: any = [
   {
@@ -179,7 +180,7 @@ export default function TabProjectsScreen({ route, navigation }: any) {
 
   const [open, setOpen] = useState(false);
   const [images, setImages] = useState([]);
-  const Item = ({ projItem }: any) => (
+  const Item = ({ projItem, projSection }: any) => (
     <View style={styles.item}>
       <Text style={[Styles.novaFamily, styles.title]}>{projItem.title}</Text>
       <Text style={[Styles.novaFamily, styles.time]}>{projItem.time}</Text>
@@ -217,6 +218,29 @@ export default function TabProjectsScreen({ route, navigation }: any) {
         />
       )}
       <Text style={[Styles.novaFamily, styles.date]}>{projItem.date}</Text>
+      {projSection.year == "2011" && (
+        <TouchableOpacity
+          onPress={() => {
+            listRef.current?.scrollToLocation({
+              itemIndex: 0,
+              sectionIndex: 0,
+              animated: true,
+            });
+          }}
+          style={{
+            alignSelf: "center",
+          }}
+        >
+          <Icon
+            name="angle-double-up"
+            style={{
+              fontSize: 27,
+              color: colors.link,
+              marginVertical: 7,
+            }}
+          />
+        </TouchableOpacity>
+      )}
     </View>
   );
 
@@ -260,7 +284,7 @@ export default function TabProjectsScreen({ route, navigation }: any) {
     },
     date: {
       fontSize: 13,
-      color: colors.error,
+      color: colors.textDate,
       paddingBottom: 13,
     },
   });
@@ -407,8 +431,10 @@ export default function TabProjectsScreen({ route, navigation }: any) {
       </View>
       <SectionList
         sections={PROJECTS}
-        keyExtractor={(item, index): any => item}
-        renderItem={({ item }) => <Item projItem={item} />}
+        keyExtractor={(item): any => item}
+        renderItem={({ item, section }) => (
+          <Item projItem={item} projSection={section} />
+        )}
         renderSectionHeader={({ section: { year } }) => (
           <Text style={[Styles.novaFamily, styles.header]}>{year}</Text>
         )}
