@@ -320,7 +320,7 @@ Notable Packages
             alignSelf: "flex-end",
             justifyContent: "center",
             transform: open ? [{ rotate: "-90deg" }] : [{ rotate: "0deg" }],
-            opacity: open ? 0.7 : 0.9,
+            opacity: open ? 0.3 : 0.7,
           }}
         />
         {open && <Markdown style={mdStyles}>{snipItem.content}</Markdown>}
