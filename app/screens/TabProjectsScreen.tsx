@@ -21,6 +21,7 @@ import { ButtonGroup } from "react-native-elements";
 import ImageViewer from "react-native-image-zoom-viewer";
 import _ from "lodash";
 import Icon from "react-native-vector-icons/FontAwesome5";
+import ReadMore from "react-native-read-more-text";
 
 export const PROJECTS: any = [
   {
@@ -204,9 +205,37 @@ export default function TabProjectsScreen({ route, navigation }: any) {
           />
         </TouchableWithoutFeedback>
       </View>
-      <Text style={[Styles.novaFamily, styles.desc]}>
-        {projItem.description}
-      </Text>
+      <ReadMore
+        numberOfLines={7}
+        renderTruncatedFooter={(handlePress: any) => (
+          <Text
+            style={{
+              color: colors.textReadMore,
+              marginTop: 3,
+              marginBottom: 13,
+            }}
+            onPress={handlePress}
+          >
+            Read more
+          </Text>
+        )}
+        renderRevealedFooter={(handlePress: any) => (
+          <Text
+            style={{
+              color: colors.textReadMore,
+              marginTop: 3,
+              marginBottom: 13,
+            }}
+            onPress={handlePress}
+          >
+            Show less
+          </Text>
+        )}
+      >
+        <Text style={[Styles.novaFamily, styles.desc]}>
+          {projItem.description}
+        </Text>
+      </ReadMore>
       {projItem.showResume && (
         <Linker url={resumeURL} text="View Resume" color={colors.link} />
       )}
