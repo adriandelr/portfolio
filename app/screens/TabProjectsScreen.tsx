@@ -257,6 +257,8 @@ export default function TabProjectsScreen({ route, navigation }: any) {
             });
           }}
           style={{
+            width: 44,
+            height: 44,
             alignSelf: "center",
           }}
         >
@@ -266,6 +268,7 @@ export default function TabProjectsScreen({ route, navigation }: any) {
               fontSize: 27,
               color: colors.link,
               marginVertical: 7,
+              textAlign: "center",
             }}
           />
         </TouchableOpacity>
