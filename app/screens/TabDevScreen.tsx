@@ -34,28 +34,36 @@ export default function TabDevScreen({ navigation }: any) {
         backgroundColor: "transparent",
       }}
     >
-      <TouchableOpacity
-        onPress={() => {
-          navigation.openDrawer();
-        }}
-        style={{
-          position: "absolute",
-          top: Platform.OS === "web" ? 15 : 13,
-          left: Platform.OS === "web" ? 15 : 13,
-        }}
-      >
-        <Icon
-          name="bars"
-          size={21}
-          color={colors.primary}
-          style={{ paddingLeft: 7 }}
-          solid
-        />
-      </TouchableOpacity>
+      {Platform.OS === "web" && (
+        <View
+          style={{
+            width: 25,
+            height: 25,
+            position: "absolute",
+            top: 15,
+            left: 15,
+            zIndex: 1,
+          }}
+        >
+          <TouchableOpacity
+            onPress={() => {
+              navigation.openDrawer();
+            }}
+          >
+            <Icon
+              name="bars"
+              size={21}
+              color={colors.primary}
+              style={{ paddingLeft: 7 }}
+              solid
+            />
+          </TouchableOpacity>
+        </View>
+      )}
 
       <ScrollView
         style={{
-          top: Platform.OS === "web" ? 50 : 0,
+          paddingTop: Platform.OS === "web" ? 50 : 0,
         }}
       >
         <View

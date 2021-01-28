@@ -267,12 +267,8 @@ export default function WelcomeOverlay() {
               <View
                 style={{
                   position: "absolute",
-                  top: Layout.isSmallDevice
-                    ? Platform.OS === "web"
-                      ? 50
-                      : 48
-                    : 124,
-                  left: Platform.OS === "web" ? 5 : 3,
+                  top: Layout.isSmallDevice ? 50 : 124,
+                  left: Platform.OS === "web" ? 5 : 4,
                   flex: 1,
                   alignItems: "flex-start",
                 }}
