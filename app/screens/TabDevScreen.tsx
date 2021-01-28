@@ -34,7 +34,7 @@ export default function TabDevScreen({ navigation }: any) {
         backgroundColor: "transparent",
       }}
     >
-      {Platform.OS === "web" && (
+      {Platform.OS === "web" && !Layout.isSmallDevice && (
         <View
           style={{
             width: 25,
