@@ -30,11 +30,7 @@ export default function MainScreen() {
       <DrawerContentScrollView {...props}>
         <DrawerItemList {...props} />
         <DrawerItem
-          label={() => (
-            <Text style={[Styles.nunitoFamily, { color: colors.text }]}>
-              Projects
-            </Text>
-          )}
+          label={() => null}
           onPress={() => {
             navigation.navigate("TabProjects");
             navigation.dispatch(DrawerActions.closeDrawer());
@@ -43,16 +39,22 @@ export default function MainScreen() {
             <Icon
               color={colors.text}
               size={24}
-              name={isFocused ? "briefcase-sharp" : "briefcase-outline"}
+              name="briefcase-sharp"
+              style={{
+                height: 53,
+                top: 0,
+                left: 0,
+                marginTop: 7,
+                marginLeft: 7,
+              }}
             />
           )}
+          style={{
+            height: 53,
+          }}
         />
         <DrawerItem
-          label={() => (
-            <Text style={[Styles.nunitoFamily, { color: colors.text }]}>
-              Snippets
-            </Text>
-          )}
+          label={() => null}
           onPress={() => {
             navigation.navigate("TabSnippets");
             navigation.dispatch(DrawerActions.closeDrawer());
@@ -61,9 +63,19 @@ export default function MainScreen() {
             <Icon
               color={colors.text}
               size={24}
-              name={isFocused ? "list-circle-sharp" : "list-circle-outline"}
+              name="list-circle-sharp"
+              style={{
+                height: 53,
+                top: 0,
+                left: 0,
+                marginTop: 7,
+                marginLeft: 7,
+              }}
             />
           )}
+          style={{
+            height: 53,
+          }}
         />
       </DrawerContentScrollView>
     );
@@ -78,7 +90,11 @@ export default function MainScreen() {
       drawerType="slide"
       drawerStyle={{
         backgroundColor: colors.background,
-        width: 200,
+        width: 73,
+      }}
+      drawerContentOptions={{
+        activeTintColor: colors.error,
+        itemStyle: { height: 53 },
       }}
       edgeWidth={200}
       minSwipeDistance={10}
@@ -87,14 +103,21 @@ export default function MainScreen() {
       }}
     >
       <Drawer.Screen
-        name="Dev"
+        name="Adrian Del Rosario - Dev"
         component={TabDevScreen}
         options={{
           drawerIcon: () => (
             <Icon
               color={colors.text}
               size={24}
-              name={isFocused ? "person-circle-sharp" : "person-circle-outline"}
+              name="person-circle-sharp"
+              style={{
+                height: 53,
+                top: 0,
+                left: 0,
+                marginTop: 7,
+                marginLeft: 7,
+              }}
             />
           ),
           headerTitleStyle: Styles.nunitoFamily,

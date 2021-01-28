@@ -349,7 +349,7 @@ export default function WelcomeOverlay() {
                     },
                   ]}
                 >
-                  Swipe right till you open the side menu
+                  Swipe right till you open the icon menu
                 </Text>
                 <SwipeFadeAnim>
                   <Icon
