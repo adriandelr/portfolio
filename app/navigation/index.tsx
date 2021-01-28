@@ -39,8 +39,7 @@ export default function Navigation({
         tabBarOptions={{
           activeTintColor: colors.primary,
           style: {
-            backgroundColor:
-              Platform.OS === "web" ? colors.navBackground : colors.background,
+            backgroundColor: colors.navBackground,
           },
           labelStyle: Styles.nunitoFamily,
           showIcon: true,

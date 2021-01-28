@@ -1,10 +1,9 @@
 import * as React from "react";
 import { Platform, StyleSheet, View, Switch } from "react-native";
 
-import { Appearance, useColorScheme } from "react-native-appearance";
-
 import { useTheme } from "../hooks/useThemeContext";
-import { Text, colors as elementsColor } from "react-native-elements";
+import Layout from "../constants/Layout";
+
 import Icon from "react-native-vector-icons/FontAwesome5";
 
 export default function Toolbar() {
@@ -18,22 +17,12 @@ export default function Toolbar() {
       alignContent: "center",
       justifyContent: "flex-end",
       flexWrap: "wrap",
-      backgroundColor:
-        Platform.OS === "web" ? colors.navBackground : colors.background,
+      backgroundColor: colors.toolbarBackground,
       padding: 15,
       paddingTop: Platform.OS === "ios" ? 70 : 10,
       paddingBottom: Platform.OS === "ios" ? 30 : 10,
     },
   });
-
-  const elemStyles = {
-    title: {
-      color: colors.text,
-    },
-    error: {
-      color: colors.error,
-    },
-  };
 
   const toggleScheme = () => {
     /*

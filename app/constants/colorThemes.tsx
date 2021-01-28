@@ -2,13 +2,14 @@ import { Platform } from "react-native";
 
 // Light theme colors
 export const lightColors = {
-  navBackground: "lightgray",
+  toolbarBackground: "whitesmoke",
+  navBackground: "whitesmoke",
   background: "whitesmoke",
   avatarBackground: "silver",
-  snipItemBackground: "white",
-  snipBorder: "snow",
+  snipItemBackground: "whitesmoke",
+  snipBorder: "whitesmoke",
   yearBorder: "lightgrey",
-  yearGroupBackground: Platform.OS === "web" ? "lightgray" : "whitesmoke",
+  yearGroupBackground: "whitesmoke",
   primary: "dimgrey",
   text: "dimgrey",
   textAvatar: "whitesmoke",
@@ -23,13 +24,14 @@ export const lightColors = {
 
 // Dark theme colors
 export const darkColors = {
-  navBackground: "dimgrey",
+  toolbarBackground: "#101111",
+  navBackground: "#101111",
   background: "#101111",
   avatarBackground: "dimgrey",
   snipItemBackground: "#101111",
   snipBorder: "#101111",
   yearBorder: "dimgrey",
-  yearGroupBackground: Platform.OS === "web" ? "dimgrey" : "#101111",
+  yearGroupBackground: "#101111",
   primary: "darkgrey",
   text: "gainsboro",
   textAvatar: "silver",
