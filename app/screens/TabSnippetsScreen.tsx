@@ -440,13 +440,20 @@ export default function TabSnippetsScreen() {
           /*
           // @ts-ignore */
           style={Platform.OS === "web" && { outline: "none" }}
-          labelStyle={{
-            color: colors.textSearchLabel,
-          }}
-          inputStyle={{
-            color: colors.text,
-            padding: 7,
-          }}
+          labelStyle={[
+            Styles.novaFamily,
+            {
+              color: colors.textSearchLabel,
+            },
+          ]}
+          inputStyle={[
+            Styles.novaFamily,
+            {
+              fontSize: 17,
+              color: colors.text,
+              padding: 7,
+            },
+          ]}
           leftIcon={{
             type: "font-awesome",
             name: "search",

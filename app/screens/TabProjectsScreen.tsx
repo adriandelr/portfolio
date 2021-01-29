@@ -209,11 +209,14 @@ export default function TabProjectsScreen({ route, navigation }: any) {
         numberOfLines={7}
         renderTruncatedFooter={(handlePress: any) => (
           <Text
-            style={{
-              color: colors.textReadMore,
-              marginTop: 3,
-              marginBottom: 13,
-            }}
+            style={[
+              Styles.novaFamily,
+              {
+                color: colors.textReadMore,
+                marginTop: 3,
+                marginBottom: 13,
+              },
+            ]}
             onPress={handlePress}
           >
             Read more
@@ -221,11 +224,14 @@ export default function TabProjectsScreen({ route, navigation }: any) {
         )}
         renderRevealedFooter={(handlePress: any) => (
           <Text
-            style={{
-              color: colors.textReadMore,
-              marginTop: 3,
-              marginBottom: 13,
-            }}
+            style={[
+              Styles.novaFamily,
+              {
+                color: colors.textReadMore,
+                marginTop: 3,
+                marginBottom: 13,
+              },
+            ]}
             onPress={handlePress}
           >
             Show less
