@@ -386,8 +386,9 @@ export default function TabSnippetsScreen() {
     },
     header: {
       fontSize: 17,
-      color: colors.error,
+      color: colors.textSnipHeader,
       marginTop: 20,
+      fontWeight: "700",
     },
     item: {
       width: "100%",
