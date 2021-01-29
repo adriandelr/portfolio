@@ -55,6 +55,7 @@
     "@types/lodash": "^4.14.168",
     "@types/react": "~16.9.35",
     "@types/react-native": "^0.63.42",
+    "@types/react-native-read-more-text": "^1.0.0",
     "gh-pages": "^3.1.0",
     "jest-expo": "~40.0.0",
     "typescript": "~4.0.0"
