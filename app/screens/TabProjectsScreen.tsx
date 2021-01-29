@@ -118,7 +118,7 @@ export const PROJECTS: any = [
         description:
           "Designed and organized banners, posters, slogans, prints, and documents for formal events. \n\nProduced video slides and presentations for company news and events updates.",
         time: "6 months",
-        date: " Jun - Dec 2012",
+        date: "Jun - Dec 2012",
         images: [
           {
             url: "",

@@ -14,6 +14,7 @@ import {
 
 import TabDevScreen from "../screens/TabDevScreen";
 
+import Linker from "../components/Linker";
 import { useTheme } from "../hooks/useThemeContext";
 import Styles from "../constants/Styles";
 
@@ -80,6 +81,21 @@ export default function MainScreen() {
             }}
           />
         </DrawerContentScrollView>
+        <Linker
+          url={
+            "https://drive.google.com/file/d/1MX6I97C9fx8CTzV5YQhRPwYdyAEjsyhm/view?usp=sharing"
+          }
+          iconOnly="address-card"
+        />
+        <Linker
+          url={"viber://contact?number=%2B09760166007"}
+          iconOnly="viber"
+        />
+        <Linker
+          url={"http://m.me/AZarch?ref=AZarch"}
+          iconOnly="facebook-messenger"
+        />
+        <Linker url={"mailto:adrian.delr@gmail.com"} iconOnly="envelope" />
         <Text
           style={[
             Styles.nunitoFamily,

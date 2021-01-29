@@ -34,7 +34,7 @@ export default function WelcomeOverlay() {
     const swipeDuration = 700;
 
     const iterations = 1000;
-    const delay = 1700;
+    const delay = 2300;
 
     useEffect(() => {
       function animate() {
