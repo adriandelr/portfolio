@@ -2,7 +2,7 @@
 export const lightColors = {
   primary: "dimgrey",
   background: "whitesmoke",
-  backgroundToolbar: "whitesmoke",
+  backgroundToolbar: "gainsboro",
   backgroundNav: "whitesmoke",
   backgroundAvatar: "silver",
   backgroundSnipItem: "whitesmoke",
@@ -26,7 +26,7 @@ export const lightColors = {
 // Dark theme colors
 export const darkColors = {
   primary: "darkgrey",
-  backgroundToolbar: "#101111",
+  backgroundToolbar: "black",
   backgroundNav: "#101111",
   background: "#101111",
   backgroundAvatar: "dimgrey",
