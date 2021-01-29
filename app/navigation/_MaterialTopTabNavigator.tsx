@@ -90,7 +90,7 @@ export default function MaterialTopTabNavigator() {
       swipeVelocityImpact={0.3}
       tabBarOptions={{
         activeTintColor: colors.primary,
-        style: { backgroundColor: colors.navBackground },
+        style: { backgroundColor: colors.backgroundNav },
         showIcon: true,
         indicatorStyle: {
           backgroundColor: colors.primary,

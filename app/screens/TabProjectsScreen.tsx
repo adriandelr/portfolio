@@ -434,31 +434,31 @@ export default function TabProjectsScreen({ route, navigation }: any) {
           Component={TouchableOpacity}
           containerStyle={{
             height: "100%",
-            backgroundColor: colors.yearGroupBackground,
-            borderColor: colors.yearBorder,
+            backgroundColor: colors.backgroundYearGroup,
+            borderColor: colors.borderYear,
             borderRadius: 0,
             marginVertical: 0,
             marginHorizontal: 0,
           }}
           buttonContainerStyle={{
-            backgroundColor: colors.yearGroupBackground,
+            backgroundColor: colors.backgroundYearGroup,
           }}
           selectedButtonStyle={{
-            backgroundColor: colors.yearGroupBackground,
+            backgroundColor: colors.backgroundYearGroup,
           }}
           textStyle={[
             Styles.novaFamily,
             {
               fontSize: Layout.isSmallDevice ? 14 : 15,
               color: colors.textYearGroup,
-              backgroundColor: colors.yearGroupBackground,
+              backgroundColor: colors.backgroundYearGroup,
             },
           ]}
           selectedTextStyle={{
             color: colors.textYearGroup,
-            backgroundColor: colors.yearGroupBackground,
+            backgroundColor: colors.backgroundYearGroup,
           }}
-          innerBorderStyle={{ width: 0, color: colors.yearGroupBackground }}
+          innerBorderStyle={{ width: 0, color: colors.backgroundYearGroup }}
         />
       </View>
       <SectionList

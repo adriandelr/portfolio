@@ -17,7 +17,7 @@ export default function Toolbar() {
       alignContent: "center",
       justifyContent: "flex-end",
       flexWrap: "wrap",
-      backgroundColor: colors.toolbarBackground,
+      backgroundColor: colors.backgroundToolbar,
       padding: 15,
       paddingTop: Platform.OS === "ios" ? 70 : 10,
       paddingBottom: Platform.OS === "ios" ? 30 : 10,

@@ -355,9 +355,9 @@ Notable Packages
       marginTop: 7,
       marginBottom: 13,
       borderWidth: 1,
-      borderColor: colors.snipBorder,
+      borderColor: colors.borderSnip,
       overflow: "hidden",
-      backgroundColor: colors.snipItemBackground,
+      backgroundColor: colors.backgroundSnipItem,
     },
     title: {
       fontSize: Platform.OS === "web" ? 15 : 15,

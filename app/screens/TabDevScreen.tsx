@@ -96,7 +96,7 @@ export default function TabDevScreen({ navigation }: any) {
             containerStyle={{
               marginTop: 30,
               marginBottom: 50,
-              backgroundColor: colors.avatarBackground,
+              backgroundColor: colors.backgroundAvatar,
             }}
           />
           <Image

@@ -1,4 +1,5 @@
 import * as React from "react";
+import { View } from "react-native";
 import {
   createDrawerNavigator,
   DrawerContentScrollView,
@@ -27,57 +28,76 @@ export default function MainScreen() {
 
   function CustomDrawerContent(props: any) {
     return (
-      <DrawerContentScrollView {...props}>
-        <DrawerItemList {...props} />
-        <DrawerItem
-          label={() => null}
-          onPress={() => {
-            navigation.navigate("TabProjects");
-            navigation.dispatch(DrawerActions.closeDrawer());
-          }}
-          icon={() => (
-            <Icon
-              color={colors.text}
-              size={24}
-              name="briefcase-sharp"
-              style={{
-                height: 53,
-                top: 0,
-                left: 0,
-                marginTop: 7,
-                marginLeft: 7,
-              }}
-            />
-          )}
-          style={{
-            height: 53,
-          }}
-        />
-        <DrawerItem
-          label={() => null}
-          onPress={() => {
-            navigation.navigate("TabSnippets");
-            navigation.dispatch(DrawerActions.closeDrawer());
-          }}
-          icon={() => (
-            <Icon
-              color={colors.text}
-              size={24}
-              name="list-circle-sharp"
-              style={{
-                height: 53,
-                top: 0,
-                left: 0,
-                marginTop: 7,
-                marginLeft: 7,
-              }}
-            />
-          )}
-          style={{
-            height: 53,
-          }}
-        />
-      </DrawerContentScrollView>
+      <View style={{ flex: 1 }}>
+        <DrawerContentScrollView {...props}>
+          <DrawerItemList {...props} />
+          <DrawerItem
+            label={() => null}
+            onPress={() => {
+              navigation.navigate("TabProjects");
+              navigation.dispatch(DrawerActions.closeDrawer());
+            }}
+            icon={() => (
+              <Icon
+                color={colors.text}
+                size={24}
+                name="briefcase-sharp"
+                style={{
+                  height: 53,
+                  top: 0,
+                  left: 0,
+                  marginTop: 7,
+                  marginLeft: 7,
+                }}
+              />
+            )}
+            style={{
+              height: 53,
+            }}
+          />
+          <DrawerItem
+            label={() => null}
+            onPress={() => {
+              navigation.navigate("TabSnippets");
+              navigation.dispatch(DrawerActions.closeDrawer());
+            }}
+            icon={() => (
+              <Icon
+                color={colors.text}
+                size={24}
+                name="list-circle-sharp"
+                style={{
+                  height: 53,
+                  top: 0,
+                  left: 0,
+                  marginTop: 7,
+                  marginLeft: 7,
+                }}
+              />
+            )}
+            style={{
+              height: 53,
+            }}
+          />
+        </DrawerContentScrollView>
+        <Text
+          style={[
+            Styles.nunitoFamily,
+            {
+              fontSize: 9,
+              color: colors.textVersion,
+              alignSelf: "center",
+              justifyContent: "flex-end",
+              borderTopWidth: 1,
+              borderColor: colors.link,
+              paddingTop: 3,
+              marginBottom: 13,
+            },
+          ]}
+        >
+          Version 1.0.0
+        </Text>
+      </View>
     );
   }
 
