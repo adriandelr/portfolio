@@ -307,9 +307,9 @@ export default function TabProjectsScreen({ route, navigation }: any) {
       paddingRight: 17,
     },
     title: {
-      fontSize: Platform.OS === "web" ? 27 : 19,
+      fontSize: Layout.isSmallDevice ? 19 : 24,
       color: colors.text,
-      fontWeight: Platform.OS === "web" ? "normal" : "300",
+      fontWeight: "700",
     },
     desc: {
       fontSize: Platform.OS === "web" ? 14 : 17,
@@ -458,6 +458,7 @@ export default function TabProjectsScreen({ route, navigation }: any) {
               fontSize: Layout.isSmallDevice ? 14 : 15,
               color: colors.textYearGroup,
               backgroundColor: colors.backgroundYearGroup,
+              fontWeight: "700",
             },
           ]}
           selectedTextStyle={{
