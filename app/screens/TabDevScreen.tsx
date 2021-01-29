@@ -154,7 +154,7 @@ export default function TabDevScreen({ navigation }: any) {
               Styles.novaFamily,
               {
                 color: colors.text,
-                fontSize: 14,
+                fontSize: Platform.OS === "web" ? 14 : 15,
                 marginTop: 40,
                 paddingHorizontal: Layout.isSmallDevice
                   ? Layout.isSmallerDevice
@@ -190,7 +190,7 @@ export default function TabDevScreen({ navigation }: any) {
                 Styles.novaFamily,
                 {
                   color: colors.text,
-                  fontSize: 14,
+                  fontSize: Platform.OS === "web" ? 14 : 15,
                   marginTop: 40,
                   marginBottom: 20,
                   paddingHorizontal: Layout.isSmallDevice
@@ -232,7 +232,7 @@ export default function TabDevScreen({ navigation }: any) {
                 Styles.novaFamily,
                 {
                   color: colors.text,
-                  fontSize: 14,
+                  fontSize: Platform.OS === "web" ? 14 : 15,
                   marginTop: 30,
                   marginBottom: 20,
                   paddingHorizontal: Layout.isSmallDevice
