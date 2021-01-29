@@ -91,10 +91,7 @@ export default function MainScreen() {
           url={"viber://contact?number=%2B09760166007"}
           iconOnly="viber"
         />
-        <Linker
-          url={"http://m.me/AZarch?ref=AZarch"}
-          iconOnly="facebook-messenger"
-        />
+        <Linker url={"http://m.me/AZarch"} iconOnly="facebook-messenger" />
         <Linker url={"mailto:adrian.delr@gmail.com"} iconOnly="envelope" />
         <Text
           style={[
