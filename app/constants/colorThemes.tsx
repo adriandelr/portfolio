@@ -1,3 +1,4 @@
+import { Platform } from "react-native";
 import Layout from "../constants/Layout";
 
 // Light theme colors
@@ -15,16 +16,16 @@ export const lightColors = {
   textAvatar: "whitesmoke",
   textGuide: "whitesmoke",
   textReadMore: "slategrey",
-  textDate: "lightslategray",
+  textDate: "lightslategrey",
   textSnipHeader: "slategrey",
   textSnipTitle: "grey",
   textSnipContent: "dimgrey",
-  textYearGroup: "dimgrey",
+  textYearGroup: Layout.isSmallDevice ? "darkgrey" : "dimgrey",
   textSearchLabel: "slategrey",
-  textSearchPlaceholder: "lightslategray",
-  textVersion: "lightslategray",
+  textSearchPlaceholder: "lightslategrey",
+  textVersion: "lightslategrey",
   link: "#D3D3D3",
-  linkerButton: "lightslategray",
+  linkerButton: "lightslategrey",
   error: "slategrey",
 };
 
@@ -43,15 +44,15 @@ export const darkColors = {
   textAvatar: "silver",
   textGuide: "whitesmoke",
   textReadMore: "slategrey",
-  textDate: "lightslategray",
+  textDate: "lightslategrey",
   textSnipHeader: "slategrey",
-  textSnipTitle: "darkgray",
+  textSnipTitle: "darkgrey",
   textSnipContent: "dimgrey",
-  textYearGroup: "darkgrey",
+  textYearGroup: Layout.isSmallDevice ? "darkgrey" : "dimgrey",
   textSearchLabel: "slategrey",
-  textSearchPlaceholder: "lightslategray",
-  textVersion: "lightslategray",
+  textSearchPlaceholder: "lightslategrey",
+  textVersion: "lightslategrey",
   link: "#D3D3D3",
-  linkerButton: "lightslategray",
+  linkerButton: "lightslategrey",
   error: "slategrey",
 };

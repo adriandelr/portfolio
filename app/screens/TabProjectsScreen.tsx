@@ -312,7 +312,7 @@ export default function TabProjectsScreen({ route, navigation }: any) {
       fontWeight: "700",
     },
     desc: {
-      fontSize: Platform.OS === "web" ? 14 : 17,
+      fontSize: Platform.OS === "web" ? 14 : 15,
       color: colors.text,
       marginBottom: 7,
     },
