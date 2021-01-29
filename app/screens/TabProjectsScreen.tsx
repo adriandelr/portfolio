@@ -17,9 +17,9 @@ import Linker from "../components/Linker";
 import Styles from "../constants/Styles";
 import Layout from "../constants/Layout";
 
+import _ from "lodash";
 import { ButtonGroup } from "react-native-elements";
 import ImageViewer from "react-native-image-zoom-viewer";
-import _ from "lodash";
 import Icon from "react-native-vector-icons/FontAwesome5";
 import ReadMore from "react-native-read-more-text";
 
