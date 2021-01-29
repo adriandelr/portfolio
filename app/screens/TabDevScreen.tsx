@@ -34,32 +34,30 @@ export default function TabDevScreen({ navigation }: any) {
         backgroundColor: "transparent",
       }}
     >
-      {Platform.OS === "web" && !Layout.isSmallDevice && (
-        <View
-          style={{
-            width: 25,
-            height: 25,
-            position: "absolute",
-            top: 15,
-            left: 15,
-            zIndex: 1,
+      <View
+        style={{
+          width: 25,
+          height: 25,
+          position: "absolute",
+          top: 15,
+          left: 15,
+          zIndex: 1,
+        }}
+      >
+        <TouchableOpacity
+          onPress={() => {
+            navigation.openDrawer();
           }}
         >
-          <TouchableOpacity
-            onPress={() => {
-              navigation.openDrawer();
-            }}
-          >
-            <Icon
-              name="bars"
-              size={21}
-              color={colors.primary}
-              style={{ paddingLeft: 7 }}
-              solid
-            />
-          </TouchableOpacity>
-        </View>
-      )}
+          <Icon
+            name="bars"
+            size={21}
+            color={colors.primary}
+            style={{ paddingLeft: 7 }}
+            solid
+          />
+        </TouchableOpacity>
+      </View>
 
       <ScrollView
         style={{
@@ -158,12 +156,11 @@ export default function TabDevScreen({ navigation }: any) {
                 color: colors.text,
                 fontSize: 14,
                 marginTop: 40,
-                paddingHorizontal:
-                  Platform.OS === "web"
-                    ? Layout.isSmallDevice
-                      ? "7%"
-                      : "27%"
-                    : "13%",
+                paddingHorizontal: Layout.isSmallDevice
+                  ? Layout.isSmallerDevice
+                    ? "19%"
+                    : "13%"
+                  : "27%",
               },
             ]}
           >
@@ -196,12 +193,11 @@ export default function TabDevScreen({ navigation }: any) {
                   fontSize: 14,
                   marginTop: 40,
                   marginBottom: 20,
-                  paddingHorizontal:
-                    Platform.OS === "web"
-                      ? Layout.isSmallDevice
-                        ? "7%"
-                        : "27%"
-                      : "13%",
+                  paddingHorizontal: Layout.isSmallDevice
+                    ? Layout.isSmallerDevice
+                      ? "19%"
+                      : "13%"
+                    : "27%",
                 },
               ]}
             >
@@ -239,12 +235,11 @@ export default function TabDevScreen({ navigation }: any) {
                   fontSize: 14,
                   marginTop: 30,
                   marginBottom: 20,
-                  paddingHorizontal:
-                    Platform.OS === "web"
-                      ? Layout.isSmallDevice
-                        ? "7%"
-                        : "27%"
-                      : "13%",
+                  paddingHorizontal: Layout.isSmallDevice
+                    ? Layout.isSmallerDevice
+                      ? "19%"
+                      : "13%"
+                    : "27%",
                 },
               ]}
             >
