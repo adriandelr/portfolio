@@ -10,6 +10,7 @@ export const lightColors = {
   backgroundAvatar: "silver",
   backgroundSnipItem: "whitesmoke",
   backgroundYearGroup: "whitesmoke",
+  backgroundClose: "gainsboro",
   borderSnip: "whitesmoke",
   borderYear: "lightgrey",
   text: "dimgrey",
@@ -26,6 +27,7 @@ export const lightColors = {
   textVersion: "lightslategrey",
   link: "#D3D3D3",
   linkerButton: "lightslategrey",
+  backArrow: "slategrey",
   error: "slategrey",
 };
 
@@ -38,6 +40,7 @@ export const darkColors = {
   backgroundAvatar: "dimgrey",
   backgroundSnipItem: "#101111",
   backgroundYearGroup: "#101111",
+  backgroundClose: "dimgrey",
   borderSnip: "#101111",
   borderYear: "dimgrey",
   text: "gainsboro",
@@ -54,5 +57,6 @@ export const darkColors = {
   textVersion: "lightslategrey",
   link: "#D3D3D3",
   linkerButton: "lightslategrey",
+  backArrow: "slategrey",
   error: "slategrey",
 };
