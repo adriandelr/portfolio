@@ -5,14 +5,12 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 
 import useCachedResources from "./app/hooks/useCachedResources";
 // import useColorScheme from "./app/hooks/useColorScheme";
+import { ThemeProvider } from "./app/hooks/useThemeContext";
 import Toolbar from "./app/components/Toolbar";
 import Navigation from "./app/navigation";
+import WelcomeOverlay from "./app/screens/OverlayUserGuide";
 
 import { AppearanceProvider, Appearance } from "react-native-appearance";
-
-import { ThemeProvider } from "./app/hooks/useThemeContext";
-
-import WelcomeOverlay from "./app/screens/OverlayUserGuide";
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
