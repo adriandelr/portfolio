@@ -108,13 +108,27 @@ defaults write com.apple.finder AppleShowAllFiles -boolean false; killall Finder
     ],
   },
   {
-    title: "JavaScript",
+    title: "JavaScript / TypeScript",
     data: [
       {
         title: "Lodash",
         content:
           "A modern JavaScript utility library delivering modularity, performance & extras.",
         link: "https://lodash.com/",
+      },
+      {
+        title: "Timeout",
+        content: `
+**JavaScript**
+> setTimeout(function(){ 
+alert("Sup!"); 
+}, 2000);
+
+**TypeScript**
+> setTimeout(() => { 
+console.log('hi'); 
+}, 500);
+                `,
       },
       {
         title: "Variable Shadowing",
@@ -212,6 +226,13 @@ Notable Packages
           "https://forums.expo.io/t/react-native-snap-carousel-not-compatible-with-react-native-web-causing-typeerror/45131",
       },
       {
+        title: "useState in React: A complete guide?",
+        content:
+          "useState is a Hook that allows you to have state variables in functional components. You pass the initial state to this function and it returns a variable with the current state value (not necessarily the initial state) and another function to update this value.",
+        link:
+          "https://blog.logrocket.com/a-guide-to-usestate-in-react-ecb9952e406c/",
+      },
+      {
         title: "Will React Classes Get Deprecated Because of Hooks?",
         content:
           "React Hooks are a complete and better replacement for Classes. Will React Classes stay with us much longer?",
@@ -292,43 +313,45 @@ export default function TabSnippetsScreen() {
     };
 
     return (
-      <TouchableOpacity
-        style={[
-          styles.item,
-          !open && { height: Platform.OS === "web" ? 33 : 44 },
-        ]}
-        onPress={toggleAccordion}
-        activeOpacity={1}
-      >
-        <Text
+      <View>
+        <TouchableOpacity
           style={[
-            Styles.novaFamily,
-            styles.title,
-            { paddingVertical: open ? 3 : 0 },
+            styles.item,
+            !open && { height: Platform.OS === "web" ? 33 : 44 },
           ]}
-          numberOfLines={open ? 0 : 1}
+          onPress={toggleAccordion}
+          activeOpacity={1}
         >
-          {snipItem.title}
-        </Text>
-        <Icon
-          name="chevron-left"
-          style={{
-            fontSize: Platform.OS === "web" ? 11 : 14,
-            color: colors.error,
-            position: "absolute",
-            top: Platform.OS === "web" ? 10 : 14,
-            right: Platform.OS === "web" ? 10 : 14,
-            alignSelf: "flex-end",
-            justifyContent: "center",
-            transform: open ? [{ rotate: "-90deg" }] : [{ rotate: "0deg" }],
-            opacity: open ? 0.3 : 0.7,
-          }}
-        />
+          <Text
+            style={[
+              Styles.novaFamily,
+              styles.title,
+              { paddingVertical: open ? 3 : 0 },
+            ]}
+            numberOfLines={open ? 0 : 1}
+          >
+            {snipItem.title}
+          </Text>
+          <Icon
+            name="chevron-left"
+            style={{
+              fontSize: Platform.OS === "web" ? 11 : 14,
+              color: colors.error,
+              position: "absolute",
+              top: Platform.OS === "web" ? 10 : 14,
+              right: Platform.OS === "web" ? 10 : 14,
+              alignSelf: "flex-end",
+              justifyContent: "center",
+              transform: open ? [{ rotate: "-90deg" }] : [{ rotate: "0deg" }],
+              opacity: open ? 0.3 : 0.7,
+            }}
+          />
+        </TouchableOpacity>
         {open && <Markdown style={mdStyles}>{snipItem.content}</Markdown>}
         {open && snipItem.link && (
           <Linker url={snipItem.link} text="View Source" color={colors.link} />
         )}
-      </TouchableOpacity>
+      </View>
     );
   }
 
@@ -419,6 +442,7 @@ export default function TabSnippetsScreen() {
   const mdStyles = StyleSheet.create({
     body: {
       width: "100%",
+      paddingHorizontal: 7,
       paddingBottom: 7,
       color: colors.text,
       fontFamily: "proxima-regular",
