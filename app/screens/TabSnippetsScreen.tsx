@@ -182,6 +182,12 @@ Notable Packages
         `,
       },
       {
+        title: "Hooks API Reference",
+        content:
+          "This page describes the APIs for the built-in Hooks in React.",
+        link: "https://reactjs.org/docs/hooks-reference.html",
+      },
+      {
         title: "The 5 React Native Component Libraries You Should Know in 2018",
         content:
           "Until 2018 we have much many different design pattern and component for React Native but on all of the list, I think this 5 case very important to learn and use in your app.",
@@ -230,6 +236,12 @@ Notable Packages
         content:
           "React is an open-source, frontend JavaScript library for building user interface components. One of the most popular frontend libraries of 2020, React has almost 3 million users and a massive developer community and runs on a wide range of platforms, from the web to mobile devices.",
         link: "https://blog.logrocket.com/react-pure-components-functional/",
+      },
+      {
+        title: "When to useMemo and useCallback",
+        content:
+          "Performance optimizations ALWAYS come with a cost but do NOT always come with a benefit. Let's talk about the costs and benefits of useMemo and useCallback.",
+        link: "https://kentcdodds.com/blog/usememo-and-usecallback",
       },
       {
         title: "useState in React: A complete guide?",
