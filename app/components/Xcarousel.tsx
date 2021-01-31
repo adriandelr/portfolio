@@ -10,6 +10,8 @@ import Carousel, { PaginationLight } from "react-native-x2-carousel";
 
 const Xcarousel = ({ sectionId, itemId }: any) => {
   const { colors } = useTheme();
+  const images = PROJECTS[sectionId].data[itemId].images;
+
   const renderItem = (data: any) => (
     <View key={data.coverImageUri} style={styles.cardContainer}>
       <View style={styles.cardWrapper}>
@@ -65,12 +67,12 @@ const Xcarousel = ({ sectionId, itemId }: any) => {
   return (
     <View style={styles.container}>
       <Carousel
-        data={PROJECTS[sectionId].data[itemId].images}
+        data={images}
         renderItem={renderItem}
         loop
         autoplay
         autoplayInterval={3000}
-        pagination={PaginationLight}
+        pagination={images.length > 1 ? PaginationLight : null}
       />
     </View>
   );
