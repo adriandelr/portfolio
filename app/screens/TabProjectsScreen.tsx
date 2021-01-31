@@ -20,7 +20,6 @@ import Styles from "../constants/Styles";
 import Layout from "../constants/Layout";
 
 import _ from "lodash";
-import ImageViewer from "react-native-image-zoom-viewer";
 import { ButtonGroup } from "react-native-elements";
 import { Icon } from "react-native-elements";
 import ReadMore from "react-native-read-more-text";

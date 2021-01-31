@@ -13,8 +13,9 @@ export const PROJECTS: any = [
         image: require("../assets/images/logos/logo-az.png"),
         images: [
           {
-            coverImageUri: require("../assets/images/projects/az-proj.png"),
-            cornerLabelColor: "#FFD300",
+            coverImageUri:
+              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-az.png",
+            cornerLabelColor: "#101111",
             cornerLabelText: "Portfolio",
           },
         ],
@@ -33,8 +34,45 @@ export const PROJECTS: any = [
         image: require("../assets/images/logos/logo-hmc.png"),
         images: [
           {
-            coverImageUri: require("../assets/images/projects/proj-hmc.png"),
-            cornerLabelColor: "#FFD300",
+            coverImageUri:
+              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-hmc-1.png",
+            cornerLabelColor: "#101111",
+            cornerLabelText: "HMC",
+          },
+          {
+            coverImageUri:
+              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-hmc-2.png",
+            cornerLabelColor: "#B6985A",
+            cornerLabelText: "HMC",
+          },
+          {
+            coverImageUri:
+              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-hmc-3.png",
+            cornerLabelColor: "#B6985A",
+            cornerLabelText: "HMC",
+          },
+          {
+            coverImageUri:
+              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-hmc-4.png",
+            cornerLabelColor: "#B6985A",
+            cornerLabelText: "HMC",
+          },
+          {
+            coverImageUri:
+              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-hmc-5.png",
+            cornerLabelColor: "#B6985A",
+            cornerLabelText: "HMC",
+          },
+          {
+            coverImageUri:
+              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-hmc-6.png",
+            cornerLabelColor: "#B6985A",
+            cornerLabelText: "HMC",
+          },
+          {
+            coverImageUri:
+              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-hmc-7.png",
+            cornerLabelColor: "#B6985A",
             cornerLabelText: "HMC",
           },
         ],
@@ -58,8 +96,51 @@ export const PROJECTS: any = [
         image: require("../assets/images/logos/logo-acn.png"),
         images: [
           {
-            coverImageUri: require("../assets/images/projects/proj-acn.png"),
-            cornerLabelColor: "#FFD300",
+            coverImageUri:
+              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-acn-1.png",
+            cornerLabelColor: "#BC0DF6",
+            cornerLabelText: "Accenture",
+          },
+          {
+            coverImageUri:
+              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-acn-2.png",
+            cornerLabelColor: "#BC0DF6",
+            cornerLabelText: "Accenture",
+          },
+          {
+            coverImageUri:
+              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-acn-3.png",
+            cornerLabelColor: "#BC0DF6",
+            cornerLabelText: "Accenture",
+          },
+          {
+            coverImageUri:
+              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-acn-4.png",
+            cornerLabelColor: "#BC0DF6",
+            cornerLabelText: "Accenture",
+          },
+          {
+            coverImageUri:
+              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-acn-5.png",
+            cornerLabelColor: "#BC0DF6",
+            cornerLabelText: "Accenture",
+          },
+          {
+            coverImageUri:
+              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-acn-6.png",
+            cornerLabelColor: "#BC0DF6",
+            cornerLabelText: "Accenture",
+          },
+          {
+            coverImageUri:
+              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-acn-7.png",
+            cornerLabelColor: "#BC0DF6",
+            cornerLabelText: "Accenture",
+          },
+          {
+            coverImageUri:
+              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-acn-8.png",
+            cornerLabelColor: "#BC0DF6",
             cornerLabelText: "Accenture",
           },
         ],
@@ -79,8 +160,9 @@ export const PROJECTS: any = [
         image: require("../assets/images/logos/logo-wo.png"),
         images: [
           {
-            coverImageUri: require("../assets/images/projects/proj-wo.png"),
-            cornerLabelColor: "#FFD300",
+            coverImageUri:
+              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-wo.png",
+            cornerLabelColor: "#002D42",
             cornerLabelText: "Wideout",
           },
         ],
@@ -99,8 +181,9 @@ export const PROJECTS: any = [
         image: require("../assets/images/logos/logo-ibm.png"),
         images: [
           {
-            coverImageUri: require("../assets/images/projects/proj-ibm.png"),
-            cornerLabelColor: "#FFD300",
+            coverImageUri:
+              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-ibm.png",
+            cornerLabelColor: "#0370C5",
             cornerLabelText: "IBM",
           },
         ],
@@ -119,8 +202,9 @@ export const PROJECTS: any = [
         image: require("../assets/images/logos/logo-avo.png"),
         images: [
           {
-            coverImageUri: require("../assets/images/projects/proj-avo.png"),
-            cornerLabelColor: "#FFD300",
+            coverImageUri:
+              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-avo.png",
+            cornerLabelColor: "#BD2229",
             cornerLabelText: "AVOLUTION",
           },
         ],
@@ -139,8 +223,9 @@ export const PROJECTS: any = [
         image: require("../assets/images/logos/logo-cata.png"),
         images: [
           {
-            coverImageUri: require("../assets/images/projects/proj-cata.png"),
-            cornerLabelColor: "#FFD300",
+            coverImageUri:
+              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-cata.png",
+            cornerLabelColor: "#3E73B6",
             cornerLabelText: "CATA",
           },
         ],
