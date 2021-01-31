@@ -33,16 +33,20 @@ const TabProjectsScreen = () => {
   const resumeURL =
     "https://drive.google.com/file/d/1MX6I97C9fx8CTzV5YQhRPwYdyAEjsyhm/view?usp=sharing";
 
+  const [open, setOpen] = useState(false);
+  const [sectionIndex, setSectionIndex] = useState(0);
+  const [projIndex, setProjIndex] = useState(0);
   const [selectedItem, setSelectedItem] = useState([]);
   const [selectedSection, setSelectedSection] = useState([]);
-
-  const [open, setOpen] = useState(false);
-  const [images, setImages] = useState([]);
 
   const Item = useCallback(
     memo(({ projItem, projSection }: any) => {
       const sectionIndex = _.indexOf(PROJECTS, projSection);
       const projIndex = _.indexOf(PROJECTS[sectionIndex].data, projItem);
+      setTimeout(() => {
+        setSectionIndex(_.indexOf(PROJECTS, selectedSection));
+        setProjIndex(_.indexOf(PROJECTS[sectionIndex].data, selectedItem));
+      });
       return (
         <ScrollView
           scrollEnabled={open ? true : false}
@@ -59,7 +63,6 @@ const TabProjectsScreen = () => {
                 setOpen(true);
                 setSelectedItem(projItem);
                 setSelectedSection(projSection);
-                setImages(projItem.images);
               }}
             >
               <Image
@@ -96,83 +99,6 @@ const TabProjectsScreen = () => {
               )}
             </View>
           )}
-          {/* {false && (
-            <ImageViewer
-              imageUrls={images}
-              useNativeDriver={true}
-              enablePreload={true}
-              enableSwipeDown={false}
-              onCancel={() => {
-                setOpen(false);
-              }}
-              style={{
-                width: "100%",
-                height: Platform.OS === "web" ? 420 : Layout.window.width - 70,
-                marginVertical: 7,
-                backgroundColor: "black",
-                opacity: 0.9,
-              }}
-              renderHeader={() => (
-                <View
-                  style={{
-                    justifyContent: "center",
-                    backgroundColor: "black",
-                  }}
-                >
-                  <Text
-                    style={[
-                      Styles.novaFamily,
-                      {
-                        fontSize: 13,
-                        color: colors.text,
-                        alignSelf: "center",
-                        margin: 7,
-                      },
-                    ]}
-                  >
-                    Swipe between images, or pinch to zoom
-                  </Text>
-                </View>
-              )}
-              renderIndicator={(currentIndex, allSize) => <Text></Text>}
-              renderFooter={(currentIndex) => (
-                <TouchableOpacity
-                  onPress={() => {
-                    setOpen(false);
-                  }}
-                  style={{
-                    display: "none",
-                  }}
-                >
-                  <View
-                    style={{
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                      width: "200%",
-                      height: 90,
-                      backgroundColor: colors.background,
-                    }}
-                  >
-                    <Text
-                      style={[
-                        Styles.novaFamily,
-                        {
-                          fontSize: 16,
-                          color: colors.text,
-                          marginTop: 7,
-                          textAlign: "center",
-                        },
-                      ]}
-                    >
-                      Tap to close detail view
-                    </Text>
-                  </View>
-                </TouchableOpacity>
-              )}
-              // menuContext={{}}
-            />
-          )} */}
           <View style={{ marginBottom: open ? 14 : 0 }}>
             <ReadMore
               numberOfLines={open ? 0 : 1}
@@ -195,7 +121,6 @@ const TabProjectsScreen = () => {
                             setOpen(true);
                             setSelectedItem(projItem);
                             setSelectedSection(projSection);
-                            setImages(projItem.images);
                           }
                     }
                   >
@@ -266,7 +191,7 @@ const TabProjectsScreen = () => {
     [showButton]
   );
 
-  const BackArrow = () => {
+  const BackArrow = memo(() => {
     return (
       <View
         style={{
@@ -300,7 +225,7 @@ const TabProjectsScreen = () => {
         )}
       </View>
     );
-  };
+  });
 
   const styles = StyleSheet.create({
     container: {
@@ -384,6 +309,13 @@ const TabProjectsScreen = () => {
               <TouchableOpacity
                 onPress={() => {
                   setOpen(false);
+                  setTimeout(() => {
+                    listRef.current?.scrollToLocation({
+                      sectionIndex: sectionIndex,
+                      itemIndex: projIndex,
+                      animated: true,
+                    });
+                  }, 300);
                 }}
                 style={{
                   height: 44,
@@ -412,7 +344,7 @@ const TabProjectsScreen = () => {
           </Modal>
         </View>
       )}
-      {true && (
+      {!open && (
         <View
           style={{
             width: "100%",

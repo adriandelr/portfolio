@@ -31,9 +31,9 @@ const Xcarousel = ({ sectionId, itemId }: any) => {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: colors.background,
       alignItems: "center",
       justifyContent: "center",
+      backgroundColor: colors.background,
     },
     cardContainer: {
       alignItems: "center",
