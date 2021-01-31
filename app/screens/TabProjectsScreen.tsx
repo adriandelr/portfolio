@@ -314,7 +314,7 @@ const TabProjectsScreen = () => {
         : (Layout.window.width - 443) / 2,
     },
     item: {
-      height: Layout.isSmallDevice ? 537 : 737,
+      height: Layout.isSmallDevice ? 573 : 737,
     },
     detail: {
       flex: 1,
