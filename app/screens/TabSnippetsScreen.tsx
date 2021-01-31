@@ -226,6 +226,12 @@ Notable Packages
           "https://forums.expo.io/t/react-native-snap-carousel-not-compatible-with-react-native-web-causing-typeerror/45131",
       },
       {
+        title: "Pure functional components in React",
+        content:
+          "React is an open-source, frontend JavaScript library for building user interface components. One of the most popular frontend libraries of 2020, React has almost 3 million users and a massive developer community and runs on a wide range of platforms, from the web to mobile devices.",
+        link: "https://blog.logrocket.com/react-pure-components-functional/",
+      },
+      {
         title: "useState in React: A complete guide?",
         content:
           "useState is a Hook that allows you to have state variables in functional components. You pass the initial state to this function and it returns a variable with the current state value (not necessarily the initial state) and another function to update this value.",
@@ -276,6 +282,11 @@ Notable Packages
   {
     title: "Links",
     data: [
+      {
+        title: "Photopea",
+        content: "Online Photo Editor.",
+        link: "https://www.photopea.com/",
+      },
       {
         title: "Lorem Ipsum",
         content:

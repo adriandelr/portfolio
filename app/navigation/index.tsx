@@ -58,6 +58,7 @@ export default function Navigation({
         sceneContainerStyle={{
           backgroundColor: "transparent",
         }}
+        swipeEnabled={Platform.OS === "web" ? false : true}
       >
         <TopTab.Screen
           name="TabDev"
