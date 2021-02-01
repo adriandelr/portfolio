@@ -71,7 +71,7 @@ const Xcarousel = ({ sectionId, itemId }: any) => {
         renderItem={renderItem}
         loop
         autoplay
-        autoplayInterval={3000}
+        autoplayInterval={2300}
         pagination={images.length > 1 ? PaginationLight : null}
       />
     </View>
