@@ -34,6 +34,7 @@ const TabProjectsScreen = () => {
     "https://drive.google.com/file/d/1MX6I97C9fx8CTzV5YQhRPwYdyAEjsyhm/view?usp=sharing";
 
   const [open, setOpen] = useState(false);
+  const [openCarousel, setOpenCarousel] = useState(false);
   const [sectionIndex, setSectionIndex] = useState(0);
   const [projIndex, setProjIndex] = useState(0);
   const [selectedItem, setSelectedItem] = useState([]);
@@ -61,6 +62,7 @@ const TabProjectsScreen = () => {
             <TouchableWithoutFeedback
               onPress={() => {
                 setOpen(true);
+                setOpenCarousel(true);
                 setSelectedItem(projItem);
                 setSelectedSection(projSection);
               }}
@@ -94,7 +96,7 @@ const TabProjectsScreen = () => {
                 opacity: 0.9,
               }}
             >
-              {open && (
+              {openCarousel && (
                 <Xcarousel sectionId={sectionIndex} itemId={projIndex} />
               )}
             </View>
@@ -308,13 +310,16 @@ const TabProjectsScreen = () => {
             >
               <TouchableOpacity
                 onPress={() => {
-                  setOpen(false);
+                  setOpenCarousel(false);
                   setTimeout(() => {
-                    listRef.current?.scrollToLocation({
-                      sectionIndex: sectionIndex,
-                      itemIndex: projIndex,
-                      animated: true,
-                    });
+                    setOpen(false);
+                    setTimeout(() => {
+                      listRef.current?.scrollToLocation({
+                        sectionIndex: sectionIndex,
+                        itemIndex: projIndex,
+                        animated: true,
+                      });
+                    }, 300);
                   }, 300);
                 }}
                 style={{
