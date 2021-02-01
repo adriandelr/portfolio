@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {
-  ActivityIndicator,
   View,
   ScrollView,
   Image,
@@ -72,15 +71,6 @@ export default function TabDevScreen({ navigation }: any) {
             backgroundColor: colors.background,
           }}
         >
-          <ActivityIndicator
-            style={{
-              display: "none",
-              top: 140,
-            }}
-            size={21}
-            color={colors.primary}
-            animating={!isLoaded}
-          />
           <Avatar
             size={192}
             rounded

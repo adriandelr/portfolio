@@ -16,6 +16,7 @@ import {
 import { PROJECTS } from "../constants/Projects";
 import { useTheme } from "../hooks/useThemeContext";
 import Linker from "../components/Linker";
+import Loader from "../components/Loader";
 import Styles from "../constants/Styles";
 import Layout from "../constants/Layout";
 
@@ -232,13 +233,12 @@ const TabProjectsScreen = () => {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      paddingHorizontal: 3,
     },
     section: {
       paddingTop: 28,
       paddingHorizontal: Layout.isSmallDevice
         ? 21
-        : (Layout.window.width - 443) / 2,
+        : (Layout.window.width - 437) / 2,
     },
     item: {
       height: Layout.isSmallDevice ? (Platform.OS === "web" ? 473 : 573) : 703,
@@ -279,6 +279,7 @@ const TabProjectsScreen = () => {
 
   return (
     <View style={styles.container}>
+      {!open && !_.isEmpty(selectedSection) && <Loader />}
       {open && (
         <View
           style={{
@@ -305,7 +306,6 @@ const TabProjectsScreen = () => {
             <View
               style={{
                 flex: 1,
-                backgroundColor: colors.background,
               }}
             >
               <TouchableOpacity
@@ -320,7 +320,7 @@ const TabProjectsScreen = () => {
                         animated: true,
                       });
                     }, 300);
-                  }, 300);
+                  }, 700);
                 }}
                 style={{
                   height: 44,
