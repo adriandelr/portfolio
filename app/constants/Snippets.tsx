@@ -209,10 +209,11 @@ Notable Packages
         link: "https://blog.logrocket.com/react-pure-components-functional/",
       },
       {
-        title: "When to useMemo and useCallback",
+        title: "useCallback vs useMemo",
         content:
-          "Performance optimizations ALWAYS come with a cost but do NOT always come with a benefit. Let's talk about the costs and benefits of useMemo and useCallback.",
-        link: "https://kentcdodds.com/blog/usememo-and-usecallback",
+          "What is the difference between useCallBack and useMemo? And why do useMemo and useCallback expect a function? If you’ve worked with React Hooks, you might have asked yourself these questions.",
+        link:
+          "https://medium.com/@jan.hesters/usecallback-vs-usememo-c23ad1dc60",
       },
       {
         title: "useState in React: A complete guide?",
