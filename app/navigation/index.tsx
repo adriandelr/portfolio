@@ -1,8 +1,8 @@
+import React, { useState, memo } from "react";
+import { Platform, ColorSchemeName, Keyboard } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import * as React from "react";
-import { Platform, ColorSchemeName } from "react-native";
 
 import NotFoundScreen from "../screens/NotFoundScreen";
 import { RootStackParamList } from "../types";
@@ -19,38 +19,36 @@ import Icon from "react-native-vector-icons/Ionicons";
 
 const TopTab = createMaterialTopTabNavigator();
 
-export default function Navigation({
-  colorScheme,
-}: {
-  colorScheme: ColorSchemeName;
-}) {
+const Navigation = ({ colorScheme }: { colorScheme: ColorSchemeName }) => {
   const { colors } = useTheme();
+
+  const [hideMenu, setHideMenu] = useState(false);
+  Keyboard.addListener("keyboardDidShow", () => setHideMenu(true));
+  Keyboard.addListener("keyboardDidHide", () => setHideMenu(false));
 
   return (
     <NavigationContainer>
       <TopTab.Navigator
         initialRouteName="TabDev"
-        tabBarPosition={
-          Platform.OS === "web" && !Layout.isSmallDevice ? "top" : "bottom"
-        }
+        tabBarPosition={Layout.isSmallDevice ? "bottom" : "top"}
         lazy={true}
         lazyPreloadDistance={0.3}
         swipeVelocityImpact={0.3}
         tabBarOptions={{
           activeTintColor: colors.primary,
+          allowFontScaling: false,
+          pressColor: "whitesmoke",
+          labelStyle: Styles.nunitoFamily,
           style: {
             backgroundColor: colors.backgroundNav,
           },
-          labelStyle: Styles.nunitoFamily,
-          showIcon: true,
           indicatorStyle: {
             backgroundColor: colors.primary,
           },
           iconStyle: {
             flexWrap: "wrap",
           },
-          pressColor: "whitesmoke",
-          allowFontScaling: false,
+          showIcon: hideMenu ? false : true,
         }}
         style={{
           backgroundColor: colors.background,
@@ -93,7 +91,7 @@ export default function Navigation({
       </TopTab.Navigator>
     </NavigationContainer>
   );
-}
+};
 
 function TabBarIcon(props: { name: string; color: string }) {
   return <Icon size={30} style={{ marginBottom: -3 }} {...props} />;
@@ -165,3 +163,5 @@ function SnippetsTabNavigator() {
     </SnippetsTabStack.Navigator>
   );
 }
+
+export default memo(Navigation);
