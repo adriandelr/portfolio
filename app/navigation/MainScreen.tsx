@@ -88,7 +88,7 @@ export default function MainScreen() {
           iconOnly="address-card"
         />
         <Linker
-          url={"viber://contact?number=%2B09760166007"}
+          url={"viber://contact?number=%2B639760166007"}
           iconOnly="viber"
         />
         <Linker url={"http://m.me/AZarch"} iconOnly="facebook-messenger" />
