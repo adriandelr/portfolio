@@ -30,7 +30,7 @@ const Navigation = ({ colorScheme }: { colorScheme: ColorSchemeName }) => {
     <NavigationContainer>
       <TopTab.Navigator
         initialRouteName="TabDev"
-        tabBarPosition={Layout.isSmallDevice ? "bottom" : "top"}
+        tabBarPosition={Layout.isSmallDevice && !hideMenu ? "bottom" : "top"}
         lazy={true}
         lazyPreloadDistance={0.3}
         swipeVelocityImpact={0.3}
