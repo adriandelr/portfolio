@@ -244,8 +244,10 @@ const TabProjectsScreen = () => {
       height: Layout.isSmallDevice ? (Platform.OS === "web" ? 473 : 573) : 703,
     },
     detail: {
-      flex: 1,
-      paddingHorizontal: 21,
+      paddingTop: 7,
+      paddingHorizontal: Layout.isSmallDevice
+        ? 21
+        : (Layout.window.width - 640) / 2,
       backgroundColor: colors.background,
     },
     header: {

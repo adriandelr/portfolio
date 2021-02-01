@@ -46,6 +46,8 @@ const Xcarousel = ({ sectionId, itemId }: any) => {
     card: {
       width: Layout.window.width * 0.9,
       height: Layout.window.width * 0.5,
+      maxWidth: 640,
+      maxHeight: 360,
     },
     cornerLabel: {
       position: "absolute",
