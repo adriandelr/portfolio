@@ -320,7 +320,7 @@ const TabProjectsScreen = () => {
                         animated: true,
                       });
                     }, 300);
-                  }, 700);
+                  }, 500);
                 }}
                 style={{
                   height: 44,
