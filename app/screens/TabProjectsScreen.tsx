@@ -191,7 +191,7 @@ const TabProjectsScreen = () => {
     [showButton]
   );
 
-  const BackArrow = memo(() => {
+  const BackArrow = useCallback(() => {
     return (
       <View
         style={{
@@ -225,7 +225,7 @@ const TabProjectsScreen = () => {
         )}
       </View>
     );
-  });
+  }, [showButton]);
 
   const styles = StyleSheet.create({
     container: {
@@ -427,4 +427,4 @@ const TabProjectsScreen = () => {
   );
 };
 
-export default TabProjectsScreen;
+export default memo(TabProjectsScreen);
