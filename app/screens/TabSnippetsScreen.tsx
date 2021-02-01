@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback, memo } from "react";
 import {
   View,
   Text,
@@ -28,10 +28,10 @@ if (Platform.OS === "android") {
   }
 }
 
-export default function TabSnippetsScreen() {
+const TabSnippetsScreen = () => {
   const { colors } = useTheme();
 
-  function Item({ snipItem }: any) {
+  const Item = useCallback(({ snipItem }: any) => {
     const [open, setOpen] = useState(false);
 
     const toggleAccordion = () => {
@@ -87,49 +87,56 @@ export default function TabSnippetsScreen() {
         )}
       </View>
     );
-  }
-
-  const filterByKeyword = (query: string, items: any) => {
-    let foundItems: any = [];
-
-    // Filter each items by query containing keyword
-    _.filter(items, (i: any, k) => {
-      (i.title &&
-        _.some(query.toLowerCase().split(" "), (q) =>
-          _.includes(i.title.toLowerCase(), q)
-        )) ||
-      (i.content &&
-        _.some(query.toLowerCase().split(" "), (q) =>
-          _.includes(i.content.toLowerCase(), q)
-        )) ||
-      (i.link &&
-        _.some(query.toLowerCase().split(" "), (q) =>
-          _.includes(i.link.toLowerCase(), q)
-        ))
-        ? foundItems.push(k)
-        : null;
-    });
-
-    // Return array with indexes of matched items
-    return foundItems;
-  };
+  }, []);
 
   const [query, setQuery] = useState("");
-  const filterSection = (query: any) => {
-    const filteredSection: any = [];
-    _.forEach(SNIPPETS, (section, index) => {
-      filteredSection.push(filterByKeyword(query, section.data));
-    });
-    const filteredSnippets: any = [];
-    _.forEach(filteredSection, (sections, sectionsIndex) => {
-      if (!_.isEmpty(sections)) {
-        _.forEach(sections, (section) => {
-          filteredSnippets.push(SNIPPETS[sectionsIndex].data[section]);
-        });
-      }
-    });
-    return filteredSnippets;
-  };
+
+  const filterByKeyword = useCallback(
+    (query: string, items: any) => {
+      let foundItems: any = [];
+
+      // Filter each items by query containing keyword
+      _.filter(items, (i: any, k) => {
+        (i.title &&
+          _.some(query.toLowerCase().split(" "), (q) =>
+            _.includes(i.title.toLowerCase(), q)
+          )) ||
+        (i.content &&
+          _.some(query.toLowerCase().split(" "), (q) =>
+            _.includes(i.content.toLowerCase(), q)
+          )) ||
+        (i.link &&
+          _.some(query.toLowerCase().split(" "), (q) =>
+            _.includes(i.link.toLowerCase(), q)
+          ))
+          ? foundItems.push(k)
+          : null;
+      });
+
+      // Return array with indexes of matched items
+      return foundItems;
+    },
+    [query]
+  );
+
+  const filterSection = useCallback(
+    (query: any) => {
+      const filteredSection: any = [];
+      _.forEach(SNIPPETS, (section, index) => {
+        filteredSection.push(filterByKeyword(query, section.data));
+      });
+      const filteredSnippets: any = [];
+      _.forEach(filteredSection, (sections, sectionsIndex) => {
+        if (!_.isEmpty(sections)) {
+          _.forEach(sections, (section) => {
+            filteredSnippets.push(SNIPPETS[sectionsIndex].data[section]);
+          });
+        }
+      });
+      return filteredSnippets;
+    },
+    [query]
+  );
 
   const styles = StyleSheet.create({
     container: {
@@ -243,4 +250,5 @@ export default function TabSnippetsScreen() {
       )}
     </View>
   );
-}
+};
+export default memo(TabSnippetsScreen);
