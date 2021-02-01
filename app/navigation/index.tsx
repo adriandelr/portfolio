@@ -93,15 +93,15 @@ const Navigation = ({ colorScheme }: { colorScheme: ColorSchemeName }) => {
   );
 };
 
-function TabBarIcon(props: { name: string; color: string }) {
+const TabBarIcon = memo((props: { name: string; color: string }) => {
   return <Icon size={30} style={{ marginBottom: -3 }} {...props} />;
-}
+});
 
 let dpTitle = "Adrian del Rosario - ";
 
 const MainScreenTabStack = createStackNavigator<RootStackParamList>();
 
-function MainScreenTabNavigator() {
+const MainScreenTabNavigator = () => {
   return (
     <MainScreenTabStack.Navigator>
       <MainScreenTabStack.Screen
@@ -122,11 +122,11 @@ function MainScreenTabNavigator() {
       />
     </MainScreenTabStack.Navigator>
   );
-}
+};
 
 const ProjectsTabStack = createStackNavigator<TabProjectsParamList>();
 
-function ProjectsTabNavigator() {
+const ProjectsTabNavigator = () => {
   return (
     <ProjectsTabStack.Navigator>
       <ProjectsTabStack.Screen
@@ -142,11 +142,11 @@ function ProjectsTabNavigator() {
       />
     </ProjectsTabStack.Navigator>
   );
-}
+};
 
 const SnippetsTabStack = createStackNavigator<TabSnippetsParamList>();
 
-function SnippetsTabNavigator() {
+const SnippetsTabNavigator = () => {
   return (
     <SnippetsTabStack.Navigator>
       <SnippetsTabStack.Screen
@@ -162,6 +162,6 @@ function SnippetsTabNavigator() {
       />
     </SnippetsTabStack.Navigator>
   );
-}
+};
 
 export default memo(Navigation);
