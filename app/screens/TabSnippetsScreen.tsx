@@ -220,12 +220,6 @@ const TabSnippetsScreen = () => {
               padding: 7,
             },
           ]}
-          leftIcon={{
-            type: "font-awesome",
-            name: "search",
-            color: colors.error,
-            size: 19,
-          }}
         />
       </View>
       {!_.isEmpty(query) && (
