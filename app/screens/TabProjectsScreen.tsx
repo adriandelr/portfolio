@@ -239,7 +239,7 @@ const TabProjectsScreen = () => {
         : (Layout.window.width - 443) / 2,
     },
     item: {
-      height: Layout.isSmallDevice ? 573 : 737,
+      height: Layout.isSmallDevice ? (Platform.OS === "web" ? 473 : 573) : 703,
     },
     detail: {
       flex: 1,
@@ -349,7 +349,7 @@ const TabProjectsScreen = () => {
           style={{
             width: "100%",
             height: "100%",
-            paddingTop: Platform.OS === "web" ? 30 : 0,
+            paddingTop: Platform.OS === "web" && !Layout.isSmallDevice ? 30 : 0,
           }}
         >
           <View
