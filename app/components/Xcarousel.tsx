@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, View, Text, Image } from "react-native";
 
 import { PROJECTS } from "../constants/Projects";
@@ -11,6 +11,12 @@ import Carousel, { PaginationLight } from "react-native-x2-carousel";
 const Xcarousel = ({ sectionId, itemId }: any) => {
   const { colors } = useTheme();
   const images = PROJECTS[sectionId].data[itemId].images;
+
+  const [isShow, setShow] = useState(false);
+
+  setTimeout(() => {
+    setShow(true);
+  }, 700);
 
   const renderItem = (data: any) => (
     <View key={data.coverImageUri} style={styles.cardContainer}>
@@ -68,14 +74,16 @@ const Xcarousel = ({ sectionId, itemId }: any) => {
 
   return (
     <View style={styles.container}>
-      <Carousel
-        data={images}
-        renderItem={renderItem}
-        loop
-        autoplay
-        autoplayInterval={2300}
-        pagination={images.length > 1 ? PaginationLight : null}
-      />
+      {isShow && (
+        <Carousel
+          data={images}
+          renderItem={renderItem}
+          loop
+          autoplay
+          autoplayInterval={2300}
+          pagination={images.length > 1 ? PaginationLight : null}
+        />
+      )}
     </View>
   );
 };

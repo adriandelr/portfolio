@@ -10,20 +10,10 @@ const Loader = () => {
 
   setTimeout(() => {
     setIsLoaded(true);
-  }, 900);
+  }, 700);
 
   return (
-    <ActivityIndicator
-      style={{
-        position: "absolute",
-        top: Layout.isSmallDevice ? (Platform.OS === "web" ? 14 : 7) : 50,
-        right: Layout.isSmallDevice ? (Platform.OS === "web" ? 28 : 7) : 50,
-        zIndex: 1,
-      }}
-      size={21}
-      color={colors.primary}
-      animating={!isLoaded}
-    />
+    <ActivityIndicator size={21} color={colors.primary} animating={!isLoaded} />
   );
 };
 
