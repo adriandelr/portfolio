@@ -59,40 +59,43 @@ export default function Linker({
         </TouchableOpacity>
       )}
       {!iconOnly && (
-        <Button
-          onPress={() => {
-            if (confirmText && cancelText) {
-              if (confirm(confirmText)) {
-                openLink();
-              } else {
-                alert(cancelText);
-              }
-            } else {
-              openLink();
-            }
-          }}
-          titleStyle={{
-            fontSize: 13,
-            color: colors.background,
-            fontWeight: Platform.OS === "web" ? "normal" : "300",
-          }}
-          buttonStyle={{
-            alignItems: "center",
-            justifyContent: "center",
+        <View
+          style={{
             width: 170,
             height: 37,
-            backgroundColor: colors.linkerButton,
             marginTop: 3,
             marginBottom: 7,
-            borderWidth: 2,
-            borderColor: "slategray",
-            borderRadius: 1,
-            paddingVertical: 7,
-            paddingHorizontal: 13,
           }}
-          title={text}
-          type="solid"
-        />
+        >
+          <Button
+            onPress={() => {
+              if (confirmText && cancelText) {
+                if (confirm(confirmText)) {
+                  openLink();
+                } else {
+                  alert(cancelText);
+                }
+              } else {
+                openLink();
+              }
+            }}
+            titleStyle={{
+              fontSize: 13,
+              color: colors.background,
+              fontWeight: Platform.OS === "web" ? "normal" : "300",
+            }}
+            buttonStyle={{
+              alignItems: "center",
+              justifyContent: "center",
+              backgroundColor: colors.linkerButton,
+              borderWidth: 2,
+              borderColor: "slategray",
+              borderRadius: 1,
+            }}
+            title={text}
+            type="solid"
+          />
+        </View>
       )}
     </View>
   );
