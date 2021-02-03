@@ -51,6 +51,10 @@ const TabProjectsScreen = () => {
     setOpenDetail(true);
   };
 
+  const Carousel = (sectionId: any, itemId: any) => {
+    return <Xcarousel sectionId={sectionIndex} itemId={projIndex} />;
+  };
+
   const Item = useCallback(
     ({ projSection, projItem }: any) => {
       return (
@@ -116,7 +120,7 @@ const TabProjectsScreen = () => {
               >
                 <Loader />
               </View>
-              <Xcarousel sectionId={sectionIndex} itemId={projIndex} />
+              <Carousel sectionId={sectionIndex} itemId={projIndex} />
             </View>
           )}
           <ReadMore
@@ -183,7 +187,7 @@ const TabProjectsScreen = () => {
         </ScrollView>
       );
     },
-    [openDetail]
+    [colors, openDetail]
   );
 
   const ItemList = useCallback(() => {
@@ -253,7 +257,7 @@ const TabProjectsScreen = () => {
         </Modal>
       </View>
     );
-  }, [openDetail]);
+  }, [colors, openDetail]);
 
   const YearGroup = () => {
     return (
