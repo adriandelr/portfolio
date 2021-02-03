@@ -189,50 +189,6 @@ const TabProjectsScreen = () => {
   const ItemList = useCallback(() => {
     return (
       <View style={styles.container}>
-        <View style={styles.buttonGroupContainer}>
-          <ButtonGroup
-            onPress={(selectedIndex: number) => {
-              listRef.current?.scrollToLocation({
-                itemIndex: 0,
-                sectionIndex: selectedIndex,
-                animated: true,
-              });
-            }}
-            buttons={_.take(
-              _.map(PROJECTS, "year"),
-              Layout.isSmallDevice ? 4 : 5
-            )}
-            Component={TouchableOpacity}
-            containerStyle={{
-              height: "100%",
-              backgroundColor: colors.backgroundYearGroup,
-              borderColor: colors.borderYear,
-              borderRadius: 0,
-              marginVertical: 0,
-              marginHorizontal: 0,
-            }}
-            buttonContainerStyle={{
-              backgroundColor: colors.backgroundYearGroup,
-            }}
-            selectedButtonStyle={{
-              backgroundColor: colors.backgroundYearGroup,
-            }}
-            textStyle={[
-              Styles.novaFamily,
-              {
-                fontSize: Layout.isSmallDevice ? 14 : 15,
-                color: colors.textYearGroup,
-                backgroundColor: colors.backgroundYearGroup,
-                fontWeight: "700",
-              },
-            ]}
-            selectedTextStyle={{
-              color: colors.textYearGroup,
-              backgroundColor: colors.backgroundYearGroup,
-            }}
-            innerBorderStyle={{ width: 0, color: colors.backgroundYearGroup }}
-          />
-        </View>
         <SectionList
           sections={PROJECTS}
           keyExtractor={(item): any => item}
@@ -298,6 +254,55 @@ const TabProjectsScreen = () => {
       </View>
     );
   }, [openDetail]);
+
+  const YearGroup = () => {
+    return (
+      <View style={styles.buttonGroupContainer}>
+        <ButtonGroup
+          onPress={(selectedIndex: number) => {
+            listRef.current?.scrollToLocation({
+              itemIndex: 0,
+              sectionIndex: selectedIndex,
+              animated: true,
+            });
+          }}
+          buttons={_.take(
+            _.map(PROJECTS, "year"),
+            Layout.isSmallDevice ? 4 : 5
+          )}
+          Component={TouchableOpacity}
+          containerStyle={{
+            height: "100%",
+            backgroundColor: colors.backgroundYearGroup,
+            borderColor: colors.borderYear,
+            borderRadius: 0,
+            marginVertical: 0,
+            marginHorizontal: 0,
+          }}
+          buttonContainerStyle={{
+            backgroundColor: colors.backgroundYearGroup,
+          }}
+          selectedButtonStyle={{
+            backgroundColor: colors.backgroundYearGroup,
+          }}
+          textStyle={[
+            Styles.novaFamily,
+            {
+              fontSize: Layout.isSmallDevice ? 14 : 15,
+              color: colors.textYearGroup,
+              backgroundColor: colors.backgroundYearGroup,
+              fontWeight: "700",
+            },
+          ]}
+          selectedTextStyle={{
+            color: colors.textYearGroup,
+            backgroundColor: colors.backgroundYearGroup,
+          }}
+          innerBorderStyle={{ width: 0, color: colors.backgroundYearGroup }}
+        />
+      </View>
+    );
+  };
 
   const scrollOffset = useRef(0);
   const handleScroll = useCallback(
@@ -365,8 +370,7 @@ const TabProjectsScreen = () => {
       height: "100%",
     },
     sectionContainer: {
-      display: openDetail ? "none" : "flex",
-      paddingTop: 28,
+      paddingTop: Layout.isSmallDevice ? 21 : 73,
       paddingHorizontal: Layout.isSmallDevice
         ? 21
         : (Layout.window.width - 437) / 2,
@@ -380,6 +384,7 @@ const TabProjectsScreen = () => {
       paddingHorizontal: Layout.isSmallDevice
         ? 21
         : (Layout.window.width - 640) / 2,
+      backgroundColor: colors.background,
     },
     modalContainer: {
       width: "100%",
@@ -423,14 +428,14 @@ const TabProjectsScreen = () => {
       position: "absolute",
       top: !Layout.isSmallDevice ? 0 : "auto",
       bottom: Layout.isSmallDevice ? 0 : "auto",
-      zIndex: 1,
     },
   });
 
   return (
     <View style={styles.container}>
       {openDetail && <ItemDetail />}
-      {true && <ItemList />}
+      <ItemList />
+      {!openDetail && <YearGroup />}
       <BackArrow />
     </View>
   );
