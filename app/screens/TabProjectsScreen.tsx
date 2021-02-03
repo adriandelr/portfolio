@@ -440,7 +440,7 @@ const TabProjectsScreen = () => {
       {openDetail && <ItemDetail />}
       <ItemList />
       {!openDetail && <YearGroup />}
-      <BackArrow />
+      {!openDetail && <BackArrow />}
     </View>
   );
 };
