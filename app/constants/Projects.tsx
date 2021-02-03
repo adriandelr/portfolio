@@ -36,7 +36,7 @@ export const PROJECTS: any = [
           {
             coverImageUri:
               "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-hmc-1.png",
-            cornerLabelColor: "#101111",
+            cornerLabelColor: "#B6985A",
             cornerLabelText: "HMC",
           },
           {
