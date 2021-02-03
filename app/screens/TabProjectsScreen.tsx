@@ -90,7 +90,7 @@ const TabProjectsScreen = () => {
                     : 420,
                   aspectRatio: 1,
                   marginVertical: 7,
-                  backgroundColor: "black",
+                  backgroundColor: colors.background,
                   opacity: 0.9,
                 }}
               />
