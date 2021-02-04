@@ -155,25 +155,24 @@ export default function TabDevScreen({ navigation }: any) {
               },
             ]}
           >
-            Adrian is a Web Developer focused on developing Web Applications
-            using Front-end Web Technologies.
+            Adrian is a Web Developer focused on developing Cross-Platform
+            applications using Front-End technologies.
             {"\n"}
             {"\n"}
-            He has been delivering various applications ranging from UI and
-            Animation to communication, computation, and manipulation of queries
-            and content for the last seven (7) years.
+            He has been delivering various solutions, ranging from UI and
+            Animation, to communication, computation, and modulation of data,
+            and content for the past six (6) years.
             {"\n"}
             {"\n"}
-            He handled projects before as a UI Hybrid Mobile Developer for US
-            based Toll Agency and supported Accenture’s Business Development for
-            a Hong Kong based Housing Agency with the same role.
+            Recently, he handled projects as a UI Hybrid Mobile Developer for a
+            US based client Tollway Group, supported Accenture's Business
+            Development for a Hong Kong based Housing Provider, and facilitated
+            a two (2) day bootcamp course on AngularJS for new recruits.
             {"\n"}
             {"\n"}
-            Recently, he worked on a project for a Global Law Firm based in the
-            US using Angular2 in maintaining their records, and continued
-            developing Mobile Applications for a Global Loyalty Solutions
-            Provider catering big 5* Star Hotel Clients such as Hilton,
-            MarcoPolo, ClubHotel, and more.
+            Furthermore, he has developed Hybrid Mobile Applications for HMC's
+            world class loyalty solutions. Providing services to luxury five (5)
+            star hotels, and brands.
           </Text>
           {Platform.OS === "web" && (
             <View style={{ width: "100%", alignItems: "center" }}>
@@ -194,7 +193,7 @@ export default function TabDevScreen({ navigation }: any) {
                 ]}
               >
                 {
-                  "You are viewing on the web. For a more native experience, download the Expo app."
+                  "You are on web view. For an awesome native experience, download the Expo app."
                 }
                 <Icon
                   name="app-store"
