@@ -429,8 +429,7 @@ Notable Packages
       },
       {
         title: "Github Pages",
-        content:
-          "Publish files to a gh-pages branch on GitHub (or any other branch anywhere else).",
+        content: "Publish files to a gh-pages branch on GitHub.",
         link: "https://github.com/tschaub/gh-pages",
       },
       {
@@ -453,6 +452,12 @@ Notable Packages
         title: "npm trends",
         content: "Compare package download counts over time.",
         link: "https://www.npmtrends.com/",
+      },
+      {
+        title: "Simple Friends",
+        content:
+          "A friend list app. Built using ReactJS and was meant to demonstrate the library's feature on Components, Forms, Cycles, Web Responsiveness, and Events using REST mock APIs.",
+        link: "https://adriandelr.github.io/friend-list/",
       },
     ],
   },
