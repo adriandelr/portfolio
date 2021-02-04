@@ -3,19 +3,96 @@ export const SNIPPETS: any = [
     title: "General",
     data: [
       {
-        title: "Methodology",
+        title: "Common Technology Definitions",
         content: `
-**Agile** is a general approach to project management, whereas **scrum** is just one of the **different** ways to practice **agile**.
+**Lodash** is by far the most widely used common JavaScript Utility library. It provides utility functions for common programming tasks using the functional programming pattern. It offers helpful modular utility in JavaScript data selection, consistency, and performance in cross-environment iteration support for arrays, and objects. It makes JavaScript coding easier and cleaner.
 
-**Agile** is a set of guiding principles and ideals, but it doesn't say how exactly those values should be implemented.
+Node Package Manager(**NPM**) is used to pull, and generate packages pointing from remote node modules that containing helpful dependencies, or features used in the app.
 
-**Scrum** is a framework that provides specific rules for getting things done.
+We use **Cordova**, a platform for developing, and building hybrid mobile applications using web development technologies. It compiles to iOS/Android platforms, and runs web sources from a WebView.
+
+**Aurelia** is a TypeScript based SPA framework for developing web applications. Similar to Angular, it has routing, source compilation, a model-view composition, data binding, extensible HTML, SPA, UI Composition, etc.
+
+**Framework7** is a UI Mobile Framework to create common web elements to give a more native feel with its styles, and interactions on menus, buttons, modals, lists, etc. similar to Ionic. _Together it features custom **DOM7** library for DOM manipulation that uses the same jQuery syntax.
+
+**Gulp** is used to automate chaining task executions of builds, or compilation of scripts.
+
+**Swiper** is a JavaScript Library we used for slides of gallery, and pages.
+
+**Less**, a pre-processor that extends, and compiles to CSS, its functions such as variables, mixins, nesting, operations, and functions.
+
+**Markdown** is a markup language that formats plain text. The formatted text is then converted into another language, such as HTML.
+
+**Expo** is an open-source platform for making universal native apps for Android, iOS, and the web with JavaScript and React.
         `,
       },
       {
-        title: "Common Definitions",
+        title: "SDLC Phases [Explained]: How to Craft Great Software in 2021",
+        content:
+          "Building software is a process. As such it needs a well-defined goal, means to accomplish it and ways to measure, maintain and improve the results. The different approaches to software development provide all that. They’re not all cut from the same cloth, though. Depending on your circumstances, you may need to opt for wildly different approaches.",
+        link: "https://techjury.net/blog/sdlc-phases/",
+      },
+      {
+        title: "What is Scrum and Agile? A quick guide to Agile vs Scrum",
         content: `
-**Markdown** is a markup language that formats plain text. The formatted text is then converted into another language, such as HTML.
+**Agile** software development methodology is more adaptable to changes as there is no in-depth planning at the beginning of a project rather there are changing requirements throughout the course of the project. A constant feedback from the end users is encouraged. In agile, there is an incremental and iterative development approach. The work is prioritized on the basis of business or customer value. There are cross-functional teams that work on the iterations of the product over a period of time. Each iteration is focused on producing a working product.
+
+**Scrum** is the most popular approach to implement agile. It helps to manage software development with an iterative approach. There are fixed-length iterations known as a sprint that allows shipping software frequently. A sprint lasts one to two weeks and at the end of each sprint, the stakeholders and team members conduct a meeting to plan the next steps.
+        `,
+        link: "https://reqtest.com/agile-blog/agile-scrum-guide/",
+      },
+      {
+        title:
+          "Continuous Integration Automation in 2021 – Hindsight is now really 2020",
+        content:
+          "A CI/CD pipeline automates your software delivery process. The pipeline builds code, runs tests (CI), and safely deploys a new version of the application (CD).  That is the pretty standard definition that most Engineers would agree with.  Okay, maybe not every engineer and at least 5 would strongly disagree.  I don’t know why, but they just do.  You know who you are.",
+        link:
+          "https://www.tapqa.com/continuous-integration-automation-in-2021-hindsight-is-now-really-2020/",
+      },
+      {
+        title: "Top 5 CI/CD Tools to Look Out for in 2021",
+        content:
+          "Automation and continuous integration/continuous development (CI/CD) can have a huge positive impact on how developers and IT operations work. For example, one of the key takeaways from GitLab’s  2020 Global DevSecOps Survey was how CI/CD tools are enabling dev and ops to be more productive by eliminating the need for manual intervention in tasks such as testing, dependency checks, merging code, and pushing from one environment to another.",
+        link:
+          "https://jfrog.com/knowledge-base/top-5-ci-cd-tools-to-look-out-for-in-2021/",
+      },
+      {
+        title: "NPM Commands",
+        content: `
+- **npm start** - Run local server
+- **npm install** - Installs project package dependencies listed in *package.json*
+- **npm update** - Updates platform source files
+- **npm run (script)** - This will run compiled commands under *scripts* in *package.json*
+- **npm list -g --depth=0** - Check list of globally installed modules
+- **npm view <package> version/s** - Specify package version, or information
+- **npm list** - List all known npm modules
+- **npm update** - Updates all existing modules to the most recent version
+        `,
+      },
+      {
+        title: "Git Commands",
+        content: `
+It is preferred to use VSCode's Integraded Source Control, or Fork.
+
+- **git init** - Set version control system to current directory
+- **git clone (branch) (path/to/repository)** - Copy existing remote or local repository to your working directory
+- **git remote add origin (server)** - Add a remote repository server to sync changes
+- **git add (path/to/file)** - Add selected modified files to the list of commits
+- **git add .** - Add all modified, and non tracked changes
+- **git add -u** - Only add modified tracked files
+- **git reset -- (path/to/file)** - Exclude added file from stage
+- **git clean -fd** - Remove untracked files from stage
+- **git commit -m (message)** - After adding changes to stage, commit files and message for head/master
+- **git push origin (branch)** - Upload committed changes
+- **git pull** - Download latest branch files
+- **git checkout -b (new_branch_feature_name)** - Create and switch to a new branch where we can work on a specific new feature
+- **git checkout -- (path/to/file)** - Undo changes, based from recent commit
+- **git status** - Check changes in working directory
+- **git log** - Check version history
+- **git merge (branch)** - Merges remote branch(master) to your active local branch
+- **git rm (filename)** - Deletes a local file
+- **git update-index --assume-unchanged (path/to/file)** - Ignore files to be added to commits
+- **git update-index --no-assume-unchanged (path/to/file)** - Ignore files to be added to commits
         `,
       },
     ],
@@ -27,8 +104,9 @@ export const SNIPPETS: any = [
         title: "Productivity Tools",
         content: `
 Apps
-+ Atom
-+ VSCode
+- Atom
+- VSCode
+- Pixie
         `,
       },
     ],
@@ -36,16 +114,6 @@ Apps
   {
     title: "Mac",
     data: [
-      {
-        title: "Productivity Tools",
-        content: `
-Apps
-+ The Unarchiver
-+ Forklift
-+ PandaPow
-+ Alpha Channel Remover
-        `,
-      },
       {
         title: "Show Hidden Files",
         content: `
@@ -64,6 +132,17 @@ defaults write com.apple.finder AppleShowAllFiles -boolean false; killall Finder
 \`\`\`
         `,
       },
+      {
+        title: "Productivity Tools",
+        content: `
+Apps
+- The Unarchiver
+- Forklift
+- PandaPow
+- Alpha Channel Remover
+- xScope
+        `,
+      },
     ],
   },
   {
@@ -75,6 +154,19 @@ defaults write com.apple.finder AppleShowAllFiles -boolean false; killall Finder
         content:
           "HyperText Markup Language, is the language used for web documents. It is not a programming language, but rather a language that identifies the meaning, purpose, and structure of text within a document.",
         link: "https://html.com/html5/",
+      },
+      {
+        title: "In-Depth HTML 5 Tutorials for 2021 | egghead.io",
+        content:
+          "HTML 5 is the structure of our web pages. It is the markup that represents the DOM (document object model).",
+        link: "https://egghead.io/q/html",
+      },
+      {
+        title: "10 Best HTML and CSS Courses for Beginners in 2021",
+        content:
+          "Hello guys, if you want to learn HTML and CSS in 2021 to become a web designer, or a frontend developer and looking for the best HTML 5 and CSS 3 courses then you have come to the right place. In the past, I have shared the best free courses to learn HTML and CSS, and in this article, you have a selection of the best courses you can have to learn a lot about HTML5 and CSS3 online.",
+        link:
+          "https://medium.com/javarevisited/10-best-html-and-css-courses-for-beginners-in-2021-6757eec00032",
       },
     ],
   },
@@ -102,8 +194,10 @@ console.log('hi');
                 `,
       },
       {
-        title: "Variable Shadowing",
-        content: "Content...",
+        title: "Understanding ‘Variable Shadowing’ with JavaScript",
+        content: "What is ‘variable shadowing’ and why it should be avoided.",
+        link:
+          "https://medium.com/@mayuminishimoto/understanding-variable-shadowing-with-javascript-58fc108c8f03",
       },
     ],
   },
@@ -128,7 +222,8 @@ console.log('hi');
     data: [
       {
         title: "What is React Native?",
-        content: "Content...",
+        content:
+          "React Native (also known as RN) is a popular JavaScript-based mobile app framework that allows you to build natively-rendered mobile apps for iOS and Android. The framework lets you create an application for various platforms by using the same codebase.",
       },
       {
         title: "Platform Packages",
@@ -242,6 +337,13 @@ Notable Packages
         link:
           "https://dev.to/osamaqarem/automatic-versioning-for-react-native-apps-2bf3",
       },
+      {
+        title: "Testing react native with testing library",
+        content:
+          "Integration tests are the easiest way to start testing your applications, simply because they are pretty straightforward.",
+        link:
+          "https://dev.to/gabrieleloy/testing-react-native-with-testing-library-1caa",
+      },
     ],
   },
   {
@@ -250,6 +352,8 @@ Notable Packages
       {
         title: "What is Ionic?",
         content: `
+Ionic Framework is an open source UI toolkit for building performant, high-quality mobile and desktop apps using web technologies — HTML, CSS, and JavaScript — with integrations for popular frameworks like Angular, React, and Vue.
+
 - Built using HTML, JS ,CSS, and Angular, recently on React
 - Code once, deploy everywhere
 - Free and open source
@@ -259,7 +363,42 @@ Notable Packages
       },
       {
         title: "Platform Packages",
-        content: "Content...",
+        content: `
+Notable Packages
+- aurelia-cli
+- gulp
+- less
+- typescript
+- typings
+- cordova-plugin-app-version
+- cordova-plugin-network-information
+- ionic-plugin-keyboard
+- cordova-plugin-contacts
+- cordova-plugin-whitelist
+- cordova-plugin-file
+- cordova-plugin-device
+- cordova-plugin-geolocation
+- cordova-plugin-inappbrowser
+- phonegap-plugin-push
+- cordova-plugin-iroot
+- cordova-plugin-apprate
+- cordova-support-google-services
+        `,
+      },
+      {
+        title: "End-to-end Testing Mobile Apps with Ionic and Cypress",
+        content:
+          "Ionic Framework is a free, open-source framework for developing native mobile applications using web development frameworks like Angular, React, and (coming soon!) Vue. Mobile applications developed in Ionic Framework run in a browser during development. Because of this, we can use Cypress to perform tests on the functionality of mobile applications before they are built for a native device.",
+        link:
+          "https://www.cypress.io/blog/2020/07/08/end-to-end-testing-mobile-apps-with-ionic-and-cypress/",
+      },
+      {
+        title:
+          "How to Implement Google Analytics in Ionic 5 Application using Ionic Native and Cordova Plugins",
+        content:
+          "This tutorial is going to help you learn how to implement Google Analytics in Ionic 5 and Angular application using Ionic Native and Cordova plugins from scratch.",
+        link:
+          "https://www.positronx.io/add-google-analytics-in-ionic-app-with-ionic-native-and-cordova-plugins/",
       },
     ],
   },
@@ -270,6 +409,12 @@ Notable Packages
         title: "Photopea",
         content: "Online Photo Editor.",
         link: "https://www.photopea.com/",
+      },
+      {
+        title: "Mixpanel",
+        content:
+          "Powerful, self-serve product analytics to help you convert, engage, and retain more users.",
+        link: "https://mixpanel.com/",
       },
       {
         title: "Lorem Ipsum",
