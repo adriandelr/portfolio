@@ -7,7 +7,7 @@ export const PROJECTS: any = [
       {
         title: "Portfolio",
         description:
-          "New year, new app! \n\nMy very own Digital Portfolio, made using React Native by Facebook.",
+          "New year, new app! \n\nMy very own Digital Portfolio. Made using React Native by Facebook.",
         time: "1 month",
         date: "Jan 2021",
         image: require("../assets/images/logos/logo-az.png"),
@@ -27,8 +27,46 @@ export const PROJECTS: any = [
     data: [
       {
         title: "Hospitality Marketing Concepts LLC",
-        description:
-          "In a remote setup, I was mainly in charge of the mobile app’s front end maintenance, bug fixes, and testing of the company’s existing platform. \n\nRegular discussion of improvement with the President / Chief Marketing Officer, and IT Manager to make sure we are always intact with our client’s requirements. \n\nConstant team communication via email, and skype in an Agile setting. Lately, adding Scrum to it. Additionally, I have recruited, and trained two developers that helped us in our development. \n\nFor more details, please see Resume, and Store Links.",
+        description: `
+**Responsible for the Hybrid Mobile App Front-End development, and maintenance**
+Focused on implementation of new features, theming new brands, testing, improvement, and fixes. In the support of numerous clients that are luxury hotels, and brands, we were able to provide them regular updates in features, fixes, and guides related to the app.
+
+Acquired, and trained two developers to help us in development. Close communication with the team through chats, calls, and emails are done as frequent as our client operation’s pace.
+
+**Developed Features**
+Features were maintained through a documented source. It includes environment instructions, platforms, plugins, checklists, and analytics.
+- Low to high complexity UI development, and fixes
+- Minimization of TypeScript Errors
+- Simplification of Icon’s Amenities Model
+- Search By Keyword, and Filter Fixes in Hotels, Outlet List
+- Date Translation
+- Multiple Benefits Link
+- Multiple Contact List 'CallUs'
+- GDPR Settings
+- Open Map Parameters for Baidu
+- In App Browser Integration
+- Local Storage Limitation
+- Categorized E-Certificates
+- Root and Jailbreak Checker Implementation
+- M4M Trial Membership
+- Analytics
+- DemoSite Web UI
+- Push Notification
+
+**Mobile Apps Client Showcase**
+Published in both Android and iOS stores.
+- Hilton Dining Asia Pacific
+- Marco Polo Elite
+- Clubhotel Lifestyle
+- Movenpick CircleM
+- Aryaduta Allure
+- Epicure Essential Pleasures
+- Grand Privilege
+- Fairmont Privilege Dining
+- Caravelle Classique Club
+- Priority Privilege Hanoi
+- Centara Privilege Club
+        `,
         time: "2 years 7 months",
         date: "Sept 2017 - Mar 2020",
         image: require("../assets/images/logos/logo-hmc.png"),
@@ -88,8 +126,36 @@ export const PROJECTS: any = [
     data: [
       {
         title: "Accenture Philippines Inc.",
-        description:
-          "‣ Large Restaurant Chain and International Franchise in US \n‣ Toll Highway Administrative Agency in US \n‣ Public Housing Agency Provider in Hong Kong \n‣ British Multinational Telecommunications Company in UK \n‣ Work Schedule Management Application in Internal Business Development \n‣ Presentation Management Application in Internal Business Development \n‣ Facilitation of AngularJS training \n‣ Estimation on Agile Sprint Complexity \n‣ Brown Bag Compilation \n‣ Global Law Firm in US \n\nFor more details, please see Resume link.",
+        description: `
+These are brief information about each project where SDLC, and methods were practiced.
+
+**Large Restaurant Chain and International Franchise based in US** (Agile, 20+ members)
+A billing portal that processes payment of franchise owners using Zuora Platform backed by Hybris backend.
+
+**Toll Highway Administrative Agency based in US** (Direct reporting, 2 members)
+UI Functionalities on Navigation, and Accordion using Ionic Framework.
+
+**Public Housing Agency Provider based in Hong Kong** (Agile, 5 members)
+Forms, and Tables for managing worklist, and architectural assessment using Ionic framework, and Image handling APIs. Client Feedback was impressive.
+
+**British Multinational Telecommunications Company based in UK** (Agile, 20+ members)
+Visual interactive banner links using pure CSS, and it is used internally by the Client.
+
+**Work Schedule Management in Internal Business** (Self reporting, 5+ members)
+A hybrid application specifically for tablets that manages a list of daily, and weekly tasks for a merchandise store.
+
+**Presentation Management in Internal Business** (Independent, 2 member)
+From the hybrid application's data structure to implementation of each interactive demo slides that were used for visiting colleagues.
+
+**Facilitation of AngularJS training** (Team collaboration, 4 members)
+Support for individuals on framework basics, challenges, and techniques in a classroom environment.
+
+**Estimation on Agile Sprint Complexity** (Independent)
+Estimation of work effort using the Agile estimator, either planning poker, or custom values to determine forecast results on project schedule, tasks, and budget prior to requirements.
+
+**Brown Bag Compilation** (Independent)
+Sharing knowledge, and experience on frameworks, data structures, request handling, plugins, and tools to individuals, and teams.
+          `,
         time: "2 years 5 months",
         date: "Dec 2014 - April 2017",
         image: require("../assets/images/logos/logo-acn.png"),
@@ -151,8 +217,14 @@ export const PROJECTS: any = [
     data: [
       {
         title: "WideOut (WF) Inc.",
-        description:
-          "R&D on various website features using Agile Method and Frameworks such as: CodeIgniter and Wordpress while observing proper responsive web design. \n\nWorked on a location-based mobile marketing service, an advanced, complete Anti-Theft Technology for mobile phones, and a social media website that utilizes Youtube and social media login APIs.",
+        description: `
+R&D on common web features, elements, tables, forms, and validations. Worked on CodeIgniter with 3rd Party APIs, and Wordpress with web responsiveness in an Agile-Scrum setup.
+
+**Grabit Discounts** is a marketing based mobile application that provides consumers
+discount based on their location and their shopping preference.
+
+**Chimely** is a new experience to watch videos. Make a chime each time you comment on a certain time frame on a video.
+        `,
         time: "1 year",
         date: "Sep 2013 - Aug 2014",
         image: require("../assets/images/logos/logo-wo.png"),
@@ -173,7 +245,7 @@ export const PROJECTS: any = [
       {
         title: "IBM Philippines Inc.",
         description:
-          "Designed and organized banners, posters, slogans, prints, and documents for formal events. \n\nProduced video slides and presentations for company news and events updates.",
+          "Designed and organized banners, posters, slogans, prints, and documents for events. Produced video slides and presentations for company news and events updates.",
         time: "6 months",
         date: "Jun - Dec 2012",
         image: require("../assets/images/logos/logo-ibm.png"),
@@ -194,7 +266,7 @@ export const PROJECTS: any = [
       {
         title: "Avolution Inc.",
         description:
-          "Redesigned and redeveloped the old flash site to the modern web standard with SEO Optimization. Designed the header of the logo and tagline.",
+          "Reworked the previous flash site to a more modern look, and standard. Added SEO tracking in search engines. Developed an interactive touch based flash presentation for their client, Cisco.",
         time: "2 months",
         date: "Apr - May 2012",
         image: require("../assets/images/logos/logo-avo.png"),
@@ -215,7 +287,7 @@ export const PROJECTS: any = [
       {
         title: "CATA Construction Philippines Corp.",
         description:
-          "Constructed the old website’s sitemap and enhanced images for web presentation.",
+          "Constructed the previous Wordpress sitemap. Enhanced web images.",
         time: "2 months",
         date: "Apr - May 2011",
         image: require("../assets/images/logos/logo-cata.png"),
