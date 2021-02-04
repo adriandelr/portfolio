@@ -215,6 +215,7 @@ const TabSnippetsScreen = () => {
           labelStyle={[
             Styles.novaFamily,
             {
+              paddingTop: 7,
               color: colors.textSearchLabel,
             },
           ]}
