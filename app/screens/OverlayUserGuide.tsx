@@ -345,7 +345,7 @@ export default function WelcomeOverlay() {
                     },
                   ]}
                 >
-                  Swipe right till you open the icon menu
+                  Swipe right till you open the icons menu
                 </Text>
                 <SwipeFadeAnim>
                   <Icon
