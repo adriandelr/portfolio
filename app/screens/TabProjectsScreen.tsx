@@ -121,6 +121,7 @@ const TabProjectsScreen = () => {
           <View
             style={{
               height: Layout.window.width * 0.5,
+              maxHeight: 360,
               marginVertical: 7,
               opacity: 0.9,
             }}
