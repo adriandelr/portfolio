@@ -180,8 +180,7 @@ const TabSnippetsScreen = () => {
     keywordContainer: {
       height: 77,
       marginTop: 7,
-      paddingHorizontal:
-        Platform.OS === "web" ? (Layout.isSmallDevice ? "3%" : "19%") : 7,
+      paddingHorizontal: Layout.isSmallDevice ? "3%" : "19%",
     },
   });
 
