@@ -158,9 +158,7 @@ const TabProjectsScreen = () => {
                   openDetail
                     ? handlePress
                     : () => {
-                        setSelectedSection(projSection);
-                        setSelectedItem(projItem);
-                        setOpenDetail(true);
+                        viewDetail(projSection, projItem);
                       }
                 }
               >
