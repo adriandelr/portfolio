@@ -229,7 +229,7 @@ const TabProjectsScreen = () => {
             onPress={() => {
               setTimeout(() => {
                 setOpenDetail(false);
-              }, 300);
+              }, 150);
             }}
             style={{
               width: "100%",
