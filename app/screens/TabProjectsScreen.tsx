@@ -223,6 +223,7 @@ const TabProjectsScreen = () => {
           transparent={false}
           visible={openDetail}
           style={styles.modalContainer}
+          onRequestClose={() => setOpenDetail(false)}
         >
           <TouchableOpacity
             onPress={() => {
