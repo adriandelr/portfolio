@@ -83,7 +83,17 @@ const TabSnippetsScreen = () => {
           <Markdown style={mdStyles}>{snipItem.content}</Markdown>
         )}
         {open && snipItem.link && (
-          <Linker url={snipItem.link} text="View Source" color={colors.link} />
+          <View
+            style={{
+              left: 7,
+            }}
+          >
+            <Linker
+              url={snipItem.link}
+              text="View Source"
+              color={colors.link}
+            />
+          </View>
         )}
       </View>
     );
