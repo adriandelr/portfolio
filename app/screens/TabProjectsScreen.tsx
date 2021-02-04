@@ -9,8 +9,6 @@ import {
   Platform,
   TouchableOpacity,
   TouchableWithoutFeedback,
-  NativeSyntheticEvent,
-  NativeScrollEvent,
 } from "react-native";
 
 import { PROJECTS } from "../constants/Projects";
@@ -19,6 +17,11 @@ import Linker from "../components/Linker";
 import Loader from "../components/Loader";
 import Styles from "../constants/Styles";
 import Layout from "../constants/Layout";
+import {
+  isShowButton,
+  computeShowButton,
+  BackArrow,
+} from "../components/BackArrow";
 
 import _ from "lodash";
 import { ButtonGroup } from "react-native-elements";
@@ -206,8 +209,11 @@ const TabProjectsScreen = () => {
           scrollEnabled={true}
           showsVerticalScrollIndicator={true}
           style={styles.sectionContainer}
-          onScroll={handleScroll}
-          scrollEventThrottle={Platform.OS === "web" ? 17 : 777}
+          onScroll={(event) => {
+            computeShowButton(event);
+            setShowButton(isShowButton);
+          }}
+          scrollEventThrottle={17}
         />
       </View>
     );
@@ -309,64 +315,8 @@ const TabProjectsScreen = () => {
     );
   };
 
-  const scrollOffset = useRef(0);
-  const handleScroll = useCallback(
-    (event: NativeSyntheticEvent<NativeScrollEvent>) => {
-      const layoutMeasurementHeight =
-          event.nativeEvent.layoutMeasurement.height,
-        contentOffsetY = event.nativeEvent.contentOffset.y,
-        contentSizeHeight = event.nativeEvent.contentSize.height,
-        offset = contentSizeHeight / 7,
-        direction =
-          contentOffsetY > 0 && contentOffsetY >= scrollOffset.current
-            ? "down"
-            : "up",
-        isUp = direction === "up",
-        isDown = direction === "down",
-        isEnd =
-          layoutMeasurementHeight + contentOffsetY >=
-          contentSizeHeight - offset;
-      if (isUp && contentOffsetY < offset) setShowButton(false);
-      if (isDown && isEnd) setShowButton(true);
-      scrollOffset.current = contentOffsetY;
-    },
-    [showButton]
-  );
-
-  const BackArrow = useCallback(() => {
-    return (
-      <View
-        style={{
-          position: "absolute",
-          right: Platform.OS === "web" ? 49 : 19,
-          bottom: Platform.OS === "web" ? 49 : 59,
-        }}
-      >
-        {showButton && (
-          <TouchableOpacity
-            onPress={() => {
-              listRef.current?.scrollToLocation({
-                itemIndex: 0,
-                sectionIndex: 0,
-                animated: true,
-              });
-            }}
-          >
-            <Icon
-              name="arrow-up"
-              type="font-awesome-5"
-              color={colors.backArrow}
-              style={{
-                width: 44,
-                height: 44,
-                fontSize: 33,
-              }}
-              reverse
-            />
-          </TouchableOpacity>
-        )}
-      </View>
-    );
+  const ScrollUp = useCallback(() => {
+    return <BackArrow listRef={listRef} />;
   }, [showButton]);
 
   const styles = StyleSheet.create({
@@ -441,7 +391,7 @@ const TabProjectsScreen = () => {
       {openDetail && <ItemDetail />}
       <ItemList />
       {!openDetail && <YearGroup />}
-      {!openDetail && <BackArrow />}
+      {!openDetail && showButton && <ScrollUp />}
     </View>
   );
 };
