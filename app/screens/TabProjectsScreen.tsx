@@ -33,9 +33,6 @@ const TabProjectsScreen = () => {
   const { colors } = useTheme();
   const listRef: any = useRef<SectionList<any>>();
 
-  const resumeURL =
-    "https://drive.google.com/file/d/1MX6I97C9fx8CTzV5YQhRPwYdyAEjsyhm/view?usp=sharing";
-
   const [openDetail, setOpenDetail] = useState(false);
   const [sectionIndex, setSectionIndex] = useState(0);
   const [projIndex, setProjIndex] = useState(0);
@@ -186,15 +183,8 @@ const TabProjectsScreen = () => {
             {projItem.description}
           </Text>
         </ReadMore>
-        {openDetail && projItem.showResume && (
-          <Linker url={resumeURL} text="View Resume" color={colors.link} />
-        )}
         {openDetail && projItem.storeLink && (
-          <Linker
-            url={projItem.storeLink}
-            text="Store Link"
-            color={colors.link}
-          />
+          <Linker url={projItem.storeLink} text="Store Link" />
         )}
         <Text style={[Styles.novaFamily, styles.textDate]}>
           {projItem.date}
@@ -214,6 +204,28 @@ const TabProjectsScreen = () => {
           )}
           renderSectionHeader={({ section: { year } }) => (
             <Text style={[Styles.novaFamily, styles.textHeader]}>{year}</Text>
+          )}
+          ListFooterComponent={() => (
+            <View
+              style={{
+                top: 0,
+                paddingBottom: Layout.isSmallDevice ? 177 : 137,
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Text style={[Styles.novaFamily, styles.textDesc]}>
+                Looking for other details?
+              </Text>
+              <Linker
+                url="https://drive.google.com/file/d/1MX6I97C9fx8CTzV5YQhRPwYdyAEjsyhm/view?usp=sharing"
+                text="View My Resume"
+                textSize={Platform.OS === "web" ? 14 : 15}
+                color={"lightslategrey"}
+                bgColor={colors.background}
+                borderColor={colors.background}
+              />
+            </View>
           )}
           ref={listRef}
           scrollEnabled={true}

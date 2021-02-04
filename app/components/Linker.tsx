@@ -9,7 +9,10 @@ import Icon from "react-native-vector-icons/FontAwesome5";
 export default function Linker({
   url,
   text,
+  textSize,
   color,
+  bgColor,
+  borderColor,
   confirmText,
   cancelText,
   iconOnly,
@@ -49,7 +52,7 @@ export default function Linker({
           <Icon
             name={iconOnly}
             size={24}
-            color={colors.primary}
+            color={color || colors.primary}
             style={{
               alignSelf: "center",
               justifyContent: "flex-end",
@@ -80,16 +83,16 @@ export default function Linker({
               }
             }}
             titleStyle={{
-              fontSize: 13,
-              color: colors.background,
+              fontSize: textSize || 13,
+              color: color || colors.background,
               fontWeight: Platform.OS === "web" ? "normal" : "300",
             }}
             buttonStyle={{
               alignItems: "center",
               justifyContent: "center",
-              backgroundColor: colors.linkerButton,
+              backgroundColor: bgColor || colors.linkerButton,
               borderWidth: 2,
-              borderColor: "slategray",
+              borderColor: borderColor || "slategray",
               borderRadius: 1,
             }}
             title={text}

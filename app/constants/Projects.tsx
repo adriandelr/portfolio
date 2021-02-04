@@ -76,7 +76,6 @@ export const PROJECTS: any = [
             cornerLabelText: "HMC",
           },
         ],
-        showResume: true,
         storeLink:
           Platform.OS === "ios"
             ? "https://apps.apple.com/ph/developer/hospitality-marketing-concepts-llc/id837144091"
@@ -144,7 +143,6 @@ export const PROJECTS: any = [
             cornerLabelText: "Accenture",
           },
         ],
-        showResume: true,
       },
     ],
   },

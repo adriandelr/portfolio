@@ -211,16 +211,8 @@ export default function TabDevScreen({ navigation }: any) {
                   solid
                 />
               </Text>
-              <Linker
-                url={expoAppStoreURL}
-                text="Apple Store"
-                color="#D3D3D3"
-              />
-              <Linker
-                url={expoPlayStoreURL}
-                text="Play Store"
-                color="#D3D3D3"
-              />
+              <Linker url={expoAppStoreURL} text="Apple Store" />
+              <Linker url={expoPlayStoreURL} text="Play Store" />
               <Text
                 style={[
                   Styles.novaFamily,
@@ -244,7 +236,6 @@ export default function TabDevScreen({ navigation }: any) {
               <Linker
                 url={expoURL}
                 text="Portfolio App"
-                color="#D3D3D3"
                 confirmText="Are you sure you have installed the Expo client?"
                 cancelText="Please download the Expo client."
               />

@@ -88,11 +88,7 @@ const TabSnippetsScreen = () => {
               left: 7,
             }}
           >
-            <Linker
-              url={snipItem.link}
-              text="View Source"
-              color={colors.link}
-            />
+            <Linker url={snipItem.link} text="View Source" />
           </View>
         )}
       </View>
