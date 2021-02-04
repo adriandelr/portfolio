@@ -150,7 +150,7 @@ const TabSnippetsScreen = () => {
       paddingHorizontal: 3,
     },
     section: {
-      paddingHorizontal: Layout.isSmallDevice ? "7%" : "21%",
+      paddingHorizontal: Layout.isSmallDevice ? "9%" : "21%",
       paddingBottom: 7,
     },
     header: {
