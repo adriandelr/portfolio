@@ -4,6 +4,7 @@ import { Platform, View, TouchableOpacity } from "react-native";
 import { useTheme } from "../hooks/useThemeContext";
 
 import { Icon } from "react-native-elements";
+import Layout from "../constants/Layout";
 
 export var isShowButton: boolean = false;
 export var scrollOffset: number = 0;
@@ -30,8 +31,8 @@ export const BackArrow = ({ listRef }: any) => {
     <View
       style={{
         position: "absolute",
-        right: Platform.OS === "web" ? 49 : 19,
-        bottom: Platform.OS === "web" ? 49 : 59,
+        right: Platform.OS === "web" ? (Layout.isSmallDevice ? 19 : 49) : 19,
+        bottom: Platform.OS === "web" ? (Layout.isSmallDevice ? 59 : 49) : 59,
       }}
     >
       <TouchableOpacity
