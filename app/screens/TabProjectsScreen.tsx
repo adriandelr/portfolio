@@ -44,7 +44,6 @@ const TabProjectsScreen = () => {
   const [showButton, setShowButton] = useState(false);
   const [showLoad, setShowLoad] = useState(true);
   const [showCarousel, setShowCarousel] = useState(false);
-  const [showReadMore, setShowReadMore] = useState(false);
 
   const viewDetail = (projSection: any, projItem: any) => {
     const sectionIndex = _.indexOf(PROJECTS, projSection);
@@ -54,7 +53,6 @@ const TabProjectsScreen = () => {
     setSectionIndex(sectionIndex);
     setProjIndex(projIndex);
 
-    setShowReadMore(true);
     setShowCarousel(true);
     setShowLoad(false);
 
@@ -63,7 +61,6 @@ const TabProjectsScreen = () => {
 
   const closeDetail = () => {
     if (showCarousel) {
-      setShowReadMore(false);
       setShowCarousel(false);
       setShowLoad(true);
       setTimeout(() => {
@@ -143,56 +140,54 @@ const TabProjectsScreen = () => {
             )}
           </View>
         )}
-        {showReadMore && (
-          <ReadMore
-            numberOfLines={openDetail ? 0 : 1}
-            renderTruncatedFooter={(handlePress: any) =>
-              !openDetail && (
-                <Text
-                  style={[
-                    Styles.novaFamily,
-                    {
-                      fontWeight: "700",
-                      color: colors.textReadMore,
-                      marginTop: 3,
-                      marginBottom: 13,
-                    },
-                  ]}
-                  onPress={
-                    openDetail
-                      ? handlePress
-                      : () => {
-                          setSelectedSection(projSection);
-                          setSelectedItem(projItem);
-                          setOpenDetail(true);
-                        }
-                  }
-                >
-                  {openDetail ? "Read more" : "View details"}
-                </Text>
-              )
-            }
-            renderRevealedFooter={(handlePress: any) => (
+        <ReadMore
+          numberOfLines={openDetail ? 0 : 1}
+          renderTruncatedFooter={(handlePress: any) =>
+            !openDetail && (
               <Text
                 style={[
                   Styles.novaFamily,
                   {
+                    fontWeight: "700",
                     color: colors.textReadMore,
                     marginTop: 3,
                     marginBottom: 13,
                   },
                 ]}
-                onPress={handlePress}
+                onPress={
+                  openDetail
+                    ? handlePress
+                    : () => {
+                        setSelectedSection(projSection);
+                        setSelectedItem(projItem);
+                        setOpenDetail(true);
+                      }
+                }
               >
-                Show less
+                {openDetail ? "Read more" : "View details"}
               </Text>
-            )}
-          >
-            <Text style={[Styles.novaFamily, styles.textDesc]}>
-              {projItem.description}
+            )
+          }
+          renderRevealedFooter={(handlePress: any) => (
+            <Text
+              style={[
+                Styles.novaFamily,
+                {
+                  color: colors.textReadMore,
+                  marginTop: 3,
+                  marginBottom: 13,
+                },
+              ]}
+              onPress={handlePress}
+            >
+              Show less
             </Text>
-          </ReadMore>
-        )}
+          )}
+        >
+          <Text style={[Styles.novaFamily, styles.textDesc]}>
+            {projItem.description}
+          </Text>
+        </ReadMore>
         {openDetail && projItem.showResume && (
           <Linker url={resumeURL} text="View Resume" color={colors.link} />
         )}
