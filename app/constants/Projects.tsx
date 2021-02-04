@@ -6,8 +6,12 @@ export const PROJECTS: any = [
     data: [
       {
         title: "Portfolio",
-        description:
-          "New year, new app! \n\nMy very own Digital Portfolio. Made using React Native by Facebook.",
+        description: `New year, new app!
+
+I am pleased to announce my very own Digital Portfolio.
+
+Made using React Native by Facebook.
+        `,
         time: "1 month",
         date: "Jan 2021",
         image: require("../assets/images/logos/logo-az.png"),
@@ -27,9 +31,9 @@ export const PROJECTS: any = [
     data: [
       {
         title: "Hospitality Marketing Concepts LLC",
-        description: `
-**Responsible for the Hybrid Mobile App Front-End development, and maintenance**
-Focused on implementation of new features, theming new brands, testing, improvement, and fixes. In the support of numerous clients that are luxury hotels, and brands, we were able to provide them regular updates in features, fixes, and guides related to the app.
+        description: `Responsible for the Hybrid Mobile App development, and maintenance. 
+
+Focused on implementation of new features, branding, testing, improvement, and fixes. In the support of numerous clients that are luxury hotels, and brands, we were able to provide them regular updates in features, fixes, and guides related to the app.
 
 Acquired, and trained two developers to help us in development. Close communication with the team through chats, calls, and emails are done as frequent as our client’s operational pace.
 
@@ -126,8 +130,7 @@ Published in both Android and iOS stores.
     data: [
       {
         title: "Accenture Philippines Inc.",
-        description: `
-These are brief information about each project where SDLC, and methods were practiced.
+        description: `These are brief information about each project where SDLC, and methods were practiced.
 
 **Large Restaurant Chain and International Franchise based in US** (Agile, 20+ members)
 A billing portal that processes payment of franchise owners using Zuora Platform backed by Hybris backend.
@@ -217,8 +220,7 @@ Sharing knowledge, and experience on frameworks, data structures, request handli
     data: [
       {
         title: "WideOut (WF) Inc.",
-        description: `
-R&D on common web features, elements, tables, forms, and validations. Worked on CodeIgniter with 3rd Party APIs, and Wordpress with web responsiveness in an Agile-Scrum setup.
+        description: `R&D on common web features, elements, tables, forms, and validations. Worked on CodeIgniter with 3rd Party APIs, and Wordpress with web responsiveness in an Agile-Scrum setup.
 
 **Grabit Discounts** is a marketing based mobile application that provides consumers
 discount based on their location and their shopping preference.
@@ -244,8 +246,9 @@ discount based on their location and their shopping preference.
     data: [
       {
         title: "IBM Philippines Inc.",
-        description:
-          "Designed and organized banners, posters, slogans, prints, and documents for events. Produced video slides and presentations for company news and events updates.",
+        description: `Designed and organized banners, posters, slogans, prints, and documents for events.
+
+Produced video slides and presentations for company news and events updates.`,
         time: "6 months",
         date: "Jun - Dec 2012",
         image: require("../assets/images/logos/logo-ibm.png"),
@@ -265,8 +268,9 @@ discount based on their location and their shopping preference.
     data: [
       {
         title: "Avolution Inc.",
-        description:
-          "Reworked the previous flash site to a more modern look, and standard. Added SEO tracking in search engines. Developed an interactive touch based flash presentation for their client, Cisco.",
+        description: `Reworked the previous flash site to a more modern look, and standard. Added SEO tracking in search engines. 
+
+Developed an interactive touch based flash presentation for their client, Cisco.`,
         time: "2 months",
         date: "Apr - May 2012",
         image: require("../assets/images/logos/logo-avo.png"),
@@ -286,8 +290,9 @@ discount based on their location and their shopping preference.
     data: [
       {
         title: "CATA Construction Philippines Corp.",
-        description:
-          "Constructed the previous Wordpress sitemap. Enhanced web images.",
+        description: `Constructed the previous Wordpress sitemap. 
+
+Enhanced web images.`,
         time: "2 months",
         date: "Apr - May 2011",
         image: require("../assets/images/logos/logo-cata.png"),
