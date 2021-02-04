@@ -17,12 +17,14 @@ import TabDevScreen from "../screens/TabDevScreen";
 import Linker from "../components/Linker";
 import { useTheme } from "../hooks/useThemeContext";
 import Styles from "../constants/Styles";
+import Back from "../components/BackHandler";
 
 import { Text } from "react-native-elements";
 import Icon from "react-native-vector-icons/Ionicons";
 
 export default function MainScreen() {
   const { colors } = useTheme();
+  Back();
 
   const navigation: any = useNavigation(),
     isFocused = useIsFocused();
