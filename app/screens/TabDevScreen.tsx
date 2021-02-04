@@ -14,6 +14,7 @@ import Layout from "../constants/Layout";
 import Linker from "../components/Linker";
 import { Avatar, Text } from "react-native-elements";
 import Icon from "react-native-vector-icons/FontAwesome5";
+import QRCode from "react-qr-code";
 
 export default function TabDevScreen({ navigation }: any) {
   const { colors } = useTheme(),
@@ -175,77 +176,92 @@ export default function TabDevScreen({ navigation }: any) {
             MarcoPolo, ClubHotel, and more.
           </Text>
           {Platform.OS === "web" && (
-            <Text
-              style={[
-                Styles.novaFamily,
+            <View style={{ width: "100%", alignItems: "center" }}>
+              <Text
+                style={[
+                  Styles.novaFamily,
+                  {
+                    color: colors.text,
+                    fontSize: Platform.OS === "web" ? 14 : 15,
+                    marginTop: 40,
+                    marginBottom: 20,
+                    paddingHorizontal: Layout.isSmallDevice
+                      ? Layout.isSmallerDevice
+                        ? "19%"
+                        : "13%"
+                      : "27%",
+                  },
+                ]}
+              >
                 {
-                  color: colors.text,
-                  fontSize: Platform.OS === "web" ? 14 : 15,
-                  marginTop: 40,
-                  marginBottom: 20,
-                  paddingHorizontal: Layout.isSmallDevice
-                    ? Layout.isSmallerDevice
-                      ? "19%"
-                      : "13%"
-                    : "27%",
-                },
-              ]}
-            >
-              {
-                "You are viewing on the web. For a more native experience, download the Expo app."
-              }
-              <Icon
-                name="app-store"
-                size={21}
-                color={colors.primary}
-                style={{ paddingLeft: 7 }}
-                solid
+                  "You are viewing on the web. For a more native experience, download the Expo app."
+                }
+                <Icon
+                  name="app-store"
+                  size={21}
+                  color={colors.primary}
+                  style={{ paddingLeft: 7 }}
+                  solid
+                />
+                <Icon
+                  name="google-play"
+                  size={21}
+                  color={colors.primary}
+                  style={{ paddingLeft: 7 }}
+                  solid
+                />
+              </Text>
+              <Linker
+                url={expoAppStoreURL}
+                text="Apple Store"
+                color="#D3D3D3"
               />
-              <Icon
-                name="google-play"
-                size={21}
-                color={colors.primary}
-                style={{ paddingLeft: 7 }}
-                solid
+              <Linker
+                url={expoPlayStoreURL}
+                text="Play Store"
+                color="#D3D3D3"
               />
-            </Text>
-          )}
-          {Platform.OS === "web" && (
-            <Linker url={expoAppStoreURL} text="Apple Store" color="#D3D3D3" />
-          )}
-          {Platform.OS === "web" && (
-            <Linker url={expoPlayStoreURL} text="Play Store" color="#D3D3D3" />
-          )}
-          {Platform.OS === "web" && (
-            <Text
-              style={[
-                Styles.novaFamily,
+              <Text
+                style={[
+                  Styles.novaFamily,
+                  {
+                    color: colors.text,
+                    fontSize: Platform.OS === "web" ? 14 : 15,
+                    marginTop: 30,
+                    marginBottom: 20,
+                    paddingHorizontal: Layout.isSmallDevice
+                      ? Layout.isSmallerDevice
+                        ? "19%"
+                        : "13%"
+                      : "27%",
+                  },
+                ]}
+              >
                 {
-                  color: colors.text,
-                  fontSize: Platform.OS === "web" ? 14 : 15,
-                  marginTop: 30,
-                  marginBottom: 20,
-                  paddingHorizontal: Layout.isSmallDevice
-                    ? Layout.isSmallerDevice
-                      ? "19%"
-                      : "13%"
-                    : "27%",
-                },
-              ]}
-            >
-              {
-                "If you have the Expo client already, you may open my app through this link."
-              }
-            </Text>
-          )}
-          {Platform.OS === "web" && (
-            <Linker
-              url={expoURL}
-              text="Portfolio App"
-              color="#D3D3D3"
-              confirmText="Are you sure you have installed the Expo client?"
-              cancelText="Please download the Expo client."
-            />
+                  "If you have Expo installed, you may open this app through the link, or scan the code."
+                }
+              </Text>
+              <Linker
+                url={expoURL}
+                text="Portfolio App"
+                color="#D3D3D3"
+                confirmText="Are you sure you have installed the Expo client?"
+                cancelText="Please download the Expo client."
+              />
+              <View
+                style={{
+                  marginTop: 21,
+                }}
+              >
+                <QRCode
+                  value="exp://exp.host/@adriandelr/Portfolio"
+                  size={137}
+                  bgColor={colors.background}
+                  fgColor={colors.primary}
+                  level="M"
+                />
+              </View>
+            </View>
           )}
         </View>
       </ScrollView>
