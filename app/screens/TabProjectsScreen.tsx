@@ -202,31 +202,6 @@ const TabProjectsScreen = () => {
           renderItem={({ item, section }) => (
             <Item projSection={section} projItem={item} />
           )}
-          renderSectionHeader={({ section: { year } }) => (
-            <Text style={[Styles.novaFamily, styles.textHeader]}>{year}</Text>
-          )}
-          ListHeaderComponent={() => (
-            <View
-              style={{
-                display: "none",
-                paddingBottom: 21,
-              }}
-            >
-              <Text
-                style={[
-                  Styles.novaFamily,
-                  {
-                    fontSize: 14,
-                    fontWeight: "700",
-                    color: "lightslategrey",
-                    alignSelf: "flex-end",
-                  },
-                ]}
-              >
-                My Projects
-              </Text>
-            </View>
-          )}
           ListFooterComponent={() => (
             <View
               style={{
@@ -393,13 +368,6 @@ const TabProjectsScreen = () => {
     },
     item: {
       height: Layout.isSmallDevice ? (Platform.OS === "web" ? 473 : 573) : 703,
-    },
-    textHeader: {
-      display: "none",
-      fontSize: 13,
-      color: colors.error,
-      textAlign: "right",
-      paddingRight: 17,
     },
     textTitle: {
       fontSize: Layout.isSmallDevice ? 19 : 24,
