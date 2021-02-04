@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { StyleSheet, View, Text, Image } from "react-native";
 
 import { PROJECTS } from "../constants/Projects";
