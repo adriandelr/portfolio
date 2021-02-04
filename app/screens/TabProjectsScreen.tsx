@@ -25,7 +25,6 @@ import {
 
 import _ from "lodash";
 import { ButtonGroup } from "react-native-elements";
-import { Icon } from "react-native-elements";
 import ReadMore from "react-native-read-more-text";
 import { ScrollView } from "react-native-gesture-handler";
 import Xcarousel from "../components/Xcarousel";
@@ -43,6 +42,9 @@ const TabProjectsScreen = () => {
   const [selectedItem, setSelectedItem] = useState([]);
   const [selectedSection, setSelectedSection] = useState([]);
   const [showButton, setShowButton] = useState(false);
+  const [showLoad, setShowLoad] = useState(true);
+  const [showCarousel, setShowCarousel] = useState(false);
+  const [showReadMore, setShowReadMore] = useState(false);
 
   const viewDetail = (projSection: any, projItem: any) => {
     const sectionIndex = _.indexOf(PROJECTS, projSection);
@@ -51,81 +53,96 @@ const TabProjectsScreen = () => {
     setSelectedItem(projItem);
     setSectionIndex(sectionIndex);
     setProjIndex(projIndex);
+
+    setShowReadMore(true);
+    setShowCarousel(true);
+    setShowLoad(false);
+
     setOpenDetail(true);
   };
 
-  const Carousel = (sectionId: any, itemId: any) => {
-    return <Xcarousel sectionId={sectionIndex} itemId={projIndex} />;
+  const closeDetail = () => {
+    if (showCarousel) {
+      setShowReadMore(false);
+      setShowCarousel(false);
+      setShowLoad(true);
+      setTimeout(() => {
+        setOpenDetail(false);
+      }, 150);
+    }
   };
 
-  const Item = useCallback(
-    ({ projSection, projItem }: any) => {
-      return (
-        <ScrollView
-          scrollEnabled={openDetail ? true : false}
-          showsVerticalScrollIndicator={openDetail ? true : false}
-          style={openDetail ? styles.detailContainer : styles.itemContainer}
-        >
-          <Text style={[Styles.novaFamily, styles.textTitle]}>
-            {projItem.title}
-          </Text>
-          <Text style={[Styles.novaFamily, styles.textTime]}>
-            {projItem.time}
-          </Text>
-          {!openDetail && (
-            <TouchableWithoutFeedback
-              onPress={() => {
-                viewDetail(projSection, projItem);
-              }}
-            >
-              <Image
-                source={projItem.image}
-                defaultSource={projItem.image}
-                resizeMethod="scale"
-                resizeMode="cover"
-                style={{
-                  width: "100%",
-                  minHeight: Layout.isSmallDevice
-                    ? Layout.isSmallerDevice
-                      ? "100%"
-                      : 270
-                    : 420,
-                  maxHeight: Layout.isSmallDevice
-                    ? Layout.isSmallerDevice
-                      ? "100%"
-                      : Layout.window.width - 42
-                    : 420,
-                  aspectRatio: 1,
-                  marginVertical: 7,
-                  backgroundColor: colors.background,
-                  opacity: 0.9,
-                }}
-              />
-            </TouchableWithoutFeedback>
-          )}
-          {openDetail && (
-            <View
+  const ItemCallbacks = [colors, openDetail];
+  const Item = useCallback(({ projSection, projItem }: any) => {
+    return (
+      <ScrollView
+        scrollEnabled={openDetail ? true : false}
+        showsVerticalScrollIndicator={openDetail ? true : false}
+        style={openDetail ? styles.detailContainer : styles.itemContainer}
+      >
+        <Text style={[Styles.novaFamily, styles.textTitle]}>
+          {projItem.title}
+        </Text>
+        <Text style={[Styles.novaFamily, styles.textTime]}>
+          {projItem.time}
+        </Text>
+        {!openDetail && (
+          <TouchableWithoutFeedback
+            onPress={() => {
+              viewDetail(projSection, projItem);
+            }}
+          >
+            <Image
+              source={projItem.image}
+              defaultSource={projItem.image}
+              resizeMethod="scale"
+              resizeMode="cover"
               style={{
-                height: Layout.window.width * 0.5,
+                width: "100%",
+                minHeight: Layout.isSmallDevice
+                  ? Layout.isSmallerDevice
+                    ? "100%"
+                    : 270
+                  : 420,
+                maxHeight: Layout.isSmallDevice
+                  ? Layout.isSmallerDevice
+                    ? "100%"
+                    : Layout.window.width - 42
+                  : 420,
+                aspectRatio: 1,
                 marginVertical: 7,
+                backgroundColor: colors.background,
                 opacity: 0.9,
               }}
+            />
+          </TouchableWithoutFeedback>
+        )}
+        {openDetail && (
+          <View
+            style={{
+              height: Layout.window.width * 0.5,
+              marginVertical: 7,
+              opacity: 0.9,
+            }}
+          >
+            <View
+              style={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                marginTop: -10.5,
+                marginLeft: -10.5,
+                zIndex: 1,
+              }}
             >
-              <View
-                style={{
-                  position: "absolute",
-                  top: "50%",
-                  left: "50%",
-                  marginTop: -10.5,
-                  marginLeft: -10.5,
-                  zIndex: 1,
-                }}
-              >
-                <Loader />
-              </View>
-              <Carousel sectionId={sectionIndex} itemId={projIndex} />
+              {showLoad && <Loader />}
             </View>
-          )}
+            {showCarousel && (
+              <Xcarousel sectionId={sectionIndex} itemId={projIndex} />
+            )}
+          </View>
+        )}
+        {showReadMore && (
           <ReadMore
             numberOfLines={openDetail ? 0 : 1}
             renderTruncatedFooter={(handlePress: any) =>
@@ -174,24 +191,23 @@ const TabProjectsScreen = () => {
               {projItem.description}
             </Text>
           </ReadMore>
-          {openDetail && projItem.showResume && (
-            <Linker url={resumeURL} text="View Resume" color={colors.link} />
-          )}
-          {openDetail && projItem.storeLink && (
-            <Linker
-              url={projItem.storeLink}
-              text="Store Link"
-              color={colors.link}
-            />
-          )}
-          <Text style={[Styles.novaFamily, styles.textDate]}>
-            {projItem.date}
-          </Text>
-        </ScrollView>
-      );
-    },
-    [colors, openDetail]
-  );
+        )}
+        {openDetail && projItem.showResume && (
+          <Linker url={resumeURL} text="View Resume" color={colors.link} />
+        )}
+        {openDetail && projItem.storeLink && (
+          <Linker
+            url={projItem.storeLink}
+            text="Store Link"
+            color={colors.link}
+          />
+        )}
+        <Text style={[Styles.novaFamily, styles.textDate]}>
+          {projItem.date}
+        </Text>
+      </ScrollView>
+    );
+  }, ItemCallbacks);
 
   const ItemList = useCallback(() => {
     return (
@@ -233,9 +249,7 @@ const TabProjectsScreen = () => {
         >
           <TouchableOpacity
             onPress={() => {
-              setTimeout(() => {
-                setOpenDetail(false);
-              }, 150);
+              closeDetail();
             }}
             style={{
               width: "100%",
@@ -244,27 +258,30 @@ const TabProjectsScreen = () => {
               justifyContent: "center",
               backgroundColor: colors.backgroundClose,
             }}
+            disabled={showCarousel ? false : true}
           >
-            <Text
-              style={[
-                Styles.novaFamily,
-                {
-                  fontSize: 14,
-                  color: colors.text,
-                  marginRight: 7,
-                },
-              ]}
-            >
-              {Platform.OS === "web"
-                ? "Close detail view"
-                : "Tap to close detail view"}
-            </Text>
+            {showCarousel && (
+              <Text
+                style={[
+                  Styles.novaFamily,
+                  {
+                    fontSize: 14,
+                    color: colors.text,
+                    marginRight: 7,
+                  },
+                ]}
+              >
+                {Platform.OS === "web"
+                  ? "Close detail view"
+                  : "Tap to close detail view"}
+              </Text>
+            )}
           </TouchableOpacity>
           <Item projSection={selectedSection} projItem={selectedItem} />
         </Modal>
       </View>
     );
-  }, [colors, openDetail]);
+  }, ItemCallbacks);
 
   const YearGroup = () => {
     return (

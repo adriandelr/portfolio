@@ -12,12 +12,6 @@ const Xcarousel = ({ sectionId, itemId }: any) => {
   const { colors } = useTheme();
   const images = PROJECTS[sectionId].data[itemId].images;
 
-  const [isShow, setShow] = useState(false);
-
-  setTimeout(() => {
-    setShow(true);
-  }, 700);
-
   const renderItem = (data: any) => (
     <View key={data.coverImageUri} style={styles.cardContainer}>
       <View style={styles.cardWrapper}>
@@ -74,16 +68,14 @@ const Xcarousel = ({ sectionId, itemId }: any) => {
 
   return (
     <View style={styles.container}>
-      {isShow && (
-        <Carousel
-          data={images}
-          renderItem={renderItem}
-          loop
-          autoplay
-          autoplayInterval={2300}
-          pagination={images.length > 1 ? PaginationLight : null}
-        />
-      )}
+      <Carousel
+        data={images}
+        renderItem={renderItem}
+        loop
+        autoplay
+        autoplayInterval={2300}
+        pagination={images.length > 1 ? PaginationLight : null}
+      />
     </View>
   );
 };
