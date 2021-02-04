@@ -31,7 +31,7 @@ export const PROJECTS: any = [
 **Responsible for the Hybrid Mobile App Front-End development, and maintenance**
 Focused on implementation of new features, theming new brands, testing, improvement, and fixes. In the support of numerous clients that are luxury hotels, and brands, we were able to provide them regular updates in features, fixes, and guides related to the app.
 
-Acquired, and trained two developers to help us in development. Close communication with the team through chats, calls, and emails are done as frequent as our client operation’s pace.
+Acquired, and trained two developers to help us in development. Close communication with the team through chats, calls, and emails are done as frequent as our client’s operational pace.
 
 **Developed Features**
 Features were maintained through a documented source. It includes environment instructions, platforms, plugins, checklists, and analytics.
