@@ -28,6 +28,7 @@ import { ButtonGroup } from "react-native-elements";
 import ReadMore from "react-native-read-more-text";
 import { ScrollView } from "react-native-gesture-handler";
 import Xcarousel from "../components/Xcarousel";
+import Markdown from "react-native-markdown-display";
 
 const TabProjectsScreen = () => {
   const { colors } = useTheme();
@@ -179,9 +180,14 @@ const TabProjectsScreen = () => {
             </Text>
           )}
         >
-          <Text style={[Styles.novaFamily, styles.textDesc]}>
-            {projItem.description}
-          </Text>
+          {!openDetail && (
+            <Text style={[Styles.novaFamily, styles.textDesc]}>
+              {projItem.description}
+            </Text>
+          )}
+          {openDetail && (
+            <Markdown style={mdStyles}>{projItem.description}</Markdown>
+          )}
         </ReadMore>
         {openDetail && projItem.storeLink && (
           <Linker url={projItem.storeLink} text="Store Link" />
@@ -396,6 +402,16 @@ const TabProjectsScreen = () => {
       position: "absolute",
       top: !Layout.isSmallDevice ? 0 : "auto",
       bottom: Layout.isSmallDevice ? 0 : "auto",
+    },
+  });
+
+  const mdStyles = StyleSheet.create({
+    body: {
+      width: "100%",
+      paddingHorizontal: 7,
+      paddingBottom: 7,
+      color: colors.text,
+      fontFamily: "proxima-regular",
     },
   });
 
