@@ -138,57 +138,57 @@ const TabProjectsScreen = () => {
             )}
           </View>
         )}
-        <ReadMore
-          numberOfLines={openDetail ? 0 : 1}
-          renderTruncatedFooter={(handlePress: any) =>
-            !openDetail && (
+        {!openDetail && (
+          <ReadMore
+            numberOfLines={openDetail ? 0 : 1}
+            renderTruncatedFooter={(handlePress: any) =>
+              !openDetail && (
+                <Text
+                  style={[
+                    Styles.novaFamily,
+                    {
+                      fontWeight: "700",
+                      color: colors.textReadMore,
+                      marginTop: 3,
+                      marginBottom: 13,
+                    },
+                  ]}
+                  onPress={
+                    openDetail
+                      ? handlePress
+                      : () => {
+                          viewDetail(projSection, projItem);
+                        }
+                  }
+                >
+                  {openDetail ? "Read more" : "View details"}
+                </Text>
+              )
+            }
+            renderRevealedFooter={(handlePress: any) => (
               <Text
                 style={[
                   Styles.novaFamily,
                   {
-                    fontWeight: "700",
                     color: colors.textReadMore,
                     marginTop: 3,
                     marginBottom: 13,
                   },
                 ]}
-                onPress={
-                  openDetail
-                    ? handlePress
-                    : () => {
-                        viewDetail(projSection, projItem);
-                      }
-                }
+                onPress={handlePress}
               >
-                {openDetail ? "Read more" : "View details"}
+                Show less
               </Text>
-            )
-          }
-          renderRevealedFooter={(handlePress: any) => (
-            <Text
-              style={[
-                Styles.novaFamily,
-                {
-                  color: colors.textReadMore,
-                  marginTop: 3,
-                  marginBottom: 13,
-                },
-              ]}
-              onPress={handlePress}
-            >
-              Show less
-            </Text>
-          )}
-        >
-          {!openDetail && (
+            )}
+          >
             <Text style={[Styles.novaFamily, styles.textDesc]}>
               {projItem.description}
             </Text>
-          )}
-          {openDetail && (
-            <Markdown style={mdStyles}>{projItem.description}</Markdown>
-          )}
-        </ReadMore>
+          </ReadMore>
+        )}
+        {openDetail && (
+          <Markdown style={mdStyles}>{projItem.description}</Markdown>
+        )}
         {openDetail && projItem.storeLink && (
           <Linker url={projItem.storeLink} text="Store Link" />
         )}
