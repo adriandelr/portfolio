@@ -3,9 +3,17 @@ export const SNIPPETS: any = [
     title: "General",
     data: [
       {
-        title: "Common Technology Definitions",
+        title: "Common Definitions - Technologies",
         content: `
+**Markdown** is a markup language that formats plain text. The formatted text is then converted into another language, such as HTML.
+
+**Expo** is an open-source platform for making universal native apps for Android, iOS, and the web with JavaScript and React.
+
 **Lodash** is by far the most widely used common JavaScript Utility library. It provides utility functions for common programming tasks using the functional programming pattern. It offers helpful modular utility in JavaScript data selection, consistency, and performance in cross-environment iteration support for arrays, and objects. It makes JavaScript coding easier and cleaner.
+
+**TypeScript** is an open-source language supported by Microsoft, which builds on top of JavaScript by adding optional static typing. Types provide a way to structure and validate your code before executing it.
+
+**Typings** describes contract of libraries you use. This allows the TypeScript compiler to confirm the classes, properties, or modules you use are existing.
 
 Node Package Manager(**NPM**) is used to pull, and generate packages pointing from remote node modules that containing helpful dependencies, or features used in the app.
 
@@ -20,10 +28,6 @@ We use **Cordova**, a platform for developing, and building hybrid mobile applic
 **Swiper** is a JavaScript Library we used for slides of gallery, and pages.
 
 **Less**, a pre-processor that extends, and compiles to CSS, its functions such as variables, mixins, nesting, operations, and functions.
-
-**Markdown** is a markup language that formats plain text. The formatted text is then converted into another language, such as HTML.
-
-**Expo** is an open-source platform for making universal native apps for Android, iOS, and the web with JavaScript and React.
         `,
       },
       {
@@ -198,6 +202,13 @@ console.log('hi');
         content: "What is ‘variable shadowing’ and why it should be avoided.",
         link:
           "https://medium.com/@mayuminishimoto/understanding-variable-shadowing-with-javascript-58fc108c8f03",
+      },
+      {
+        title: "What are Typings in Typescript?",
+        content:
+          "JavaScript is untyped, meaning that we can pass around and use data, objects and functions with no constraints. We can write code that calls methods that don't exist on an object, or reference variables that we don't have. These kinds of mistakes can be hard to discover when you are writing code, and it can lead to unstable and buggy code. Doing big changes of your code can become difficult and risky as you don't immediately see if some changes conflicts with the rest of the code somewhere else.",
+        link:
+          "https://stackoverflow.com/questions/41573822/what-are-typings-in-typescript",
       },
     ],
   },
