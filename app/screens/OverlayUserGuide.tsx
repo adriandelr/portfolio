@@ -112,7 +112,6 @@ export default function WelcomeOverlay() {
         zIndex: 1,
         elevation: 1,
         flexDirection: "row",
-        overflow: "hidden",
       }}
     >
       <TouchableOpacity

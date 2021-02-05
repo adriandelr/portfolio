@@ -52,6 +52,7 @@ const Navigation = ({ colorScheme }: { colorScheme: ColorSchemeName }) => {
         }}
         style={{
           backgroundColor: colors.background,
+          paddingBottom: Platform.OS === "ios" ? 40 : 0,
         }}
         sceneContainerStyle={{
           backgroundColor: "transparent",
