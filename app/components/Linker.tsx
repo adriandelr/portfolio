@@ -29,7 +29,7 @@ export default function Linker({
         await Linking.openURL(url);
       }
     } else {
-      Alert.alert(`Invalid URL: ${url}`);
+      Alert.alert("Please make sure you have this application.");
     }
   }, [url]);
 
