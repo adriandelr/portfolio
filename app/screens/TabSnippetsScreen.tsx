@@ -248,6 +248,7 @@ const TabSnippetsScreen = () => {
             <Text style={[Styles.novaFamily, styles.header]}>{title}</Text>
           )}
           style={styles.section}
+          stickySectionHeadersEnabled={false}
         />
       )}
     </View>
