@@ -89,26 +89,9 @@ const TabProjectsScreen = () => {
           >
             <Image
               source={projItem.image}
-              defaultSource={projItem.image}
               resizeMethod="scale"
               resizeMode="cover"
-              style={{
-                width: "100%",
-                minHeight: Layout.isSmallDevice
-                  ? Layout.isSmallerDevice
-                    ? "100%"
-                    : 270
-                  : 420,
-                maxHeight: Layout.isSmallDevice
-                  ? Layout.isSmallerDevice
-                    ? "100%"
-                    : Layout.window.width - 42
-                  : 420,
-                aspectRatio: 1,
-                marginVertical: 7,
-                backgroundColor: colors.background,
-                opacity: 0.9,
-              }}
+              style={styles.image}
             />
           </TouchableWithoutFeedback>
         )}
@@ -352,12 +335,12 @@ const TabProjectsScreen = () => {
     },
     sectionContainer: {
       paddingTop: Layout.isSmallDevice ? 21 : 73,
-      paddingHorizontal: Layout.isSmallDevice
-        ? 21
-        : (Layout.window.width - 437) / 2,
     },
     itemContainer: {
+      width: "77%",
+      maxWidth: 420,
       height: Layout.isSmallDevice ? (Platform.OS === "web" ? 473 : 573) : 703,
+      alignSelf: "center",
     },
     detailContainer: {
       width: "100%",
@@ -374,6 +357,22 @@ const TabProjectsScreen = () => {
     },
     item: {
       height: Layout.isSmallDevice ? (Platform.OS === "web" ? 473 : 573) : 703,
+    },
+    image: {
+      width: "100%",
+      minHeight: Layout.isSmallDevice
+        ? Layout.isSmallerDevice
+          ? "100%"
+          : 270
+        : 420,
+      maxHeight: Layout.isSmallDevice
+        ? Layout.isSmallerDevice
+          ? "100%"
+          : Layout.window.width - 42
+        : 420,
+      marginVertical: 7,
+      backgroundColor: colors.background,
+      opacity: 0.9,
     },
     textTitle: {
       fontSize: Layout.isSmallDevice ? 19 : 24,
