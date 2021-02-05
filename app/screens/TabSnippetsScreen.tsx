@@ -31,69 +31,72 @@ if (Platform.OS === "android") {
 const TabSnippetsScreen = () => {
   const { colors } = useTheme();
 
-  const Item = useCallback(({ snipItem }: any) => {
-    const [open, setOpen] = useState(false);
+  const Item = useCallback(
+    ({ snipItem }: any) => {
+      const [open, setOpen] = useState(false);
 
-    const toggleAccordion = () => {
-      LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
-      setOpen(!open);
-    };
+      const toggleAccordion = () => {
+        LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
+        setOpen(!open);
+      };
 
-    return (
-      <View>
-        <TouchableOpacity
-          style={[
-            styles.item,
-            !open && { height: Platform.OS === "web" ? 33 : 44 },
-          ]}
-          onPress={toggleAccordion}
-          activeOpacity={1}
-        >
-          <Text
+      return (
+        <View>
+          <TouchableOpacity
             style={[
-              Styles.novaFamily,
-              styles.title,
-              { paddingVertical: open ? 3 : 0 },
+              styles.item,
+              !open && { height: Platform.OS === "web" ? 33 : 44 },
             ]}
-            numberOfLines={open ? 0 : 1}
+            onPress={toggleAccordion}
+            activeOpacity={1}
           >
-            {snipItem.title}
-          </Text>
-          <Icon
-            name="chevron-left"
-            style={{
-              fontSize: Platform.OS === "web" ? 11 : 14,
-              color: colors.error,
-              position: "absolute",
-              top: Platform.OS === "web" ? 10 : 14,
-              right: Platform.OS === "web" ? 10 : 14,
-              alignSelf: "flex-end",
-              justifyContent: "center",
-              transform: open ? [{ rotate: "-90deg" }] : [{ rotate: "0deg" }],
-              opacity: open ? 0.3 : 0.7,
-            }}
-          />
-        </TouchableOpacity>
-        {Platform.OS === "web" && open && (
-          <Text selectable={true}>
+            <Text
+              style={[
+                Styles.novaFamily,
+                styles.title,
+                { paddingVertical: open ? 3 : 0 },
+              ]}
+              numberOfLines={open ? 0 : 1}
+            >
+              {snipItem.title}
+            </Text>
+            <Icon
+              name="chevron-left"
+              style={{
+                fontSize: Platform.OS === "web" ? 11 : 14,
+                color: colors.error,
+                position: "absolute",
+                top: Platform.OS === "web" ? 10 : 14,
+                right: Platform.OS === "web" ? 10 : 14,
+                alignSelf: "flex-end",
+                justifyContent: "center",
+                transform: open ? [{ rotate: "-90deg" }] : [{ rotate: "0deg" }],
+                opacity: open ? 0.3 : 0.7,
+              }}
+            />
+          </TouchableOpacity>
+          {Platform.OS === "web" && open && (
+            <Text selectable={true}>
+              <Markdown style={mdStyles}>{snipItem.content}</Markdown>
+            </Text>
+          )}
+          {Platform.OS !== "web" && open && (
             <Markdown style={mdStyles}>{snipItem.content}</Markdown>
-          </Text>
-        )}
-        {Platform.OS !== "web" && open && (
-          <Markdown style={mdStyles}>{snipItem.content}</Markdown>
-        )}
-        {open && snipItem.link && (
-          <View
-            style={{
-              left: 7,
-            }}
-          >
-            <Linker url={snipItem.link} text="View Source" />
-          </View>
-        )}
-      </View>
-    );
-  }, []);
+          )}
+          {open && snipItem.link && (
+            <View
+              style={{
+                left: 7,
+              }}
+            >
+              <Linker url={snipItem.link} text="View Source" />
+            </View>
+          )}
+        </View>
+      );
+    },
+    [colors]
+  );
 
   const [query, setQuery] = useState("");
 
