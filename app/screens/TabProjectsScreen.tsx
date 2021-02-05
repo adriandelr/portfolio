@@ -138,6 +138,7 @@ const TabProjectsScreen = () => {
                       color: colors.textReadMore,
                       marginTop: 3,
                       marginBottom: 13,
+                      alignSelf: "flex-end",
                     },
                   ]}
                   onPress={
@@ -337,14 +338,14 @@ const TabProjectsScreen = () => {
     container: {
       width: "100%",
       height: "100%",
-      paddingHorizontal: wp("1%"),
+      paddingHorizontal: Layout.isSmallDevice ? wp("1%") : 0,
     },
     sectionContainer: {
       paddingTop: Layout.isSmallDevice ? 21 : 73,
     },
     itemContainer: {
       width: Layout.isSmallerImage ? "77%" : 420,
-      height: Layout.isSmallerImage ? wp("121%") : 530,
+      height: Layout.isSmallerImage ? wp("121%") : 533,
       marginBottom: Layout.isSmallerImage ? hp("11%") : 130,
       alignSelf: "center",
     },
@@ -390,6 +391,7 @@ const TabProjectsScreen = () => {
       color: colors.textDate,
       paddingVertical: 14,
       paddingBottom: openDetail ? (Platform.OS === "ios" ? 70 : 21) : 0,
+      alignSelf: "flex-end",
     },
     buttonGroupContainer: {
       width: Layout.isSmallDevice ? "100%" : "100%",
