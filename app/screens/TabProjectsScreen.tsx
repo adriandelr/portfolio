@@ -245,7 +245,7 @@ const TabProjectsScreen = () => {
             }}
             style={{
               width: "100%",
-              height: 44,
+              height: Platform.OS === "ios" ? 88 : 44,
               alignItems: "center",
               justifyContent: "center",
               backgroundColor: colors.backgroundClose,
@@ -257,6 +257,7 @@ const TabProjectsScreen = () => {
                 style={[
                   Styles.novaFamily,
                   {
+                    top: Platform.OS === "ios" ? 24 : 0,
                     fontSize: 14,
                     color: colors.text,
                     marginRight: 7,
@@ -391,6 +392,7 @@ const TabProjectsScreen = () => {
       fontSize: 13,
       color: colors.textDate,
       paddingVertical: 14,
+      paddingBottom: openDetail ? (Platform.OS === "ios" ? 70 : 21) : 0,
     },
     buttonGroupContainer: {
       width: Layout.isSmallDevice ? "100%" : "100%",

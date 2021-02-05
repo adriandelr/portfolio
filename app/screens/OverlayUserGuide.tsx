@@ -239,7 +239,8 @@ export default function WelcomeOverlay() {
             <View
               style={{
                 position: "absolute",
-                top: Layout.isSmallDevice ? 30 : 10,
+                top:
+                  Platform.OS === "ios" ? 75 : Layout.isSmallDevice ? 30 : 10,
                 left: Layout.isSmallDevice ? 40 : 40,
                 flex: 1,
                 alignItems: "flex-start",
@@ -304,7 +305,7 @@ export default function WelcomeOverlay() {
             <View
               style={{
                 position: "absolute",
-                top: 10,
+                top: Platform.OS === "ios" ? 55 : 10,
                 right: 60,
                 flex: 1,
                 alignItems: "center",
@@ -428,7 +429,7 @@ export default function WelcomeOverlay() {
               <View
                 style={{
                   position: "absolute",
-                  bottom: 50,
+                  bottom: Platform.OS === "ios" ? 90 : 50,
                   flex: 1,
                   alignSelf: "center",
                   justifyContent: "center",
@@ -460,10 +461,15 @@ export default function WelcomeOverlay() {
             backgroundColor: colors.background,
             opacity: 0.97,
             position: "absolute",
-            top: Layout.isSmallDevice ? 45 : 120,
+            top: Platform.OS === "ios" ? 115 : Layout.isSmallDevice ? 45 : 120,
             left: 0,
             width: Layout.window.width,
-            height: Layout.isSmallDevice ? "87.3%" : "100%",
+            height:
+              Platform.OS === "ios"
+                ? "77%"
+                : Layout.isSmallDevice
+                ? "87.3%"
+                : "100%",
           }}
         ></View>
       )}
