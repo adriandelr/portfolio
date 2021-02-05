@@ -5,7 +5,7 @@ import Layout from "../constants/Layout";
 export const lightColors = {
   primary: "dimgrey",
   background: "whitesmoke",
-  backgroundToolbar: Layout.isSmallDevice ? "gainsboro" : "whitesmoke",
+  backgroundToolbar: Layout.isSmallDevice ? "whitesmoke" : "whitesmoke",
   backgroundNav: "whitesmoke",
   backgroundAvatar: "silver",
   backgroundSnipItem: "whitesmoke",
@@ -34,7 +34,7 @@ export const lightColors = {
 // Dark theme colors
 export const darkColors = {
   primary: "darkgrey",
-  backgroundToolbar: Layout.isSmallDevice ? "black" : "#101111",
+  backgroundToolbar: Layout.isSmallDevice ? "#101111" : "#101111",
   backgroundNav: "#101111",
   background: "#101111",
   backgroundAvatar: "dimgrey",
