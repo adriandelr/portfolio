@@ -29,6 +29,10 @@ import ReadMore from "react-native-read-more-text";
 import { ScrollView } from "react-native-gesture-handler";
 import Xcarousel from "../components/Xcarousel";
 import Markdown from "react-native-markdown-display";
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from "react-native-responsive-screen";
 
 const TabProjectsScreen = () => {
   const { colors } = useTheme();
@@ -75,10 +79,7 @@ const TabProjectsScreen = () => {
         showsVerticalScrollIndicator={openDetail ? true : false}
         style={openDetail ? styles.detailContainer : styles.itemContainer}
       >
-        <Text
-          numberOfLines={Layout.isSmallerDevice ? 0 : 1}
-          style={[Styles.novaFamily, styles.textTitle]}
-        >
+        <Text numberOfLines={1} style={[Styles.novaFamily, styles.textTitle]}>
           {projItem.title}
         </Text>
         <Text style={[Styles.novaFamily, styles.textTime]}>
@@ -336,14 +337,15 @@ const TabProjectsScreen = () => {
     container: {
       width: "100%",
       height: "100%",
+      paddingHorizontal: wp("1%"),
     },
     sectionContainer: {
       paddingTop: Layout.isSmallDevice ? 21 : 73,
     },
     itemContainer: {
-      width: "77%",
-      maxWidth: 420,
-      height: Layout.isSmallDevice ? (Layout.isSmallerDevice ? 373 : 537) : 703,
+      width: Layout.isSmallerImage ? "77%" : 420,
+      height: Layout.isSmallerImage ? wp("121%") : 530,
+      marginBottom: Layout.isSmallerImage ? hp("11%") : 130,
       alignSelf: "center",
     },
     detailContainer: {
@@ -360,26 +362,10 @@ const TabProjectsScreen = () => {
       borderWidth: 0,
     },
     image: {
-      width: Layout.isSmallDevice
-        ? Layout.isSmallerDevice
-          ? "100%"
-          : (77 / 100) * Layout.window.width
-        : 420,
-      height: Layout.isSmallDevice
-        ? Layout.isSmallerDevice
-          ? "100%"
-          : (77 / 100) * Layout.window.width
-        : 420,
-      maxWidth: Layout.isSmallDevice
-        ? Layout.isSmallerDevice
-          ? 280
-          : 420
-        : 420,
-      maxHeight: Layout.isSmallDevice
-        ? Layout.isSmallerDevice
-          ? 280
-          : 420
-        : 420,
+      width: Layout.isSmallerImage ? wp("77%") : 420,
+      height: Layout.isSmallerImage ? wp("77%") : 420,
+      maxWidth: 420,
+      maxHeight: 420,
       marginVertical: 7,
       backgroundColor: colors.background,
       opacity: 0.9,

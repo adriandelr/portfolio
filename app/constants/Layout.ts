@@ -9,5 +9,6 @@ export default {
     height,
   },
   isSmallerDevice: width <= 280,
+  isSmallerImage: width <= 420,
   isSmallDevice: width <= 768,
 };
