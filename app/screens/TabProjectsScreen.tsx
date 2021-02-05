@@ -75,7 +75,7 @@ const TabProjectsScreen = () => {
         showsVerticalScrollIndicator={openDetail ? true : false}
         style={openDetail ? styles.detailContainer : styles.itemContainer}
       >
-        <Text style={[Styles.novaFamily, styles.textTitle]}>
+        <Text numberOfLines={1} style={[Styles.novaFamily, styles.textTitle]}>
           {projItem.title}
         </Text>
         <Text style={[Styles.novaFamily, styles.textTime]}>
@@ -90,7 +90,7 @@ const TabProjectsScreen = () => {
             <Image
               source={projItem.image}
               resizeMethod="scale"
-              resizeMode="cover"
+              resizeMode="contain"
               style={styles.image}
             />
           </TouchableWithoutFeedback>
@@ -225,7 +225,7 @@ const TabProjectsScreen = () => {
         />
       </View>
     );
-  }, []);
+  }, [colors]);
 
   const ItemDetail = useCallback(() => {
     return (
@@ -339,7 +339,7 @@ const TabProjectsScreen = () => {
     itemContainer: {
       width: "77%",
       maxWidth: 420,
-      height: Layout.isSmallDevice ? (Platform.OS === "web" ? 473 : 573) : 703,
+      height: Layout.isSmallDevice ? 573 : 703,
       alignSelf: "center",
     },
     detailContainer: {
@@ -354,9 +354,6 @@ const TabProjectsScreen = () => {
       width: "100%",
       height: "100%",
       borderWidth: 0,
-    },
-    item: {
-      height: Layout.isSmallDevice ? (Platform.OS === "web" ? 473 : 573) : 703,
     },
     image: {
       width: "100%",
