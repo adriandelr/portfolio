@@ -225,7 +225,7 @@ const TabProjectsScreen = () => {
         />
       </View>
     );
-  }, [colors]);
+  }, []);
 
   const ItemDetail = useCallback(() => {
     return (
@@ -357,15 +357,16 @@ const TabProjectsScreen = () => {
     },
     image: {
       width: "100%",
+      height: Layout.isSmallDevice ? 300 : "auto",
       minHeight: Layout.isSmallDevice
         ? Layout.isSmallerDevice
-          ? "100%"
-          : 270
+          ? "auto"
+          : "auto"
         : 420,
       maxHeight: Layout.isSmallDevice
         ? Layout.isSmallerDevice
-          ? "100%"
-          : Layout.window.width - 42
+          ? 280
+          : "auto"
         : 420,
       marginVertical: 7,
       backgroundColor: colors.background,
