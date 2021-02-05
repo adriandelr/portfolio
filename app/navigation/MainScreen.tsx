@@ -88,14 +88,28 @@ export default function MainScreen() {
             "https://drive.google.com/file/d/1Dp0FvtoDqGYWdXHZ8qfOTWyk_0v1bh8S/view?usp=sharing"
           }
           iconOnly="address-card"
+          color={colors.text}
         />
         <Linker
           url={"viber://contact?number=%2B639760166007"}
           iconOnly="viber"
+          color={colors.text}
         />
-        <Linker url={"http://m.me/AZarch"} iconOnly="facebook-messenger" />
-        <Linker url={"skype:adrian.delr?chat"} iconOnly="skype" />
-        <Linker url={"mailto:adrian.delr@gmail.com"} iconOnly="envelope" />
+        <Linker
+          url={"http://m.me/AZarch"}
+          iconOnly="facebook-messenger"
+          color={colors.text}
+        />
+        <Linker
+          url={"skype:adrian.delr?chat"}
+          iconOnly="skype"
+          color={colors.text}
+        />
+        <Linker
+          url={"mailto:adrian.delr@gmail.com"}
+          iconOnly="envelope"
+          color={colors.text}
+        />
         <Text
           style={[
             Styles.nunitoFamily,
