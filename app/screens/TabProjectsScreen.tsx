@@ -75,7 +75,10 @@ const TabProjectsScreen = () => {
         showsVerticalScrollIndicator={openDetail ? true : false}
         style={openDetail ? styles.detailContainer : styles.itemContainer}
       >
-        <Text numberOfLines={1} style={[Styles.novaFamily, styles.textTitle]}>
+        <Text
+          numberOfLines={Layout.isSmallerDevice ? 0 : 1}
+          style={[Styles.novaFamily, styles.textTitle]}
+        >
           {projItem.title}
         </Text>
         <Text style={[Styles.novaFamily, styles.textTime]}>
@@ -340,7 +343,7 @@ const TabProjectsScreen = () => {
     itemContainer: {
       width: "77%",
       maxWidth: 420,
-      height: Layout.isSmallDevice ? 573 : 703,
+      height: Layout.isSmallDevice ? (Layout.isSmallerDevice ? 373 : 537) : 703,
       alignSelf: "center",
     },
     detailContainer: {
@@ -357,17 +360,25 @@ const TabProjectsScreen = () => {
       borderWidth: 0,
     },
     image: {
-      width: "100%",
-      height: Layout.isSmallDevice ? 300 : "auto",
-      minHeight: Layout.isSmallDevice
+      width: Layout.isSmallDevice
         ? Layout.isSmallerDevice
-          ? "auto"
-          : "auto"
+          ? "100%"
+          : (77 / 100) * Layout.window.width
+        : 420,
+      height: Layout.isSmallDevice
+        ? Layout.isSmallerDevice
+          ? "100%"
+          : (77 / 100) * Layout.window.width
+        : 420,
+      maxWidth: Layout.isSmallDevice
+        ? Layout.isSmallerDevice
+          ? 280
+          : 420
         : 420,
       maxHeight: Layout.isSmallDevice
         ? Layout.isSmallerDevice
           ? 280
-          : "auto"
+          : 420
         : 420,
       marginVertical: 7,
       backgroundColor: colors.background,
