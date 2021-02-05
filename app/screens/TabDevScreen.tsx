@@ -150,7 +150,7 @@ export default function TabDevScreen({ navigation }: any) {
                 paddingHorizontal: Layout.isSmallDevice
                   ? Layout.isSmallerDevice
                     ? "19%"
-                    : "13%"
+                    : "17%"
                   : "27%",
               },
             ]}
@@ -187,7 +187,7 @@ export default function TabDevScreen({ navigation }: any) {
                     paddingHorizontal: Layout.isSmallDevice
                       ? Layout.isSmallerDevice
                         ? "19%"
-                        : "13%"
+                        : "17%"
                       : "27%",
                   },
                 ]}
@@ -223,7 +223,7 @@ export default function TabDevScreen({ navigation }: any) {
                     paddingHorizontal: Layout.isSmallDevice
                       ? Layout.isSmallerDevice
                         ? "19%"
-                        : "13%"
+                        : "17%"
                       : "27%",
                   },
                 ]}
