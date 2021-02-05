@@ -337,7 +337,7 @@ const TabProjectsScreen = () => {
     container: {
       width: "100%",
       height: "100%",
-      paddingHorizontal: Layout.isSmallDevice ? wp("1%") : 0,
+      paddingHorizontal: wp("0.25%"),
     },
     sectionContainer: {
       paddingTop: Layout.isSmallDevice ? 21 : 73,
@@ -355,6 +355,7 @@ const TabProjectsScreen = () => {
         ? 21
         : (Layout.window.width - 640) / 2,
       backgroundColor: colors.background,
+      marginHorizontal: Platform.OS === "web" ? 0 : wp("-0.5%"),
     },
     modalContainer: {
       width: "100%",
