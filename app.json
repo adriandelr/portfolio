@@ -4,32 +4,30 @@
     "slug": "Portfolio",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./app/assets/images/icon-az.png",
+    "icon": "./app/assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./app/assets/images/splash-az.png",
+      "image": "./app/assets/images/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./app/assets/images/adaptive-icon-az.png",
+        "foregroundImage": "./app/assets/images/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
       "package": "com.adriandelr.Portfolio"
     },
     "web": {
-      "favicon": "./app/assets/images/favicon-az.png"
+      "favicon": "./app/assets/images/favicon.png"
     },
     "description": ""
   }

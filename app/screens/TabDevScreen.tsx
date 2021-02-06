@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-import {
-  View,
-  ScrollView,
-  Image,
-  Platform,
-  TouchableOpacity,
-} from "react-native";
+import { View, ScrollView, Platform, TouchableOpacity } from "react-native";
 
 import { useTheme } from "../hooks/useThemeContext";
 import Styles from "../constants/Styles";
@@ -86,20 +80,6 @@ export default function TabDevScreen({ navigation }: any) {
               marginTop: 30,
               marginBottom: 50,
               backgroundColor: colors.backgroundAvatar,
-            }}
-          />
-          <Image
-            source={require("../assets/images/az-logo.png")}
-            onLoadEnd={() => {
-              setIsLoaded(true);
-            }}
-            style={{
-              display: "none",
-              width: 192,
-              height: 192,
-              marginTop: 30,
-              marginBottom: 50,
-              opacity: 0.7,
             }}
           />
           {Platform.OS === "web" && (

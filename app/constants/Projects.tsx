@@ -14,11 +14,11 @@ Made using React Native by Facebook.
         `,
         time: "1 month",
         date: "Jan 2021",
-        image: require("../assets/images/logos/logo-az.png"),
+        image: require("../assets/images/logos/logo-pp.png"),
         images: [
           {
             coverImageUri:
-              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-az.png",
+              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-pp.png",
             cornerLabelColor: "#101111",
             cornerLabelText: "Portfolio",
           },
