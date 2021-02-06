@@ -241,13 +241,20 @@ console.log('hi');
         content: `
 Notable Packages
 - Expo
+- Expo Web Browser
+- Gh Pages
 - React Native Appearance
 - React Native Elements
 - React Native Reanimated
 - React Native Gesture Handler
 - React Native Safe Area Context
+- react Native Markdown Display
+- React Native Read More Text
+- React Native Responsive Screen
+- React Native Xcarousel
+- React Native Image Zoom Viewer
+- React Qr Code
 - React Native UI Lib
-- React Native Image Viewier
 - React Native Snap Carousel
 - React Native Vector Icons
 - React Native InAppBrowser
