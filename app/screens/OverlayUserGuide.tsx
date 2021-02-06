@@ -14,6 +14,10 @@ import Layout from "../constants/Layout";
 import { Text, Overlay } from "react-native-elements";
 import Modal from "modal-react-native-web";
 import Icon from "react-native-vector-icons/FontAwesome5";
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from "react-native-responsive-screen";
 
 export default function WelcomeOverlay() {
   const { setScheme, colors, isDark } = useTheme();
@@ -468,7 +472,7 @@ export default function WelcomeOverlay() {
               Platform.OS === "ios"
                 ? "77%"
                 : Layout.isSmallDevice
-                ? "87.3%"
+                ? hp("100%") - 117
                 : "100%",
           }}
         ></View>
