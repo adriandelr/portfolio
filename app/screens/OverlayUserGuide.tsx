@@ -22,7 +22,7 @@ import {
 export default function WelcomeOverlay() {
   const { setScheme, colors, isDark } = useTheme();
 
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
 
   const toggleOverlay = () => {
     setVisible(!visible);
@@ -301,7 +301,7 @@ export default function WelcomeOverlay() {
                   },
                 ]}
               >
-                Toggle Side Menu on the Dev page
+                Toggle icons menu on dev page
               </Text>
             </View>
 
@@ -462,7 +462,7 @@ export default function WelcomeOverlay() {
         <View
           style={{
             backgroundColor: "white",
-            opacity: 0.777,
+            opacity: 0.93,
             position: "absolute",
             top: Platform.OS === "ios" ? 115 : Layout.isSmallDevice ? 45 : 120,
             left: 0,
