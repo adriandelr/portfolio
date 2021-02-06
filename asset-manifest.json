@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/portfolio/static/js/app.78faf7ea.chunk.js",
-    "app.js.map": "/portfolio/static/js/app.78faf7ea.chunk.js.map",
+    "app.js": "/portfolio/static/js/app.fa32bd09.chunk.js",
+    "app.js.map": "/portfolio/static/js/app.fa32bd09.chunk.js.map",
     "runtime~app.js": "/portfolio/static/js/runtime~app.e3633d06.js",
     "runtime~app.js.map": "/portfolio/static/js/runtime~app.e3633d06.js.map",
-    "static/js/2.bfceafd0.chunk.js": "/portfolio/static/js/2.bfceafd0.chunk.js",
-    "static/js/2.bfceafd0.chunk.js.map": "/portfolio/static/js/2.bfceafd0.chunk.js.map",
+    "static/js/2.1cd72c9c.chunk.js": "/portfolio/static/js/2.1cd72c9c.chunk.js",
+    "static/js/2.1cd72c9c.chunk.js.map": "/portfolio/static/js/2.1cd72c9c.chunk.js.map",
     "fonts/AntDesign.ttf": "/portfolio/./fonts/AntDesign.ttf",
     "fonts/Entypo.ttf": "/portfolio/./fonts/Entypo.ttf",
     "fonts/Feather.ttf": "/portfolio/./fonts/Feather.ttf",
@@ -17,7 +17,6 @@
     "fonts/Ionicons.ttf": "/portfolio/./fonts/Ionicons.ttf",
     "fonts/MaterialCommunityIcons.ttf": "/portfolio/./fonts/MaterialCommunityIcons.ttf",
     "fonts/MaterialIcons.ttf": "/portfolio/./fonts/MaterialIcons.ttf",
-    "fonts/Nunito-Regular.ttf": "/portfolio/./fonts/Nunito-Regular.ttf",
     "fonts/ProximaNova-Regular.otf": "/portfolio/./fonts/ProximaNova-Regular.otf",
     "fonts/SimpleLineIcons.ttf": "/portfolio/./fonts/SimpleLineIcons.ttf",
     "favicon-16.png": "/portfolio/favicon-16.png",
@@ -26,7 +25,7 @@
     "index.html": "/portfolio/index.html",
     "manifest.json": "/portfolio/manifest.json",
     "serve.json": "/portfolio/serve.json",
-    "static/js/2.bfceafd0.chunk.js.LICENSE.txt": "/portfolio/static/js/2.bfceafd0.chunk.js.LICENSE.txt",
+    "static/js/2.1cd72c9c.chunk.js.LICENSE.txt": "/portfolio/static/js/2.1cd72c9c.chunk.js.LICENSE.txt",
     "static/media/bell.png": "/portfolio/static/media/bell.cf04af27.png",
     "static/media/heart.png": "/portfolio/static/media/heart.23b5c2c0.png",
     "static/media/logo-acn.png": "/portfolio/static/media/logo-acn.71c1ae61.png",
@@ -41,7 +40,7 @@
   },
   "entrypoints": [
     "static/js/runtime~app.e3633d06.js",
-    "static/js/2.bfceafd0.chunk.js",
-    "static/js/app.78faf7ea.chunk.js"
+    "static/js/2.1cd72c9c.chunk.js",
+    "static/js/app.fa32bd09.chunk.js"
   ]
 }
