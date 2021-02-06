@@ -112,7 +112,7 @@ export default function MainScreen() {
         />
         <Text
           style={[
-            Styles.nunitoFamily,
+            Styles.novaFamily,
             {
               fontSize: 9,
               color: colors.textVersion,
@@ -170,7 +170,6 @@ export default function MainScreen() {
               }}
             />
           ),
-          headerTitleStyle: Styles.nunitoFamily,
         }}
       />
     </Drawer.Navigator>

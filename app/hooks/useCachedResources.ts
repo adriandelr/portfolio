@@ -16,7 +16,6 @@ export default function useCachedResources() {
         await Font.loadAsync({
           ...Ionicons.font,
           "proxima-regular": require("../assets/fonts/proxima/ProximaNova-Regular.otf"),
-          "nunito-regular": require("../assets/fonts/nunito/Nunito-Regular.ttf"),
         });
       } catch (e) {
         // We might want to provide this error information to an error reporting service
