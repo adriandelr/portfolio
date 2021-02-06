@@ -268,44 +268,42 @@ export default function WelcomeOverlay() {
               </Text>
             </View>
 
-            {Platform.OS === "web" && (
-              <View
-                style={{
-                  position: "absolute",
-                  top: Layout.isSmallDevice ? 50 : 124,
-                  left: Platform.OS === "web" ? 5 : 4,
-                  flex: 1,
-                  alignItems: "flex-start",
-                }}
+            <View
+              style={{
+                position: "absolute",
+                top: Layout.isSmallDevice ? 50 : 122,
+                left: Platform.OS === "web" ? 5 : 4,
+                flex: 1,
+                alignItems: "flex-start",
+              }}
+            >
+              <Icon
+                name="bars"
+                size={21}
+                color={colors.primary}
+                style={{ paddingLeft: 7 }}
+                solid
+              />
+              <Icon
+                name="long-arrow-alt-up"
+                size={37}
+                color={colors.textGuide}
+                style={{ marginLeft: 7, transform: [{ rotate: "-7deg" }] }}
+                solid
+              />
+              <Text
+                style={[
+                  Styles.novaFamily,
+                  {
+                    color: colors.textGuide,
+                    fontSize: 13,
+                    width: Layout.isSmallerDevice ? "73%" : "30%",
+                  },
+                ]}
               >
-                <Icon
-                  name="bars"
-                  size={21}
-                  color={colors.primary}
-                  style={{ paddingLeft: 7 }}
-                  solid
-                />
-                <Icon
-                  name="long-arrow-alt-up"
-                  size={37}
-                  color={colors.textGuide}
-                  style={{ marginLeft: 7, transform: [{ rotate: "-7deg" }] }}
-                  solid
-                />
-                <Text
-                  style={[
-                    Styles.novaFamily,
-                    {
-                      color: colors.textGuide,
-                      fontSize: 13,
-                      width: Layout.isSmallerDevice ? "73%" : "30%",
-                    },
-                  ]}
-                >
-                  Toggle Side Menu on the first page
-                </Text>
-              </View>
-            )}
+                Toggle Side Menu on the Dev page
+              </Text>
+            </View>
 
             <View
               style={{
@@ -463,8 +461,8 @@ export default function WelcomeOverlay() {
       {visible && (
         <View
           style={{
-            backgroundColor: colors.background,
-            opacity: 0.97,
+            backgroundColor: "white",
+            opacity: 0.777,
             position: "absolute",
             top: Platform.OS === "ios" ? 115 : Layout.isSmallDevice ? 45 : 120,
             left: 0,
