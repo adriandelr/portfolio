@@ -116,6 +116,7 @@ export default function WelcomeOverlay() {
         zIndex: 1,
         elevation: 1,
         flexDirection: "row",
+        overflow: "hidden",
       }}
     >
       <TouchableOpacity
@@ -472,7 +473,9 @@ export default function WelcomeOverlay() {
               Platform.OS === "ios"
                 ? "77%"
                 : Layout.isSmallDevice
-                ? hp("100%") - 117
+                ? Platform.OS === "web"
+                  ? hp("100%") - 117
+                  : hp("100%") - 150
                 : "100%",
           }}
         ></View>
