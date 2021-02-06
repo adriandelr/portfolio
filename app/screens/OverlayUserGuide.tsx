@@ -268,7 +268,7 @@ export default function WelcomeOverlay() {
               </Text>
             </View>
 
-            {!Layout.isSmallDevice && (
+            {Platform.OS === "web" && (
               <View
                 style={{
                   position: "absolute",
