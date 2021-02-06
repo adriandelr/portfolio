@@ -268,42 +268,44 @@ export default function WelcomeOverlay() {
               </Text>
             </View>
 
-            <View
-              style={{
-                position: "absolute",
-                top: Layout.isSmallDevice ? 50 : 122,
-                left: Platform.OS === "web" ? 5 : 4,
-                flex: 1,
-                alignItems: "flex-start",
-              }}
-            >
-              <Icon
-                name="bars"
-                size={21}
-                color={colors.primary}
-                style={{ paddingLeft: 7 }}
-                solid
-              />
-              <Icon
-                name="long-arrow-alt-up"
-                size={37}
-                color={colors.textGuide}
-                style={{ marginLeft: 7, transform: [{ rotate: "-7deg" }] }}
-                solid
-              />
-              <Text
-                style={[
-                  Styles.novaFamily,
-                  {
-                    color: colors.textGuide,
-                    fontSize: 13,
-                    width: Layout.isSmallerDevice ? "73%" : "30%",
-                  },
-                ]}
+            {!Layout.isSmallDevice && (
+              <View
+                style={{
+                  position: "absolute",
+                  top: Layout.isSmallDevice ? 50 : 122,
+                  left: Platform.OS === "web" ? 5 : 4,
+                  flex: 1,
+                  alignItems: "flex-start",
+                }}
               >
-                Toggle icons menu on dev page
-              </Text>
-            </View>
+                <Icon
+                  name="bars"
+                  size={21}
+                  color={colors.primary}
+                  style={{ paddingLeft: 7 }}
+                  solid
+                />
+                <Icon
+                  name="long-arrow-alt-up"
+                  size={37}
+                  color={colors.textGuide}
+                  style={{ marginLeft: 7, transform: [{ rotate: "-7deg" }] }}
+                  solid
+                />
+                <Text
+                  style={[
+                    Styles.novaFamily,
+                    {
+                      color: colors.textGuide,
+                      fontSize: 13,
+                      width: Layout.isSmallerDevice ? "73%" : "30%",
+                    },
+                  ]}
+                >
+                  Toggle icons menu on dev page
+                </Text>
+              </View>
+            )}
 
             <View
               style={{
