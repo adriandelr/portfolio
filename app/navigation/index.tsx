@@ -38,7 +38,7 @@ const Navigation = ({ colorScheme }: { colorScheme: ColorSchemeName }) => {
           activeTintColor: colors.primary,
           allowFontScaling: false,
           pressColor: "whitesmoke",
-          labelStyle: Styles.nunitoFamily,
+          labelStyle: [Styles.nunitoFamily, { textTransform: "none" }],
           style: {
             backgroundColor: colors.backgroundNav,
           },
