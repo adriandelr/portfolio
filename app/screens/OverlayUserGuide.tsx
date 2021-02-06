@@ -22,7 +22,7 @@ import {
 export default function WelcomeOverlay() {
   const { setScheme, colors, isDark } = useTheme();
 
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
 
   const toggleOverlay = () => {
     setVisible(!visible);
