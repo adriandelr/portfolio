@@ -1,7 +1,7 @@
 {
   "files": {
-    "app.js": "/portfolio/static/js/app.76e3f450.chunk.js",
-    "app.js.map": "/portfolio/static/js/app.76e3f450.chunk.js.map",
+    "app.js": "/portfolio/static/js/app.7dc66836.chunk.js",
+    "app.js.map": "/portfolio/static/js/app.7dc66836.chunk.js.map",
     "runtime~app.js": "/portfolio/static/js/runtime~app.e3633d06.js",
     "runtime~app.js.map": "/portfolio/static/js/runtime~app.e3633d06.js.map",
     "static/js/2.0869cc00.chunk.js": "/portfolio/static/js/2.0869cc00.chunk.js",
@@ -33,7 +33,7 @@
     "static/media/logo-cata.png": "/portfolio/static/media/logo-cata.c235b0e0.png",
     "static/media/logo-hmc.png": "/portfolio/static/media/logo-hmc.97567f77.png",
     "static/media/logo-ibm.png": "/portfolio/static/media/logo-ibm.bbe625ea.png",
-    "static/media/logo-pp.png": "/portfolio/static/media/logo-pp.df2cd1a8.png",
+    "static/media/logo-pp.png": "/portfolio/static/media/logo-pp.caef94b7.png",
     "static/media/logo-wo.png": "/portfolio/static/media/logo-wo.1d2472fe.png",
     "static/media/rocket.png": "/portfolio/static/media/rocket.d2f3bf41.png",
     "static/media/star.png": "/portfolio/static/media/star.69c71386.png"
@@ -41,6 +41,6 @@
   "entrypoints": [
     "static/js/runtime~app.e3633d06.js",
     "static/js/2.0869cc00.chunk.js",
-    "static/js/app.76e3f450.chunk.js"
+    "static/js/app.7dc66836.chunk.js"
   ]
 }
