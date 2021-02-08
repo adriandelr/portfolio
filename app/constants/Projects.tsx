@@ -6,7 +6,9 @@ export const PROJECTS: any = [
     data: [
       {
         title: "Portfolio",
-        description: `Happy new year! I am pleased to announce my very own **Digital Portfolio**. Made using these powerful technologies, **React Native** by Facebook and **Expo**, an open source universal platform builder.
+        description: `(Independent)
+
+Happy new year! I am pleased to announce my very own **Digital Portfolio**. Made using these powerful technologies, **React Native** by Facebook and **Expo**, an open source universal platform builder.
 
 The **Portfolio** app features an introduction of my experiences, list of my projects, snippets, and side menu icons for a way to connect to me easily.
 
@@ -31,7 +33,9 @@ The application supports most common platforms such as, **Web**, **Android**, an
     data: [
       {
         title: "Hospitality Marketing Concepts LLC",
-        description: `Responsible for the Hybrid Mobile App development, and maintenance. 
+        description: `(Regular, Remote Setup)
+
+Responsible for the Hybrid Mobile App development, and maintenance. 
 
 Focused on implementation of new features, branding, testing, improvement, and fixes. In the support of numerous clients that are luxury hotels, and brands, we were able to provide them regular updates in features, fixes, and guides related to the app.
 
@@ -130,7 +134,9 @@ Published in both Android and iOS stores.
     data: [
       {
         title: "Accenture Philippines Inc.",
-        description: `These are brief information about each project where SDLC, and methods were practiced.
+        description: `(Regular)
+
+These are brief information about each project where SDLC, and methods were practiced.
 
 **Large Restaurant Chain and International Franchise based in US** (Agile, 20+ members)
 A billing portal that processes payment of franchise owners using Zuora Platform backed by Hybris backend.
@@ -220,7 +226,9 @@ Sharing knowledge, and experience on frameworks, data structures, request handli
     data: [
       {
         title: "WideOut (WF) Inc.",
-        description: `R&D on common web features, elements, tables, forms, and validations. Worked on CodeIgniter with 3rd Party APIs, and Wordpress with web responsiveness in an Agile-Scrum setup.
+        description: `(Regular)
+
+R&D on common web features, elements, tables, forms, and validations. Worked on CodeIgniter with 3rd Party APIs, and Wordpress with web responsiveness in an Agile-Scrum setup.
 
 **Grabit Discounts** is a marketing based mobile application that provides consumers
 discount based on their location and their shopping preference.
@@ -246,7 +254,9 @@ discount based on their location and their shopping preference.
     data: [
       {
         title: "IBM Philippines Inc.",
-        description: `Designed and organized banners, posters, slogans, prints, and documents for events.
+        description: `(Internship)
+
+Designed and organized banners, posters, slogans, prints, and documents for events.
 
 Produced video slides and presentations for company news and events updates.`,
         time: "6 months",
@@ -268,7 +278,9 @@ Produced video slides and presentations for company news and events updates.`,
     data: [
       {
         title: "Avolution Inc.",
-        description: `Reworked the previous flash site to a more modern look, and standard. Added SEO tracking in search engines. 
+        description: `(Self-Employed)
+
+Reworked the previous flash site to a more modern look, and standard. Added SEO tracking in search engines. 
 
 Developed an interactive touch based flash presentation for their client, Cisco.`,
         time: "2 months",
@@ -290,7 +302,9 @@ Developed an interactive touch based flash presentation for their client, Cisco.
     data: [
       {
         title: "CATA Construction Philippines Corp.",
-        description: `Constructed the previous Wordpress sitemap. 
+        description: `(Self-Employed)
+
+Constructed the previous Wordpress sitemap. 
 
 Enhanced web images.`,
         time: "2 months",
