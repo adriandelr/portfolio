@@ -435,6 +435,12 @@ Notable Packages
         link: "https://mixpanel.com/",
       },
       {
+        title: "Hexometer - Top 10 Most Popular Technologies to Build Websites",
+        content:
+          "Data is based on the websites scanned & analyzed by Tech Stack Checker.",
+        link: "https://hexometer.com/most-popular-tech-stacks",
+      },
+      {
         title: "Github Pages",
         content: "Publish files to a gh-pages branch on GitHub.",
         link: "https://github.com/tschaub/gh-pages",
