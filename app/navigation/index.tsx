@@ -98,7 +98,7 @@ const TabBarIcon = memo((props: { name: string; color: string }) => {
   return <Icon size={30} style={{ marginBottom: -3 }} {...props} />;
 });
 
-let dpTitle = "Adrian del Rosario - ";
+let dpTitle = "Adrian Del Rosario - ";
 
 const MainScreenTabStack = createStackNavigator<RootStackParamList>();
 
