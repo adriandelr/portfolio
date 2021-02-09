@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/portfolio/static/js/app.e961fe6f.chunk.js",
-    "app.js.map": "/portfolio/static/js/app.e961fe6f.chunk.js.map",
+    "app.js": "/portfolio/static/js/app.9505e8d6.chunk.js",
+    "app.js.map": "/portfolio/static/js/app.9505e8d6.chunk.js.map",
     "runtime~app.js": "/portfolio/static/js/runtime~app.e3633d06.js",
     "runtime~app.js.map": "/portfolio/static/js/runtime~app.e3633d06.js.map",
-    "static/js/2.0869cc00.chunk.js": "/portfolio/static/js/2.0869cc00.chunk.js",
-    "static/js/2.0869cc00.chunk.js.map": "/portfolio/static/js/2.0869cc00.chunk.js.map",
+    "static/js/2.4db912fc.chunk.js": "/portfolio/static/js/2.4db912fc.chunk.js",
+    "static/js/2.4db912fc.chunk.js.map": "/portfolio/static/js/2.4db912fc.chunk.js.map",
     "fonts/AntDesign.ttf": "/portfolio/./fonts/AntDesign.ttf",
     "fonts/Entypo.ttf": "/portfolio/./fonts/Entypo.ttf",
     "fonts/Feather.ttf": "/portfolio/./fonts/Feather.ttf",
@@ -25,13 +25,13 @@
     "index.html": "/portfolio/index.html",
     "manifest.json": "/portfolio/manifest.json",
     "serve.json": "/portfolio/serve.json",
-    "static/js/2.0869cc00.chunk.js.LICENSE.txt": "/portfolio/static/js/2.0869cc00.chunk.js.LICENSE.txt",
+    "static/js/2.4db912fc.chunk.js.LICENSE.txt": "/portfolio/static/js/2.4db912fc.chunk.js.LICENSE.txt",
     "static/media/bell.png": "/portfolio/static/media/bell.cf04af27.png",
     "static/media/heart.png": "/portfolio/static/media/heart.23b5c2c0.png",
     "static/media/logo-acn.png": "/portfolio/static/media/logo-acn.71c1ae61.png",
     "static/media/logo-avo.png": "/portfolio/static/media/logo-avo.1c58856a.png",
     "static/media/logo-cata.png": "/portfolio/static/media/logo-cata.c235b0e0.png",
-    "static/media/logo-hmc.png": "/portfolio/static/media/logo-hmc.97567f77.png",
+    "static/media/logo-hmc.png": "/portfolio/static/media/logo-hmc.4dc7ad52.png",
     "static/media/logo-ibm.png": "/portfolio/static/media/logo-ibm.bbe625ea.png",
     "static/media/logo-pp.png": "/portfolio/static/media/logo-pp.caef94b7.png",
     "static/media/logo-wo.png": "/portfolio/static/media/logo-wo.1d2472fe.png",
@@ -40,7 +40,7 @@
   },
   "entrypoints": [
     "static/js/runtime~app.e3633d06.js",
-    "static/js/2.0869cc00.chunk.js",
-    "static/js/app.e961fe6f.chunk.js"
+    "static/js/2.4db912fc.chunk.js",
+    "static/js/app.9505e8d6.chunk.js"
   ]
 }
