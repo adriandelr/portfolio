@@ -18,7 +18,13 @@ The application supports most common platforms such as, **Web**, **Android**, an
         images: [
           {
             coverImageUri:
-              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-pp.png",
+              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-pp-1.png",
+            cornerLabelColor: "#101111",
+            cornerLabelText: "Portfolio",
+          },
+          {
+            coverImageUri:
+              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-pp-2.png",
             cornerLabelColor: "#101111",
             cornerLabelText: "Portfolio",
           },
