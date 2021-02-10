@@ -18,6 +18,12 @@ The application supports most common platforms such as, **Web**, **Android**, an
         images: [
           {
             coverImageUri:
+              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-pp.png",
+            cornerLabelColor: "#101111",
+            cornerLabelText: "Portfolio",
+          },
+          {
+            coverImageUri:
               "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-pp-1.png",
             cornerLabelColor: "#101111",
             cornerLabelText: "Portfolio",
@@ -81,6 +87,12 @@ Published in both Android and iOS stores.
         date: "Sept 2017 - Mar 2020",
         image: require("../assets/images/logos/logo-hmc.png"),
         images: [
+          {
+            coverImageUri:
+              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-hmc.png",
+            cornerLabelColor: "#B6985A",
+            cornerLabelText: "HMC",
+          },
           {
             coverImageUri:
               "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-hmc-1.png",
@@ -171,6 +183,12 @@ Sharing knowledge, and experience on frameworks, data structures, request handli
         images: [
           {
             coverImageUri:
+              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-acn.png",
+            cornerLabelColor: "#BC0DF6",
+            cornerLabelText: "Accenture",
+          },
+          {
+            coverImageUri:
               "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-acn-1.png",
             cornerLabelColor: "#BC0DF6",
             cornerLabelText: "Accenture",
@@ -243,6 +261,12 @@ discount based on their location and their shopping preference.
             cornerLabelColor: "#002D42",
             cornerLabelText: "Wideout",
           },
+          {
+            coverImageUri:
+              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-wo-1.png",
+            cornerLabelColor: "#002D42",
+            cornerLabelText: "Wideout",
+          },
         ],
       },
     ],
@@ -262,6 +286,12 @@ Produced video slides and presentations for company news and events updates.`,
           {
             coverImageUri:
               "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-ibm.png",
+            cornerLabelColor: "#0370C5",
+            cornerLabelText: "IBM",
+          },
+          {
+            coverImageUri:
+              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-ibm-1.png",
             cornerLabelColor: "#0370C5",
             cornerLabelText: "IBM",
           },
@@ -287,6 +317,12 @@ Developed an interactive touch based flash presentation for their client, Cisco.
             cornerLabelColor: "#BD2229",
             cornerLabelText: "AVOLUTION",
           },
+          {
+            coverImageUri:
+              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-avo-1.png",
+            cornerLabelColor: "#BD2229",
+            cornerLabelText: "AVOLUTION",
+          },
         ],
       },
     ],
@@ -306,6 +342,12 @@ Enhanced web images.`,
           {
             coverImageUri:
               "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-cata.png",
+            cornerLabelColor: "#3E73B6",
+            cornerLabelText: "CATA",
+          },
+          {
+            coverImageUri:
+              "https://raw.githubusercontent.com/adriandelr/portfolio/master/app/assets/images/projects/proj-cata-1.png",
             cornerLabelColor: "#3E73B6",
             cornerLabelText: "CATA",
           },
