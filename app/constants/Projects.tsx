@@ -6,11 +6,11 @@ export const PROJECTS: any = [
     data: [
       {
         title: "Portfolio",
-        description: `Happy new year! I am pleased to announce my very own **Digital Portfolio**. Made using these powerful technologies, **React Native** by Facebook and **Expo**, an open source universal platform builder.
+        description: `Happy new year! I am pleased to announce my very own **Digital Portfolio**. Made using these powerful technologies, **React Native** by Facebook and **Expo**, an open-source universal platform builder.
 
-The **Portfolio** app features an introduction of my experiences, list of my projects, snippets, and side menu icons for a way to connect to me easily.
+The **Portfolio** app features an introduction of my experiences, a list of my projects, snippets, and side menu icons for a way to connect to me easily.
 
-The application supports most common platforms such as, **Web**, **Android**, and **iOS**, all in one code base, so be sure to check it out natively!
+The application supports most common platforms such as **Web**, **Android**, and **iOS**, all in one code base, so be sure to check it out natively!
         `,
         time: "1 month (Independent)",
         date: "Jan 2021",
