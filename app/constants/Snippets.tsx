@@ -46,6 +46,12 @@ We use **Cordova**, a platform for developing, and building hybrid mobile applic
         link: "https://reqtest.com/agile-blog/agile-scrum-guide/",
       },
       {
+        title: "Angular vs React vs Vue 2021",
+        content:
+          "There are three frameworks for building web applications that every frontend developer has heard about: React, Vue.js, and Angular.",
+        link: "https://athemes.com/guides/angular-vs-react-vs-vue/",
+      },
+      {
         title:
           "Continuous Integration Automation in 2021 – Hindsight is now really 2020",
         content:
