@@ -19,8 +19,8 @@ import {
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
 
-export default function WelcomeOverlay() {
-  const { setScheme, colors, isDark } = useTheme();
+export default function OverlayUserGuide() {
+  const { colors } = useTheme();
 
   const [visible, setVisible] = useState(false);
 
