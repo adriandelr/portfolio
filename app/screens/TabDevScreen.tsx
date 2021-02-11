@@ -131,14 +131,10 @@ export default function TabDevScreen({ navigation }: any) {
             style={[
               Styles.novaFamily,
               {
+                maxWidth: Layout.isSmallDevice ? "100%" : 530,
                 color: colors.text,
                 fontSize: Platform.OS === "web" ? 14 : 15,
                 marginTop: 40,
-                paddingHorizontal: Layout.isSmallDevice
-                  ? Layout.isSmallerDevice
-                    ? "19%"
-                    : "17%"
-                  : "27%",
               },
             ]}
           >
@@ -167,15 +163,11 @@ export default function TabDevScreen({ navigation }: any) {
                 style={[
                   Styles.novaFamily,
                   {
+                    maxWidth: Layout.isSmallDevice ? "100%" : 530,
                     color: colors.text,
                     fontSize: Platform.OS === "web" ? 14 : 15,
                     marginTop: 40,
                     marginBottom: 20,
-                    paddingHorizontal: Layout.isSmallDevice
-                      ? Layout.isSmallerDevice
-                        ? "19%"
-                        : "17%"
-                      : "27%",
                   },
                 ]}
               >
@@ -203,15 +195,11 @@ export default function TabDevScreen({ navigation }: any) {
                 style={[
                   Styles.novaFamily,
                   {
+                    maxWidth: Layout.isSmallDevice ? "100%" : 530,
                     color: colors.text,
                     fontSize: Platform.OS === "web" ? 14 : 15,
                     marginTop: 30,
                     marginBottom: 20,
-                    paddingHorizontal: Layout.isSmallDevice
-                      ? Layout.isSmallerDevice
-                        ? "19%"
-                        : "17%"
-                      : "27%",
                   },
                 ]}
               >
