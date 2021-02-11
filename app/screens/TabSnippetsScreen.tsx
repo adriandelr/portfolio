@@ -150,7 +150,7 @@ const TabSnippetsScreen = () => {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      paddingHorizontal: 3,
+      paddingHorizontal: Platform.OS === "web" && !Layout.isSmallDevice ? 0 : 3,
     },
     section: {
       paddingHorizontal: Layout.isSmallDevice ? "9%" : "21%",

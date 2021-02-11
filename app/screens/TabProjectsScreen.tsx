@@ -337,7 +337,8 @@ const TabProjectsScreen = () => {
     container: {
       width: "100%",
       height: "100%",
-      paddingHorizontal: wp("0.25%"),
+      paddingHorizontal:
+        Platform.OS === "web" && !Layout.isSmallDevice ? 0 : wp("0.25%"),
     },
     sectionContainer: {
       paddingTop: Layout.isSmallDevice ? 21 : 73,

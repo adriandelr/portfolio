@@ -24,7 +24,8 @@ export default function TabDevScreen({ navigation }: any) {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        paddingHorizontal: 3,
+        paddingHorizontal:
+          Platform.OS === "web" && !Layout.isSmallDevice ? 0 : 3,
         backgroundColor: "transparent",
       }}
     >
@@ -55,6 +56,7 @@ export default function TabDevScreen({ navigation }: any) {
 
       <ScrollView
         style={{
+          width: "100%",
           paddingTop: Platform.OS === "web" ? 50 : 0,
         }}
       >
@@ -64,6 +66,11 @@ export default function TabDevScreen({ navigation }: any) {
             justifyContent: "center",
             alignItems: "center",
             backgroundColor: colors.background,
+            paddingHorizontal: Layout.isSmallDevice
+              ? Layout.isSmallerDevice
+                ? "19%"
+                : "17%"
+              : "27%",
           }}
         >
           <Avatar
