@@ -69,7 +69,7 @@ export default function TabDevScreen({ navigation }: any) {
             paddingHorizontal: Layout.isSmallDevice
               ? Layout.isSmallerDevice
                 ? "19%"
-                : "17%"
+                : "15%"
               : "27%",
           }}
         >
