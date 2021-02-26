@@ -204,6 +204,13 @@ console.log('hi');
                 `,
       },
       {
+        title: "Interfaces in TypeScript: What are they and how do we use them",
+        content:
+          "JavaScript gives developers a great deal of flexibility. A variable initialized as an integer can be assigned a function literal at run-time. Types of variables are not predictable in JavaScript. As you can see in the example below, a is initialized as an integer and is then assigned a function literal.",
+        link:
+          "https://blog.logrocket.com/interfaces-in-typescript-what-are-they-and-how-do-we-use-them-befbc69b38b3/",
+      },
+      {
         title: "Understanding ‘Variable Shadowing’ with JavaScript",
         content: "What is ‘variable shadowing’ and why it should be avoided.",
         link:
@@ -235,7 +242,7 @@ console.log('hi');
     ],
   },
   {
-    title: "React Native",
+    title: "ReactJS / React Native",
     data: [
       {
         title: "What is React Native?",
@@ -283,6 +290,13 @@ Notable Packages
           "Until 2018 we have much many different design pattern and component for React Native but on all of the list, I think this 5 case very important to learn and use in your app.",
         link:
           "https://medium.com/@aras.emami/the-5-react-native-component-libraries-you-should-know-in-2018-f0520d7eb99f",
+      },
+      {
+        title: "Stateful and Stateless Components in React",
+        content:
+          "Today, we’re going to review what stateful and stateless components are in React, how you can tell the difference, and the complex process of deciding whether to make components stateful or not.",
+        link:
+          "https://programmingwithmosh.com/javascript/stateful-stateless-components-react/",
       },
       {
         title: "React Native Dark Mode Done Right!",
@@ -371,7 +385,7 @@ Notable Packages
     ],
   },
   {
-    title: "Ionic",
+    title: "Angular / Ionic",
     data: [
       {
         title: "What is Ionic?",
@@ -408,6 +422,13 @@ Notable Packages
 - cordova-plugin-apprate
 - cordova-support-google-services
         `,
+      },
+      {
+        title: "Aurelia vs Angular(2+): Why I prefer Aurelia over Angular",
+        content:
+          "Aurelia and Angular are popular JavaScript client frameworks that empower you to build modern applications for the web, mobile and desktop. They provide modern features like data binding, extensible HTML, SPA, Routing, UI Composition, etc to build complex apps.",
+        link:
+          "https://medium.com/@krishankataria2015/aurelia-vs-angular-2-why-i-prefer-aurelia-over-angular-a9c96a82c13d#:~:text=Aurelia%20and%20Angular%20are%20both,makes%20development%20easier%20and%20faster.",
       },
       {
         title: "End-to-end Testing Mobile Apps with Ionic and Cypress",
