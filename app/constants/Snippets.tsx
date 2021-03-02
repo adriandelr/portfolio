@@ -28,6 +28,10 @@ We use **Cordova**, a platform for developing, and building hybrid mobile applic
 **Swiper** is a JavaScript Library we used for slides of gallery, and pages.
 
 **Less**, a pre-processor that extends, and compiles to CSS, its functions such as variables, mixins, nesting, operations, and functions.
+
+**Babel**, Babel is a JavaScript transpiler that converts edge JavaScript into plain old ES5 JavaScript, JSX to React, that can run in any browser.
+
+**Webpack**, is a tool that lets you compile JavaScript modules, also known as module bundler. Given a large number of files, it generates a single file that run your app.
         `,
       },
       {
