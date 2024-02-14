@@ -14,7 +14,7 @@
     "update-sdk": "npm i expo@50",
     "update-deps": "npx expo install --fix",
     "eas-install": "npm i -g eas-cli",
-    "eas-login": "eas login", 
+    "eas-login": "eas login",
     "eas-build-android": "eas build --platform android",
     "eas-build-ios": "eas build --platform ios",
     "eas-build-all": "eas build --platform all",
@@ -61,7 +61,8 @@
     "react-native-vector-icons": "^7.1.0",
     "react-native-web": "~0.19.6",
     "react-native-x2-carousel": "^1.0.1",
-    "react-qr-code": "^1.0.5"
+    "react-qr-code": "^1.0.5",
+    "@expo/metro-runtime": "~3.1.3"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
