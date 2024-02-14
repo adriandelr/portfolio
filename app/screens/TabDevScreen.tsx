@@ -138,24 +138,23 @@ export default function TabDevScreen({ navigation }: any) {
               },
             ]}
           >
-            Adrian is a Web Developer focused on developing Cross-Platform
-            applications using Front-End technologies.
+            Adrian is a web developer focused on developing
+            Cross-Platform applications using Front-End technologies. He
+            has been delivering various solutions, ranging from UI and
+            Animation to communication, computation, and modulation of
+            client-side data and content for the past nine (9) years.
             {"\n"}
             {"\n"}
-            He has been delivering various solutions, ranging from UI and
-            Animation, to communication, computation, and modulation of data,
-            and content for the past six (6) years.
+            Recently, he handled projects as a UI Hybrid Mobile Developer
+            for a US-based client Tollway Group, and supported
+            Accenture's Business Development for a Hong Kong-based
+            Housing Provider. He facilitated a two-day boot camp course
+            on a web framework for onboarding recruits.
             {"\n"}
             {"\n"}
-            Recently, he handled projects as a UI Hybrid Mobile Developer for a
-            US based client Tollway Group, supported Accenture's Business
-            Development for a Hong Kong based Housing Provider, and facilitated
-            a two (2) day bootcamp course on AngularJS for new recruits.
-            {"\n"}
-            {"\n"}
-            Furthermore, he has developed Hybrid Mobile Applications for HMC's
-            world class loyalty solutions. Providing services to luxury five (5)
-            star hotels, and brands.
+            Furthermore, he has developed Hybrid mobile applications for
+            HMC's world-class loyalty solutions. Providing services to
+            luxury five-star hotels, and brands.
           </Text>
           {Platform.OS === "web" && (
             <View style={{ width: "100%", alignItems: "center" }}>
@@ -172,7 +171,7 @@ export default function TabDevScreen({ navigation }: any) {
                 ]}
               >
                 {
-                  "You are on web view. For an awesome native experience, download the Expo app."
+                  "(UNMAINTAINED) \n You are on web view. For an awesome native experience, download the Expo app."
                 }
                 <Icon
                   name="app-store"

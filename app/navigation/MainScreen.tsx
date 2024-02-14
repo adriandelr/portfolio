@@ -85,7 +85,7 @@ export default function MainScreen() {
         </DrawerContentScrollView>
         <Linker
           url={
-            "https://drive.google.com/file/d/1Dp0FvtoDqGYWdXHZ8qfOTWyk_0v1bh8S/view?usp=sharing"
+            "https://drive.google.com/file/d/1YrCNM6RgqmXvbbMrHPwLucF1Q3ZdPEmw/view?usp=sharing"
           }
           iconOnly="address-card"
           color={colors.text}

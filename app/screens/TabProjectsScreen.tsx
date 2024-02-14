@@ -208,7 +208,7 @@ const TabProjectsScreen = () => {
                 Looking for other details?
               </Text>
               <Linker
-                url="https://drive.google.com/file/d/1Dp0FvtoDqGYWdXHZ8qfOTWyk_0v1bh8S/view?usp=sharing"
+                url="https://drive.google.com/file/d/1YrCNM6RgqmXvbbMrHPwLucF1Q3ZdPEmw/view?usp=sharing"
                 text="View My Resume"
                 textSize={Platform.OS === "web" ? 14 : 15}
                 color={"lightslategrey"}
