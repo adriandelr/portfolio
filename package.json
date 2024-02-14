@@ -3,7 +3,7 @@
   "homepage": "https://adriandelr.github.io/portfolio",
   "scripts": {
     "deploy": "gh-pages -d web-build",
-    "predeploy": "export NODE_OPTIONS=--openssl-legacy-provider && expo build:web",
+    "predeploy": "expo build:web",
     "start": "export NODE_OPTIONS=--openssl-legacy-provider && expo start",
     "android": "export NODE_OPTIONS=--openssl-legacy-provider && expo start --android",
     "ios": "export NODE_OPTIONS=--openssl-legacy-provider && expo start --ios",
